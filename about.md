@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+The Metamatic framework is a simple and easy-to-use predictable state container for JavaScript apps. 
+With Metamatic, you can implement a central data management policy in frontend applications quite fast and painlessly. 
+With Metamatic, you can get things done faster because you don't need to write endless amounts of repetitive 'spells' to get what you want. 
+Metamatic helps you create cleaner and more maintainable code.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll

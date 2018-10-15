@@ -6,7 +6,7 @@ categories: metamatic
 ---
 
 The [Metamatic state container framework](https://www.npmjs.com/package/metamatic) wonderfully abstracts away the burden of writing and managing containers by yourself. With Metamatic, chances are
-that you never really need to think about how to actually "broadcast", "radiate" or "dispatch" events. That is, when you launch an even somewhere inside
+that you never really need to think about how to actually "broadcast", "radiate" or "dispatch" events. That is, when you launch an event somewhere inside
 your app then all parts that listen for that specific event would receive that event and handle it the way they wish. But inside the hood Metamatic indeed
 relies on such event dispatching mechanism. 
 

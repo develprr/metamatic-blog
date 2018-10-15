@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using Metatic Dispatcher as Standalone Feature"
+title:  "Using Metamatic Dispatcher as Standalone Feature"
 date:   2018-10-15 23:53 +0300
 categories: metamatic
 ---

@@ -4,7 +4,11 @@ title: News
 permalink: /news/
 ---
 
-### Version 1.6.5 Functions renamed for more clarity
+### Version 1.6.8: Fixed bug in retrieving items from session storage
+
+A bug that prevented retrieving items from session storage has been fixed.
+
+### Version 1.6.5: Functions renamed for more clarity
 
 To improve code readability, *update* function has been renamed to **updateState**, *obtain* function to **getState**,  *store* function to **setState** and *clear*
 function to **clearState**. Version 1.6.5 won't be backwards compatible with earlier versions! 

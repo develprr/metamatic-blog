@@ -7,7 +7,7 @@ permalink: /references/
 Metamatic has carried out many great projects with fantastic partners and customers.
 
 ### Talented Solutions
-Working together with Talented Network, Metamatic made the world perhaps a little bit better place by helping the leading Finnish health care service provider 
+Working together with Talented Network, Metamatic made the world perhaps a little bit better place by helping a major Finnish health care service provider 
 update their public web portal.
 
 ### NSD Consulting

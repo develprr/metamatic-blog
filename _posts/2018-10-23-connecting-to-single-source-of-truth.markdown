@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Connecting to Single Source of Truth"
+date:   2018-10-23 23:53 +0300
+categories: metamatic
+---
+
 ## The Metamatic State Container Model
 
 The Metamatic framework introduces an embedded state container model. 

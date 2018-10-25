@@ -4,6 +4,10 @@ title: News
 permalink: /news/
 ---
 
+### Version 1.6.9 calling updateState to a non-defined state now possible
+
+Version 1.6.9 makes **updateState** function more usable. It can be now called also on a state that is not yet defined at all. In such case, it just initializes the state like *setState* function.
+
 ### Version 1.6.8: Fixed bug in retrieving items from session storage
 
 A bug that prevented retrieving items from session storage has been fixed.

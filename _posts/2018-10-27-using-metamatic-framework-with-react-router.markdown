@@ -36,8 +36,6 @@ export class App extends React.Component {
 
   componentWillUnmount = () => disconnect(this);
 
-  getViewComponent = () => this.state.loggedIn ? <Management/> : <Login/>;
-
   isLoggedIn = () => this.state.loggedIn === true;
 
   renderAuthorizedContent = () => (

@@ -4,7 +4,14 @@ title: News
 permalink: /news/
 ---
 
-### Version 1.6.9 calling updateState to a non-defined state now possible
+### Version 1.7.0 Use initState function to initialize states
+
+Metamatic version 1.7.0 introduces **initState** function that is enables your app to robustly remmeber all its states even if the browser page is reloaded / refreshed!
+Set initiall values safely to objects using *initState* function that only sets those values to a state that don't exist there previously.
+This is useful because then values are not overwritten when the browser is refreshed. When the browser is refreshed and all initState calls are then re-executed, they won't reset those values
+anymore.
+
+### Version 1.6.9: calling updateState to a non-defined state now possible
 
 Version 1.6.9 makes **updateState** function more usable. It can be now called also on a state that is not yet defined at all. In such case, it just initializes the state like *setState* function.
 

@@ -31,7 +31,8 @@ export class App extends React.Component {
     this.state = {};
   }
 
-  componentDidMount = () => connect(this, ACCESS_STATE, (state) => this.setState(state));
+  componentDidMount = () => 
+      connect(this, ACCESS_STATE, (state) => this.setState(state));
 
   componentWillUnmount = () => disconnect(this);
 
@@ -39,18 +40,22 @@ export class App extends React.Component {
 
   isLoggedIn = () => this.state.loggedIn === true;
 
-  renderContent = () => this.isLoggedIn() ? (
-      <div className="containser-fluid">
-      <Route path='/' component={Header}/>
-      <Route exact path='/cars' component={CarFilterList}/>
-      <Route exact path='/cars/:carId' component={CarDetails}/>
-    </div>
-  ) : (
+  renderAuthorizedContent = () => (
+      <div className="container-fluid">
+        <Route path='/' component={Header}/>
+        <Route exact path='/cars' component={CarFilterList}/>
+        <Route exact path='/cars/:carId' component={CarDetails}/>
+      </div>
+  )
+
+  renderUnauthorizedContent = () => (
       <div className="container-fluid">
         <Route path='/' component={Header}/>
         <Login/>
       </div>
-  );
+  )
+
+  renderContent = () => this.isLoggedIn() ? this.renderAuthorizedContent() : this.renderUnauthorizedContent();
 
   render = () => (
       <BrowserRouter>

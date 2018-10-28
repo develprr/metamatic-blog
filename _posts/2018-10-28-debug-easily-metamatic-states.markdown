@@ -20,7 +20,7 @@ Similar tools to view states inside App's localStorage are also provided by all 
 
 No need to install any buggy and shady third party plugins to view your Metamatic states!
 
-![Debugging Metamatic States]({{ site.url }}/assets/debugging-metamatic-states.png)
+![Debugging Metamatic States]({{ site.baseurl }}/assets/debugging-metamatic-states.png)
 
 Metamatic uses by default browser's Local Storage for persisting state container's states. This is practical because objects serialized
 inside LocalStorage will survive page reloads so it is quite advantageous saving from a lot of coding and renewed data loading, enabling

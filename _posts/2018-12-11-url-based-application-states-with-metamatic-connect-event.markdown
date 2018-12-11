@@ -5,7 +5,7 @@ date:   2018-12-11 18:28:12 +0300
 categories: metamatic
 ---
 
-## The Problem of State Defining sub-URLs
+## The Problem of State Defining Sub-URLs
 
 A very typical situation in JavaScript based web apps is that they use client-side urls, 
 where application's specific sub-urls are handled by the JavaScript client in the way
@@ -108,3 +108,7 @@ const setCarModelDetails = (carModelDetails) => updateStore(STORE_CAR_MODEL_ITEM
 
 Updating the store will fire a Metamatic STORE_CAR_MODEL_ITEM event will dispatch the actual store STORE_CAR_MODEL_ITEM to all listeners. Then *CarDetails* 
 component will receive that store and have access to the desired *carModelDetails* state inside that store!
+
+## Complete Example
+
+Find a complete example application to showcase the Metamatic CONNECT event [here](https://github.com/develprr/metamatic-car-app).

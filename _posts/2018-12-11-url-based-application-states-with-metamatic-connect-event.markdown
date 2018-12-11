@@ -5,7 +5,7 @@ date:   2018-12-11 18:28:12 +0300
 categories: metamatic
 ---
 
-##The Problem of State Defining sub-URLs
+## The Problem of State Defining sub-URLs
 
 A very typical situation in JavaScript based web apps is that they use client-side urls, 
 where application's specific sub-urls are handled by the JavaScript client in the way
@@ -31,7 +31,7 @@ when the user enters the details view over a direct URL link.
 Therefore the application must understand to load the relevant details data also based on the application's URL, not only
 a click listener inside some other view.
 
-##The Metamatic Solution
+## The Metamatic Solution
 
 That's where Metamatic's CONNECT system event comes to help. Let's say that the user opens URL https://metamatic-car-app.herokuapp.com/cars/4 
 that is mapped in the router to CarDetails component:
@@ -57,7 +57,7 @@ Then *CarDetails* component just must trust that the store contains the needed d
 will ensure the availability of that data. The store must load the relevant data not only when user selected the car model in another view
 but also when *CarDetails* was invoked through /cars/**:carId** sub-URL.
  
-##How to Implement CONNECT Event Handler
+## How to Implement CONNECT Event Handler
 
 For this use case the Metamatic framework provides a very practical solution. In Metamatic, every time a component is connected to a store, this action
 will automatically fire a corresponding system event with syntax **CONNECT**/*STORE_NAME_HERE* that is launched into the application-wide bit-space.

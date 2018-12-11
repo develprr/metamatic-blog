@@ -33,7 +33,7 @@ a click listener inside some other view.
 
 ## The Metamatic Solution
 
-That's where Metamatic's CONNECT system event comes to help. Let's say that the user opens URL https://metamatic-car-app.herokuapp.com/cars/4 
+That's where Metamatic's CONNECT system event comes to help. Let's say that the user opens URL [https://metamatic-car-app.herokuapp.com/cars/4](https://metamatic-car-app.herokuapp.com/cars/4) 
 that is mapped in the router to CarDetails component:
 
 {% highlight javascript %}

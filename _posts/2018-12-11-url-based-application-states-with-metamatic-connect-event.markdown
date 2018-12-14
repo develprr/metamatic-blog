@@ -109,6 +109,31 @@ const setCarModelDetails = (carModelDetails) => updateStore(STORE_CAR_MODEL_ITEM
 Updating the store will fire a Metamatic STORE_CAR_MODEL_ITEM event will dispatch the actual store STORE_CAR_MODEL_ITEM to all listeners. Then *CarDetails* 
 component will receive that store and have access to the desired *carModelDetails* state inside that store!
 
+## A Generic Solution
+
+A great benefit of this way of binding URL patterns to stores is that every time any component is bound to STORE_CAR_MODEL_ITEM store it will make the store to 
+act, namely, optionally loading car model details. For the Metamatic Car App, there are actually several URLs that will require the application to 
+know car details data: 
+
+* Car details [https://metamatic-car-app.herokuapp.com/cars/4](https://metamatic-car-app.herokuapp.com/cars/4)
+* Car order form [https://metamatic-car-app.herokuapp.com/cars/4/order](https://metamatic-car-app.herokuapp.com/cars/4/order)
+* Order confirmation page [https://metamatic-car-app.herokuapp.com/cars/4/confirmation](https://metamatic-car-app.herokuapp.com/cars/4/confirmation)
+
+Then you must edit the Router component to define which view components actually respond to the URL patterns described above:
+
+{% highlight javascript %}
+      <Route exact path='/cars/:carId' component={CarDetails}/>
+      <Route exact path='/cars/:carId/order' component={OrderView}/>
+      <Route exact path='/cars/:carId/confirmation' component={OrderConfirmationView}/>
+{% endhighlight %}
+
+Since all those components need the car details data they connect to STORE_CAR_MODEL_ITEM in their constructor. And STORE_CAR_MODEL_ITEM, in turn, 
+then loads the car details when needed. Putting all this together, to create views that can be accessed through a distinct URL, you need to do following things: 
+
+1. Use Metamatic's CONNECT event to make a store to optionally load data when a component connects.
+2. Connect the component to store in the constructor.
+3. Define state-defining URLs for renderer components in React router.
+
 ## Complete Example
 
 Find a complete example application to showcase the Metamatic CONNECT event [here](https://github.com/develprr/metamatic-car-app).

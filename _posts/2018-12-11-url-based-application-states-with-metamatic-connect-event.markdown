@@ -109,7 +109,7 @@ const setCarModelDetails = (carModelDetails) => updateStore(STORE_CAR_MODEL_ITEM
 Updating the store will fire a Metamatic STORE_CAR_MODEL_ITEM event will dispatch the actual store STORE_CAR_MODEL_ITEM to all listeners. Then *CarDetails* 
 component will receive that store and have access to the desired *carModelDetails* state inside that store!
 
-## A Generic Solution
+## Routing URLs
 
 A great benefit of this way of binding URL patterns to stores is that every time any component is bound to STORE_CAR_MODEL_ITEM store it will make the store to 
 act, namely, optionally loading car model details. For the Metamatic Car App, there are actually several URLs that will require the application to 
@@ -122,9 +122,9 @@ know car details data:
 Then you must edit the Router component to define which view components actually respond to the URL patterns described above:
 
 {% highlight javascript %}
-      <Route exact path='/cars/:carId' component={CarDetails}/>
-      <Route exact path='/cars/:carId/order' component={OrderView}/>
-      <Route exact path='/cars/:carId/confirmation' component={OrderConfirmationView}/>
+  <Route exact path='/cars/:carId' component={CarDetails}/>
+  <Route exact path='/cars/:carId/order' component={OrderView}/>
+  <Route exact path='/cars/:carId/confirmation' component={OrderConfirmationView}/>
 {% endhighlight %}
 
 Since all those components need the car details data they connect to STORE_CAR_MODEL_ITEM in their constructor. And STORE_CAR_MODEL_ITEM, in turn, 
@@ -133,6 +133,38 @@ then loads the car details when needed. Putting all this together, to create vie
 1. Use Metamatic's CONNECT event to make a store to optionally load data when a component connects.
 2. Connect the component to store in the constructor.
 3. Define state-defining URLs for renderer components in React router.
+
+# What About State Connectors
+
+The examples above described a use case of connecting a Metamatic component to an entire store. Connecting a component to an entire store fits well
+when the contents of the store are quite similar to the data actually needed by the component. However, connecting a Metamatic component to an entire store 
+will cause the component's state to be updated and therefore causing the component to refresh every time the store is updated. If the state inside the store that
+was updated is something actually not used by the connected compoonent then the store update evemt will cause an unnecessary refresh of the component.
+This, while usually not a critical problem, might potentially cause performance issues if there's a lot of data and if it's updated often.
+
+Also you may want to keep your code logical and when you connect your component to a Metamatic state you may not want the component to receive states that
+are actually not needed by the component at all.
+
+Therefore Metamatic also offers a possibility to connect to a nested state inside a store with **connectToState** function and to multiple states 
+inside a store with **connectToStates** function. Using these connectors the component will be listening to only one sub-part of the store. Then updating
+the store will only cause re-rendering of the listener component if exactly the sub-state in question was updated:
+
+{% highlight javascript %}
+componentDidMount = () => connectToStates(this, STORE_CAR_MODEL_ITEM, {
+  'carModelDetails.model': (model) => this.setState({...this.state, model}),
+  'carModelDetails.speed': (speed) => this.setState({...this.state, speed}),
+});
+{% endhighlight %}
+
+Namely,  if you connect your component to a particular nested state inside a store instead, using *connectToState* or function,
+will fire two distinct CONNECT events. It will fire a state-related event with format CONNECT/[STORE_NAME]:[NESTED_STATE_NAME], and a store-related CONNECT/[STORE_NAME]
+
+And if you connect the component to many states inside a store using *connectToStates* then for each state CONNECT/[STORE_NAME]:[NESTED_STATE_NAME] is fired
+and finally one CONNECT/[STORE_NAME] event is fired. For example, you want to connect your React component to nested states *model* and *speed* inside *carModelDetails*
+state inside store STORE_CAR_MODEL_ITEM:
+
+Invoking *connectToStates* the way described above, will cause Metamatic fire system three events *CONNECT/STORE_CAR_MODEL_ITEM:carModelDetails.model* and 
+*CONNECT/STORE_CAR_MODEL_ITEM:carModelDetails.speed* and finally *CONNECT/STORE_CAR_MODEL_ITEM* event.
 
 ## Complete Example
 

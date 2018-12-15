@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "URL-based Application States with Metamatic's CONNECT Event"
+title:  "URL-Based Application States with Metamatic's CONNECT Event"
 date:   2018-12-11 18:28:12 +0300
 categories: metamatic
 ---

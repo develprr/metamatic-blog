@@ -138,8 +138,8 @@ then loads the car details when needed. Putting all this together, to create vie
 
 The examples above described a use case of connecting a Metamatic component to an entire store. Connecting a component to an entire store fits well
 when the contents of the store are quite similar to the data actually needed by the component. However, connecting a Metamatic component to an entire store 
-will cause the component's state to be updated and therefore causing the component to refresh every time the store is updated. If the state inside the store that
-was updated is something actually not used by the connected compoonent then the store update evemt will cause an unnecessary refresh of the component.
+will cause the component to refresh every time the store is updated. If the state inside the store that
+was updated is something actually not used by the connected component then the store update event will cause an unnecessary refresh of the component.
 This, while usually not a critical problem, might potentially cause performance issues if there's a lot of data and if it's updated often.
 
 Also you may want to keep your code logical and when you connect your component to a Metamatic state you may not want the component to receive states that

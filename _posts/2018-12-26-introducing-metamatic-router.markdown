@@ -5,8 +5,6 @@ date:   2018-12-26 16:98:12 +0300
 categories: metamatic
 ---
 
-## Routing with Metamatic
-
 The [Metamatic framework](https://www.npmjs.com/package/metamatic) now provides an out-of-the-box embedded router feature. This addition converts Metamatic from being plainly a data state management framework 
 into a more multi-purpose utility library for JavaScript-based web application development.
 

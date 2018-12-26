@@ -7,7 +7,7 @@ categories: metamatic
 
 The [Metamatic framework](https://www.npmjs.com/package/metamatic) now provides an out-of-the-box embedded router feature. 
 
-When developing JavaScript web apps, there are multiple options available for enabling client-side routing in you browser-based software. 
+When developing JavaScript web apps, there are multiple options available for enabling client-side routing in browser-based UI software. 
 When coding with Metamatic and React, you can use many available router libraries to enable routing.
 
 But some libraries require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially

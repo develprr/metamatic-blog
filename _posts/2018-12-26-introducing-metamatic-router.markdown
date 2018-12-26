@@ -5,15 +5,12 @@ date:   2018-12-26 16:48:12 +0300
 categories: metamatic
 ---
 
-The [Metamatic framework](https://www.npmjs.com/package/metamatic) now provides an out-of-the-box embedded router feature. This addition converts Metamatic from being plainly a data state management framework 
-into a more multi-purpose utility library for JavaScript-based web application development.
-
-## Why Metamatic Router
+The [Metamatic framework](https://www.npmjs.com/package/metamatic) now provides an out-of-the-box embedded router feature. 
 
 When developing JavaScript web apps, there are multiple options available for enabling client-side routing in you browser-based software. 
 When coding with Metamatic and React, you can use many available router libraries to enable routing.
 
-But beware that there are some libraries that require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially
+But some libraries require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially
 if you use a router library that expects you to add Router as a JSX component in the style of a <SomeRouter> tag that then wraps around the application-related
 JSX elements. It can be considered an anti-pattern because you are first supposed to use JSX for defining visual rendering hierarchy of elements 
 only and then you mess this clean system by injecting programmatic non-visual elements. 

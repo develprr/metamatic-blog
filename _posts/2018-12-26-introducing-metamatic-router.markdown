@@ -8,22 +8,20 @@ categories: metamatic
 The [Metamatic framework](https://www.npmjs.com/package/metamatic) now provides an out-of-the-box embedded router feature. 
 
 When developing JavaScript web apps, there are multiple options available for enabling client-side routing in browser-based UI software. 
-When coding with Metamatic and React, you can use many available router libraries to enable routing.
+When coding with React, you can use many available router libraries to enable routing.
 
 But some libraries require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially
-if you use a router library that expects you to add Router as a JSX component as a tag such <SomeRouter> that then wraps around application-related
-JSX elements. It can be considered an anti-pattern because you are first supposed to use JSX for defining visual rendering hierarchy of elements 
-only and then you mess this clean system by injecting programmatic non-visual elements. 
+if you use a router library that expects you to add Router as a JSX component whereby you add a tag such as <SomeRouter> that then wraps around application-related
+JSX elements. I say this can be seen as an anti-pattern when you are first supposed to use JSX for defining visual elements 
+and then you mess this clean system by injecting programmatic non-visual elements: you end up having a sort of not-really-visual yet not-really-programmatic-either mishmash tag-monster.
 
-You end up having a sort of not-really-visual yet not-really-programmatic-either mishmash tag-monster.
+Metamatic provides a simplistic out-of-the-box router solution for those who don't like provider tags.
 
-Metamatic provides a simplistic out-of-the-box router solution for those that don't like provider tags.
-
-The Metamatic Router was created just because it was a quite easy thing to create this kind of a thing on top of the core Metamatic framework.
+The Metamatic Router was created primarily out of joy of doing so, but also because it was a quite easy thing to create this kind of a creature on top of the core Metamatic framework.
 
 ## Installing Metamatic Router
 
-There are two options to install the Metamatic Router. The most obvious one is installing the Metamatic framework just like before:
+There are two options to install the Metamatic Router. The first option is just to install Metamatic framework like before:
 
 ```js
 npm i --save metamatic

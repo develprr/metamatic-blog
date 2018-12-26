@@ -1,18 +1,18 @@
 ---
 layout: post
 title:  "Introducing the Metamatic Router"
-date:   2018-12-15 09:54:10 +0300
+date:   2018-12-26 16:98:12 +0300
 categories: metamatic
 ---
 
 ## Routing with Metamatic
 
-The Metamatic framework now provides an out-of-the-box embedded router feature. This addition converts Metamatic from being entirely a data state management framework 
-into a more multi-purpose style utility library to support JavaScript-based web application development.
+The Metamatic framework now provides an out-of-the-box embedded router feature. This addition converts Metamatic from being plainly a data state management framework 
+into a more multi-purpose utility library for JavaScript-based web application development.
 
 ## Why Metamatic Router
 
-When developing JavaScript web apps, there are multiple options available for enabling client-side routing in you browser based software. 
+When developing JavaScript web apps, there are multiple options available for enabling client-side routing in you browser-based software. 
 When coding with Metamatic and React, you can use many available router libraries to enable routing.
 
 But beware that there are some libraries that require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially
@@ -21,21 +21,19 @@ JSX elements inside itself. It can be considered an anti-pattern because you are
 only and then you mess this clean system by injecting programmatic non-visual elements to have this sort of a not-really-visual yet not-really-programmatic mishmash of a tag-monster.
 
 You can use Metamatic with any of those libraries but Metamatic also provides an out-of-the-box routing solution that you can consider as an option
-when implementing a Metamatic app. The Metamatic Router was created just because it was a quite easy thing to do on top of the core Metamatic framework.
+when implementing a Metamatic app. 
 
-The Metamatic Router was made for one reason. The Metamatic state management framework just happened to be a dream-like basement to build a router.
-It was made just because it was easy!
+The Metamatic Router was created just because it was a quite easy thing to create this kind of a thing on top of the core Metamatic framework.
 
 ## Installing Metamatic Router
 
-There are two options to install the Metamatic Router. The most obvious one is just installing the Metamatic framework just like before:
+There are two options to install the Metamatic Router. The most obvious one is installing the Metamatic framework just like before:
 
 ```js
 npm i --save metamatic
 ```
 
-The **metamatic** package can be understood since version 2.4.7 as a web development suite that covers both the state management scheme alongside providing
-additional routing support. However, you can also install the Metamatic Router as a standalone feature without using the Metamatic state management features:
+You can also install just the Metamatic Router as a standalone feature without state management features:
  
 ```js
 npm i --save @metamatic.net/metamatic-router
@@ -43,7 +41,7 @@ npm i --save @metamatic.net/metamatic-router
 
 ## Real Demo of Router in Action
 
-To understand how to harness the Metamatic Router, the most obvious thing to is to check out the [Metamatic Router Demo](https://github.com/develprr/metamatic-router-demo).
+To understand how to harness the Metamatic Router, the most obvious thing to do is to check out the [Metamatic Router Demo](https://github.com/develprr/metamatic-router-demo).
 There is also a hosted version of the example showing the built and deployed [router demo running real time here](https://metamatic-demo.herokuapp.com/router).
 
 ## Configuring Metamatic Router
@@ -57,7 +55,7 @@ It requires you to connect the component to router with **connectToRouter** upon
 componentDidMount = () => connectToRouter(this, () => this.setState({}));
 ```
 
-Secondly, define which components are rendered for which URLs with **matchRoute** function invokations in *render* function:
+Secondly, define which components are rendered for which URLs with **matchRoute** function invocations in *render* function:
 
 ```js
 render = () => (

@@ -14,14 +14,13 @@ When developing JavaScript web apps, there are multiple options available for en
 When coding with Metamatic and React, you can use many available router libraries to enable routing.
 
 But beware that there are some libraries that require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially
-if you use a router library that expects you to add Router as a JSX component in the style of a <SomeRouter> tag that then encloses the application-related
-JSX elements inside itself. It can be considered an anti-pattern because you are first supposed to use JSX for defining visual rendering hierarchy of elements 
+if you use a router library that expects you to add Router as a JSX component in the style of a <SomeRouter> tag that then wraps around the application-related
+JSX elements. It can be considered an anti-pattern because you are first supposed to use JSX for defining visual rendering hierarchy of elements 
 only and then you mess this clean system by injecting programmatic non-visual elements. 
 
 You end up having a sort of not-really-visual yet not-really-programmatic-either mishmash tag-monster.
 
-Metamatic provides a simplistic out-of-the-box router solution for those that don't like provider tags. You can use Metamatic with any of those libraries but 
-Metamatic also provides an out-of-the-box routing solution that you can consider as an option when implementing a Metamatic app. 
+Metamatic provides a simplistic out-of-the-box router solution for those that don't like provider tags.
 
 The Metamatic Router was created just because it was a quite easy thing to create this kind of a thing on top of the core Metamatic framework.
 

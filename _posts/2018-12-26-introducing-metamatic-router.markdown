@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing the Metamatic Router"
-date:   2018-12-26 16:98:12 +0300
+date:   2018-12-26 16:48:12 +0300
 categories: metamatic
 ---
 

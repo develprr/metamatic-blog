@@ -11,7 +11,7 @@ When developing JavaScript web apps, there are multiple options available for en
 When coding with React, you can use many available router libraries to enable routing.
 
 But some libraries require you to wrap your application inside a certain "router provider". That can be understood as an anti-pattern especially
-if you use a router library that expects you to add Router as a JSX component whereby you add a tag such as <SomeRouter> that then wraps around application-related
+if you use a router library that expects you to add Router as a JSX component whereby you add a "provider" tag that then wraps around application-related
 JSX elements. I say this can be seen as an anti-pattern when you are first supposed to use JSX for defining visual elements 
 and then you mess this clean system by injecting programmatic non-visual elements: you end up having a sort of not-really-visual yet not-really-programmatic-either mishmash tag-monster.
 

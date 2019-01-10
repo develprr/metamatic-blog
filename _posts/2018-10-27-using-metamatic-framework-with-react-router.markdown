@@ -4,7 +4,7 @@ title:  "Using Metamatic Framework With React Router"
 date:   2018-10-27 22:28:12 +0300
 categories: metamatic
 ---
-The Metamatic framework sits very well together with React routing scheme. The following  
+The Metamatic™ framework sits very well together with React routing scheme. The following  
 example of a React main class implementing both React-Routes and Metamatic-based state container would look somewhat like this:
 
 {% highlight javascript %}
@@ -64,7 +64,7 @@ export class App extends React.Component {
 }
 {% endhighlight %}
 
-In the example above, a React app's main class connects to a Metamatic store 'STORE_AUTHORIZATION' from which it obtains an important
+In the example above, a React app's main class connects to a store 'STORE_AUTHORIZATION' from which it obtains an important
 information, namely, whether the user is loggedIn or not. Based on that info, it then renders two exclusive routing strategies. 
 One which is for a user that is not logged in and another for someone who is logged in. Certainly, for those who are not logged in,
 it's only meaningful to show a "Log In" view but those who are in will be provided the full scale of navigation urls inside the App.

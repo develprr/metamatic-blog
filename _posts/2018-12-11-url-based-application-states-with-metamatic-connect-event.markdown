@@ -31,7 +31,7 @@ when the user enters the details view over a direct URL link.
 Therefore the application must understand to load the relevant details data also based on the application's URL, not only
 a click listener inside some other view.
 
-## The Metamatic Solution
+## The Solution
 
 That's where Metamatic's CONNECT system event comes to help. Let's say that the user opens URL [https://metamatic-car-app.herokuapp.com/cars/4](https://metamatic-car-app.herokuapp.com/cars/4) 
 that is mapped in the router to CarDetails component:
@@ -41,10 +41,10 @@ that is mapped in the router to CarDetails component:
 {% endhighlight %}
 
 Now this setting will cause that when the user opens a url with car's ID then **CarDetails** component will be rendered.
-Therefore, the *CarDetails* view must have access to the corresponding car data that is being centrally maintained in the app's Metamatic store.
+Therefore, the *CarDetails* view must have access to the corresponding car data that is being centrally maintained in the app's store.
 
-Therefore *CarDetails* component must be connected to the Metamatic store that holds car details. 
-Using the Metamatic framework with ReactJS, the connection must be done in component's *componentDidMount* life cycle function:
+Therefore *CarDetails* component must be connected to Metamatic™ store that holds car details. 
+Using Metamatic™ framework with ReactJS, the connection must be done in component's *componentDidMount* life cycle function:
 
 {% highlight javascript %}
 componentDidMount = () => connectToStore(this, STORE_CAR_MODEL_ITEM, (store) => this.setState(store));
@@ -59,7 +59,7 @@ but also when *CarDetails* was invoked through /cars/**:carId** sub-URL.
  
 ## How to Implement CONNECT Event Handler
 
-For this use case the Metamatic framework provides a very practical solution. In Metamatic, every time a component is connected to a store, this action
+For this use case Metamatic™ framework provides a very practical solution. In Metamatic, every time a component is connected to a store, this action
 will automatically fire a corresponding system event with syntax **CONNECT**/*STORE_NAME_HERE* that is launched into the application-wide bit-space.
 
 On the store side of a Metamatic app, the store can be initialized to listen for CONNECT event:
@@ -73,11 +73,11 @@ export const CONNECT_CAR_MODEL_ITEM = `CONNECT/${STORE_CAR_MODEL_ITEM}`;
 export const CarModelStore = () => handleEvent(CONNECT_CAR_MODEL_ITEM, () => loadCarModelDetailsByUrl());
 {% endhighlight %}
 
-In the example above we define *CarModelStore()* function that actually makes the Metamatic state manager listen for *CONNECT/STORE_CAR_MODEL_ITEM*
+In the example above we define *CarModelStore()* function that actually makes Metamatic™ State Manager listen for *CONNECT/STORE_CAR_MODEL_ITEM*
 event. When such event occurs, car model details will be loaded based on the car model ID that is described in the URL path.
 
-When *CarDetails* component is connected to the Metamatic store with name *STORE_CAR_MODEL_ITEM*, a system event *CONNECT/STORE_CAR_MODEL_ITEM* is fired
-by the Metamatic framework. An example implementation of the actual **loadCarModelDetailsByUrl** function could look like this:
+When *CarDetails* component is connected to Metamatic™ store with name *STORE_CAR_MODEL_ITEM*, a system event *CONNECT/STORE_CAR_MODEL_ITEM* is fired
+by Metamatic™ framework. An example implementation of the actual **loadCarModelDetailsByUrl** function could look like this:
 
 {% highlight javascript %}
 const extractCarModelIdFromUrl = () => {
@@ -106,13 +106,13 @@ const setCarModelDetails = (carModelDetails) => updateStore(STORE_CAR_MODEL_ITEM
 });
 {% endhighlight %}
 
-Updating the store will fire a Metamatic STORE_CAR_MODEL_ITEM event will dispatch the actual store STORE_CAR_MODEL_ITEM to all listeners. Then *CarDetails* 
+Updating the store will fire a STORE_CAR_MODEL_ITEM event will dispatch the actual store STORE_CAR_MODEL_ITEM to all listeners. Then *CarDetails* 
 component will receive that store and have access to the desired *carModelDetails* state inside that store!
 
 ## Routing URLs
 
 A great benefit of this way of binding URL patterns to stores is that every time any component is bound to STORE_CAR_MODEL_ITEM store it will make the store to 
-act, namely, optionally loading car model details. For the Metamatic Car App, there are actually several URLs that will require the application to 
+act, namely, optionally loading car model details. Fo the Car App, there are actually several URLs that will require the application to 
 know car details data: 
 
 * Car details [https://metamatic-car-app.herokuapp.com/cars/4](https://metamatic-car-app.herokuapp.com/cars/4)
@@ -136,13 +136,13 @@ then loads the car details when needed. Putting all this together, to create vie
 
 # What About State Connectors
 
-The examples above described a use case of connecting a Metamatic component to an entire store. Connecting a component to an entire store fits well
-when the contents of the store are quite similar to the data actually needed by the component. However, connecting a Metamatic component to an entire store 
+The examples above described a use case of connecting a component to an entire store. Connecting a component to an entire store fits well
+when the contents of the store are quite similar to the data actually needed by the component. However, connecting a component to an entire store 
 will cause the component to refresh every time the store is updated. If the state inside the store that
 was updated is something actually not used by the connected component then the store update event will cause an unnecessary refresh of the component.
 This, while usually not a critical problem, might potentially cause performance issues if there's a lot of data and if it's updated often.
 
-Also you may want to keep your code logical and when you connect your component to a Metamatic state you may not want the component to receive states that
+Also you may want to keep your code logical and when you connect your component to a state you may not want the component to receive states that
 are actually not needed by the component at all.
 
 Therefore Metamatic also offers a possibility to connect to a nested state inside a store with **connectToState** function and to multiple states 
@@ -168,4 +168,4 @@ Invoking *connectToStates* the way described above, will cause Metamatic fire sy
 
 ## Complete Example
 
-Find a complete example application to showcase the Metamatic CONNECT event [here](https://github.com/develprr/metamatic-car-app).
+Find a complete example application to showcase Metamatic™ CONNECT event [here](https://github.com/develprr/metamatic-car-app).

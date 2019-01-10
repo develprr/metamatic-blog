@@ -12,29 +12,29 @@ Nevertheless, there may still be situations that user wants to do some old-schoo
 And even then, it still beats most established state container frameworks in the elegance it is done! This article explains how to create custom 
 Metamatic state containers.
 
-One wonderful thing about the Metamatic framework is that a state container as such is a plain object. Therefore implementing a Metamatic state container 
+One wonderful thing about Metamatic™ framework is that a state container as such is a plain object. Therefore implementing a state container 
 could not be easier. Another wonderful thing is that you modify the state container through direct method invocation, through very basic and plain setter methods.
 This makes the code very readable. If any component wants to update a state in the state container, it should be done by
 directly invoking a setter method. This approach is opposite to some major state container frameworks that require you to dispatch
 events from components in order to update the state container. Such practice does not only turn the code unreadable and unmaintainable but is also
  completely unnecessary and serves no real purpose.
 
-In Metamatic, the flow goes as follows: 
+In Metamatic™, the flow goes as follows: 
 
 1. States are updated by directly invoking setter (updater) methods of a state container.
 2. State container updater method automatically clones the new value object and updates the state container accordingly.
-3. After setting a new value to the state container, the Metamatic framework broadcasts the changed state to everywhere in the app.
-4. All components that are registered listeners of the dispatched Metamatic event, update their state.
+3. After setting a new value to the state container, Metamatic broadcasts the changed state to everywhere in the app.
+4. All components that are registered listeners of the dispatched event, update their state.
 
 ## Important to Remember
 
 Even though updating state container throug direct method invocation,
 
-1. **YOU SHALL NEVER** directly refer to Metamatic state container from outside. You can call updater methods from outside but not directly the actual container.
+1. Don't refer to state container directly from outside. You can call updater methods from outside but not directly the actual container.
 2. Other components outside the state container shall **NEVER** use getters or direct references to get states from the state container. 
-3. Components shall get events from the Metamatic state container only through **connect**, **connectAll** or **handle** functions provided by the framework.
+3. Components shall get events from the state container only through **connect**, **connectAll** or **handle** functions provided by the framework.
 
-The above mentioned three principles are important to keep in mind because directly referring to Metamatic container states would enable the referrer
+The above mentioned three principles are important to keep in mind because directly referring to container states would enable the referrer
 components to manipulate the container states without the container being informed. While it's not the end of the world, it's a serious antipattern and strips off the
 container's control over its states, which in turn can cause data integrity bugs that are difficult to track.
 
@@ -42,7 +42,7 @@ Read more about these principles in a [blog article on state container strategie
 
 ## Create a State Container
 
-In the Metamatic framework, creating a state container is very easy. The state container is essentially only a very simple plain object. You can name it
+In Metamatic, creating a state container is very easy. The state container is essentially only a very simple plain object. You can name it
 as you wish, for instance AppState, AppContainer, MainStore etc. In this example, I'll name the state container as *MetaStore*. To create a MetaStore, create 
 *MetaStore.js* file  Of course the file can have any name you wish. In that file, define the state container object as a plain object:
 

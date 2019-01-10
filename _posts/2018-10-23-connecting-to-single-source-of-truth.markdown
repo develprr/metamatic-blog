@@ -7,7 +7,7 @@ categories: metamatic
 
 ## The Metamatic State Container Model
 
-The Metamatic framework introduces an embedded state container model. 
+The Metamatic™ framework introduces an embedded state container model. 
 
 There are two major strategies to implement a state container, which are the **Two-Way-Events** strategy and the **One-Way-Events** strategy.
 The *Two-Way-Events* strategy means that the central data container (MetaStore) communicates with the rest of the software only through events. 
@@ -24,8 +24,8 @@ container. And when they flow upstream, from the UI components back to the state
 
 With Metamatic, you can implement state container communication using both *Two-Way-Events* and *One-Way-Events* strategies. *One-Way-Events* strategy enables you to write more straightforward
 code because it will be easier to track the program flow upstream back to container from the components, since you implement container updater functions that are directly
-invoked by your components. It is recommendable to primarily update the Metamatic states through direct invocation from components. But if an event is to update 
-at least two different Metamatic states, then the component should rather dispatch an event than directly call the container updater function.
+invoked by your components. It is recommendable to primarily update states through direct invocation from components. But if an event is to update 
+at least two different states, then the component should rather dispatch an event than directly call the container updater function.
 
 Example of dispatching an event upstream from a component:
 

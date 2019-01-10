@@ -5,9 +5,9 @@ date:   2018-10-15 23:53 +0300
 categories: metamatic
 ---
 
-The [Metamatic state container framework](https://www.npmjs.com/package/metamatic) wonderfully abstracts away the burden of writing and managing containers by yourself. With Metamatic, chances are
+The [Metamatic™ state container framework](https://www.npmjs.com/package/metamatic) wonderfully abstracts away the burden of writing and managing containers by yourself. With Metamatic, chances are
 that you never really need to think about how to actually "broadcast", "radiate" or "dispatch" events. That is, when you launch an event somewhere inside
-your app then all parts that listen for that specific event would receive that event and handle it the way they wish. But inside the hood Metamatic indeed
+your app then all parts that listen for that specific event would receive that event and handle it the way they wish. But uner the hood Metamatic indeed
 relies on such event dispatching mechanism. 
 
 What is exciting that you can actually use those Metamatic's event features directly byself, bypassing the Metamatic's embeddded state container model.

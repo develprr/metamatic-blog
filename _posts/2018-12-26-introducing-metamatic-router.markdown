@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introducing the Metamatic Router"
+title:  "Introducing Metamatic Router"
 date:   2018-12-26 16:48:12 +0300
 categories: metamatic
 ---
@@ -19,13 +19,13 @@ The Metamatic Router was created primarily out of joy of doing so, but also beca
 
 ## Installing Metamatic™ Router
 
-There are two options to install the Metamatic Router. The first option is just to install Metamatic™ framework like before:
+There are two options to install Metamatic Router. The first option is just to install Metamatic™ framework like before:
 
 ```js
 npm i --save metamatic
 ```
 
-You can also install just the Metamatic Router as a standalone feature without state management features:
+You can also install just Metamatic Router as a standalone feature without state management features:
  
 ```js
 npm i --save @metamatic.net/metamatic-router
@@ -33,12 +33,12 @@ npm i --save @metamatic.net/metamatic-router
 
 ## Real Demo of Router in Action
 
-To understand how to harness the Metamatic Router, the most obvious thing to do is to check out the [Router Demo](https://github.com/develprr/metamatic-router-demo).
+To understand how to harness Metamatic Router, the most obvious thing to do is to check out the [Router Demo](https://github.com/develprr/metamatic-router-demo).
 There is also a hosted version of the example showing the built and deployed [router demo running real time here](https://metamatic-demo.herokuapp.com/router).
 
 ## Configuring Router
 
-In addition to including the Metamatic™ Ruter into your *package.json* file there is little to do when getting started with Metamatic™ Router.
+In addition to including Metamatic™ Router into your *package.json* file there is little to do when getting started with Metamatic™ Router.
 First, Connect your apps's main component to Metmatic Router similarly as done in this [example](https://github.com/develprr/metamatic-router-demo/blob/master/src/App.js).
 
 It requires you to connect the component to router with **connectToRouter** upon mounting:

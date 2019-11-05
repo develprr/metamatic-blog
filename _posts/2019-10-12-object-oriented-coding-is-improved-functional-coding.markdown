@@ -15,7 +15,7 @@ has most likely been misinformed in programming matters.
 
 ## OOP Is FP On Steroids
 
-Most publications that attack the object oriented programmiog (OOP) paradigm make the mistake that they confuse some
+Most publications that criticize the object oriented programmiog (OOP) paradigm make the mistake that they confuse some
 very basic principles. Most notably, advocates of functional programming (FP) commonly base their claims on assumption
 that the "immutability principle" is a specific feature of the FP alone which - in their view - cannot be applied in OOP at all.
 
@@ -58,7 +58,7 @@ This means that a language course has a name, description and any number of atte
 Now we are ready to go adding one student to a language course in a consistent OOP fashion. 
 But not so fast! Let's remind ourselves first how it would be done in the FP scheme... 
 
-## The Crappy Functional Way
+## The Functional Way
 
 If we were to use the highly touted "functional" design pattern to add one student to the course, 
 we would write a standalone function for that:

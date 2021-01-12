@@ -37,11 +37,11 @@ in many different ways which are hard to predict.
 Therefore, granting many functions an access to one object through 
 reference is inherently a bad thing, opening the gates to buggy software.
 
-The solution to the multiple access problem is to code in immutable way,
+The solution to the multiple access problem is to code in an immutable way,
 which means that all functions modifying some state clone the state when
 modifying it and then just replace the original state with the new 
 state. So no objects "mutate" but are rather replaced by the "next
-generation" of the object
+generation" of the object.
 
 ## When Immutability is not that Great
 
@@ -68,7 +68,7 @@ them into format that your software can better handle.
 It turns out, dogmatic sticking to immutablility principle will kill
 your software!
 
-## The Game is on - Spread operator vs. Push Function
+## The Game is On!
 
 Here is a JavaScript function that generates an array in an immutable way,
 using the spread operator to actually clone the array under construction

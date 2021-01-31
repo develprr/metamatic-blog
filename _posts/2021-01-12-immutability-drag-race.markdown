@@ -7,7 +7,7 @@ categories: metamatic
 
 There's been a trend toward functional programming in the recent years,
 especially in the field of web programming. The trend emphasizes
-certain coding principles and loosely bunch them together under one
+certain coding principles and bunch them together under one
 loose concept of "functional programming paradigm".
 
 One of the principles labeled under the functionality umbrella is
@@ -148,20 +148,18 @@ Here we have a typical immutable array modifier function that uses
 a combination of map function and spread operator:
 
 ```JavaScript
-const changeArrayPropertiesImmutableWay = (array) => array.map((entry) => ({
+const changeArrayPropertiesImmutableWay = (array) => array.map(entry => ({
     ...entry,
     name: "new name"
 }));
 ```
 
-Let's then code a mutable array modifier douchebag that relies on 
-a rusty forEach function together with an awkwardly offending 
-yet totally tasteless property assignment approach:
+Let's then code the competitor, which is a rather "old-fashioned" mutable array modifier:
 
 ```JavaScript
 const changeArrayPropertiesMutableWay = (array) => {
-    array.forEach((entry) => {
-      entry["name"] = "some other name"
+    array.forEach(entry => {
+      entry["name"] = "some other name";
     })
     return array;
 }
@@ -173,14 +171,14 @@ array generator I just made to generate the test data, because I just don't
 have time to wait until the end of the world to get my test data:
 
 ```JavaScript
-const reallyBigArray = createArrayMutableWay(1000000)
+const reallyBigArray = createArrayMutableWay(1000000);
 ```
 
 The race may start... Ready, steady, go!
 
 ```JavaScript
-
 // Running the immutable modifier:
+
 let timeStart = new Date();
 changeArrayPropertiesImmutableWay(reallyBigArray);
 let timeStop = new Date();
@@ -188,6 +186,7 @@ let timeStop = new Date();
 const immutableDuration = timeStop - timeStart;
 
 // Running the mutable modifier:
+
 timeStart = new Date();
 changeArrayPropertiesMutableWay(reallyBigArray);
 timeStop = new Date();
@@ -198,6 +197,8 @@ const mutableDuration = timeStop - timeStart;
 console.log(`immutable array modification took ${immutableDuration}`);
 console.log(`mutable array modification took ${mutableDuration}`);
 ```
+
+### The Results
 
 On my PC, the immutable array modification took *613 milliseconds*,
 whereas it only took *21 milliseconds* to modify the array with the
@@ -211,25 +212,25 @@ I can easily imagine a web developer who might say this comparison is pointless,
 because we are running just some small iterations on rather tiny array snippets 
 in JavaScript based web UI that lives inside the client's browser.
 And it's taking toll anyway on *client's* CPU - smart phone or laptop,
-which won't cost us anything. But wait, not so fast...
+which won't cost us anything. I agree, this can be entirely true, but wait, not so fast...
 
 ### At The Front
 
 Definitely immutable programming approach can be good for the UI due to
 the earlier mentioned reasons. But be careful not to process any big arrays 
-out there at the front and letting the browser app to grow too heavy.
+out there at the front and letting the browser app grow too heavy.
 With this I don't mean the size of the code bundle but rather the burden
 the logic puts on CPU's shoulders. 
 
 The digital world isn't entirely separate from the physical world. 
-Also a browser-based  apps take the toll on CPU and can make the battery drain out faster.
+Also browser-based  apps take their toll on CPU and can make the battery drain out faster.
 Be fearful of the day when you get the first report from a user
 that their browser app is randomly crashing - an inherently difficult
 problem to nail down and fix, if the UI has just slowly grown into a true CPU glutton.
 
 ### In The Backend
 
-Quite needless to say, peformance issues can get easily get very critial 
+Quite needless to say, peformance issues can easily get very critial 
 in the backend. The calculation is quite straightforward: if you code
 a backend data conversion process that is 30 times slower to perform
 than the optimal solution, you will have to rack up 30 times more machines to  

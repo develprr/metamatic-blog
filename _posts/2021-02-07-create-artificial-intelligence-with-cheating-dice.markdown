@@ -27,12 +27,12 @@ Markov chains and so much more!
 
 ... And then, you stumbled with equations, got lost in the maze of
 your thoughts, found yourself wondering how all these things can 
-help your Pacman monster find a way out of *his maze*.
+help your Pac-Man mouse find a way out of *his maze*.
 
 Don't be ashamed. Do not be pressed down by sorrow and desperation. 
 I got lost the very same way as you did. But I found the way out; 
 there is light at the end of the tunnel. There is a path
-for your Pac-Man to find his way out of the maze!
+for your Pac-Man mouse to find his way out of the maze!
 
 ## The Core Essence Of Intelligence 
 
@@ -63,8 +63,8 @@ That is physical intelligence.
 
 ### Neural Intelligence
 
-We can compare a plant with ideas or thoughs. If it's healthy, it survives and produces
-offspring.We humans, considering ourselves intelligent beings, don't actually
+We can compare a plant with ideas or thoughs. If an idea is  healthy, it survives and produces
+offspring - some fruitful action and even better ideas. We humans, considering ourselves intelligent beings, don't actually
 need to physically do a stupid thing to live out its consequences. We can sit and *think*
 what would happen if "I... ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
 
@@ -92,7 +92,7 @@ a next step that isn't the obviously the best one. This is because in a computer
 just as in the life in general, the obviously most rewarding next step
 often isn't the best path in the long term!
 
-If you get hungry and just grab chocolate bar from the grocery and *then run*, 
+If you get hungry and just grab a chocolate bar from the grocery and *then run*, 
 you'll be doing fine for five to twenty minutes, but not so much anymore when the police car
 stops in front of you when you sit in the park with your hands and face smeared
 brown from the chocolate you just ate.
@@ -108,17 +108,17 @@ consequent steps are iterated, although it does not appear to be so right away.
 
 However, the task of going through all steps would be just too enorm for a brute-force search algorithm, but 
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
-also for coach...
+also for soccer coach when...
 
-## Building A Soccer Team
+### Building A Soccer Team
 
-A Coach wants to build up a "dream-team" by starting from zero and 
+A coach wants to build up a "dream-team" by starting from zero and 
 expanding his team player by player, after adding each player stopping
 to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
-Theo does not play well when Tim is in the team and Jack plays better
-with his twin Joe and so on. For this reason, to find the best team you would
+Theo plays miserable well when Tim is in the team (maybe because Tim married his ex-girlfriend?) 
+and Jack plays way better with his identical twin Joe and so on. For this reason, to find the best team you would
 might want to occasionally try to add someone to the team that is
 not the best option measured by plain score. There might be hidden
 synergies!
@@ -126,9 +126,7 @@ synergies!
 ## Cheating Dice To The Rescue
 
 At this point I want to introduce you to a super simple
-algorithm that I call **cheating dice** - I wanted to call it first **random onion**
-but after letting my wife proof read this, I realized I could better explain 
-it with a comparison to "cheating dice". The cheating dice are special dice fiddled 
+algorithm that I call **cheating dice** - The cheating dice are special dice fiddled 
 to produce biased outcomes.
 
 With cheating dice, you might actually most likely get - but not always - number six, 
@@ -148,11 +146,18 @@ Anyway, I find this following algorithm handy yet easy-to-grasp thing
 to serve as a core component of an AI solution, which is about mostly selecting the nearly best option
 but occasionally trying out a sub-optimal solution.
 
-Since I am currently in love with Ruby (not cheating TypeScript though), 
-I show my implementation in Ruby language:
+### Applying Onion Random to Mimic Cheating Dice
+
+Let's implement something now that allows us to create the "cheating dice" effect.
+I will call the following implementation "onion random" algorithm,
+because it justs creates a random number within given range, and then randomly splits
+the number into smaller numbers. Finally we get an outcome that is a random number
+biased toward zero end of the range.
+
+Since I like Ruby, I show my implementation in Ruby language:
 
 {% highlight ruby %}
-def throw_cheating_dice(max_number_limit, cheat_factor)
+def onion_random(max_number_limit, cheat_factor)
   cheat_factor.times.reduce(max_number_limit) { 
     |current_random_result, iteration|
     rand(current_random_result)
@@ -172,7 +177,7 @@ change will always still exist that the highest possible nubmer, which is max_nu
 
 for example:
 {% highlight ruby %}
-result = throw_cheating_dice(100, 4)
+result = onion_random(100, 4)
 {% endhighlight %}
 
 You will get an outcome that is quite often zero or close to zero, but you may still
@@ -182,4 +187,10 @@ Needless to say, you are getting quite sexy distribution curves with cheating di
 
 Your mouse in his maze will absolutely love this. 
 
-I'll be soon back to this and maybe even more exciting topics. Cheers!
+### Better Implementation With Easing Functions
+
+All mathematicians will probably laugh at my clumsy implementation of biased random.
+A smoother solution than nesting random function calls would be just taking 
+one random between 0 and 1 and pass it to an (easing function)[https://en.wikipedia.org/wiki/Inbetweening]. 
+
+I'll be back to this and even more exciting topics. Cheers!

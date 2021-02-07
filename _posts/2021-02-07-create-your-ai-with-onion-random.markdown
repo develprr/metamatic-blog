@@ -64,7 +64,7 @@ That is physical intelligence.
 
 ### Neural Intelligence
 
-We can compare a plant with ideas or thoughs. If it's healthy, it survives and produces
+We can compare a plant with ideas or thoughts. If it's healthy, it survives and produces
 offspring.We humans, considering ourselves intelligent beings, don't actually
 need to physically do a stupid thing to live out its consequences. We can sit and *think*
 what would happen if "I... ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."

@@ -111,7 +111,7 @@ However, the task of going through all steps would be just too enorm for a brute
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
 also for coach...
 
-## Building A Soccer Team
+### Building A Soccer Team
 
 A Coach wants to build up a "dream-team" by starting from zero and 
 expanding his team player by player, after adding each player stopping

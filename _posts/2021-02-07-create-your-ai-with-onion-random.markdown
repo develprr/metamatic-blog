@@ -28,7 +28,7 @@ Markov chains and so much more!
 
 ... And then, you stumbled with equations, got lost in the maze of
 your thoughts, found yourself wondering how all these things can 
-help your Pacman monster find a way out of *his maze*.
+help your Pac-Man mouse find a way out of *his maze*.
 
 Don't be ashamed. Do not be pressed down by sorrow and desperation. 
 I got lost the very same way as you did. But I found the way out; 

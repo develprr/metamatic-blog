@@ -139,7 +139,8 @@ Since I am currently in love with Ruby, I show my implementation in Ruby languag
 
 {% highlight ruby %}
 def onion_random(max_random_integer, amount_of_onion_layers)
-  amount_of_onion_layers.times.reduce(max_random_integer) { |reduced_random_integer, iteration|
+  amount_of_onion_layers.times.reduce(max_random_integer) { 
+    |reduced_random_integer, iteration|
     rand(reduced_random_integer)
   }.to_i
 end

@@ -153,7 +153,8 @@ I show my implementation in Ruby language:
 
 {% highlight ruby %}
 def throw_cheating_dice(max_number_limit, cheat_factor)
-  cheat_factor.times.reduce(max_number_limit) { |current_random_result, iteration|
+  cheat_factor.times.reduce(max_number_limit) { 
+    |current_random_result, iteration|
     rand(current_random_result)
   }.to_i
 end

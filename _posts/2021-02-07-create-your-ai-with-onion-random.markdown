@@ -89,7 +89,7 @@ Better search algorithms were invented, such as [Q-learing algorithm](https://en
 The core idea is that instead of totally evaluating all possible combinations,
 each evaluation of the path *usually* chooses the best next step,
 but not always! It *explores*. That means, it occasionally chooses
-a next step that isn't the obviously the best one. This is because in a computer maze,
+a next step that isn't the obviously best one. This is because in a computer maze,
 just as in the life in general, the obviously most rewarding next step
 often isn't the best path in the long term!
 

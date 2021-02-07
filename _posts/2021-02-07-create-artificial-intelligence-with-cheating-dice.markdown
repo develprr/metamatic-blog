@@ -158,9 +158,8 @@ Since I like Ruby, I show my implementation in Ruby language:
 
 {% highlight ruby %}
 def onion_random(max_number_limit, bias_factor)
-  bias_factor.times.reduce(max_number_limit) { 
-    |current_random_result, iteration|
-    rand(current_random_result)
+  bias_factor.times.reduce(max_number_limit) { |split_random|
+    rand(split_random)
   }.to_i
 end
 {% endhighlight %}

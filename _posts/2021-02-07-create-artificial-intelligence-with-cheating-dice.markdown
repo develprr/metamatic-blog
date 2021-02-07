@@ -106,18 +106,18 @@ measured as a linear distance from maze's exit door, then actually a step
 further away from the exit door may be the right solution when 
 consequent steps are iterated, although it does not appear to be so right away. 
 
-However, the task of going through all steps would be just too enorm for a brute-force search algorithm, but 
+However, the task of going through all steps would be just too enormous for a brute-force search algorithm, but 
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
 also for soccer coach when...
 
 ### Building A Soccer Team
 
 A coach wants to build up a "dream-team" by starting from zero and 
-expanding his team player by player, after adding each player stopping
+expanding his team player by player. After adding each player, he stops
 to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
-Theo plays miserable well when Tim is in the team (maybe because Tim married his ex-girlfriend?) 
+Theo plays miserably when Tim is in the team (maybe because Tim married his ex-girlfriend?) 
 and Jack plays way better with his identical twin Joe and so on. For this reason, to find the best team you would
 might want to occasionally try to add someone to the team that is
 not the best option measured by plain score. There might be hidden
@@ -157,8 +157,8 @@ biased toward zero end of the range.
 Since I like Ruby, I show my implementation in Ruby language:
 
 {% highlight ruby %}
-def onion_random(max_number_limit, cheat_factor)
-  cheat_factor.times.reduce(max_number_limit) { 
+def onion_random(max_number_limit, bias_factor)
+  bias_factor.times.reduce(max_number_limit) { 
     |current_random_result, iteration|
     rand(current_random_result)
   }.to_i
@@ -170,7 +170,7 @@ implementation of biased dice. With this core AI function, my friend, you'll get
 
 This function returns you a random integer number that is always smaller than 
 the **max_number_limit** that you give as a parameter. The other parameter,
-**cheat_factor** is also an integer, telling how many times you randomly
+**bias_factor** is also an integer, telling how many times you randomly
 reduce the max number. The bigger cheat_factor is, the more likely the function is to produce
 outcomes biased toward zero. But no matter how high the cheat_factor is, the
 change will always still exist that the highest possible nubmer, which is max_number_limit - 1.
@@ -189,8 +189,9 @@ Your mouse in his maze will absolutely love this.
 
 ### Better Implementation With Easing Functions
 
-All mathematicians will probably laugh at my clumsy implementation of biased random.
+Now, afer hyping up this super cool onion random algorithm, I must admit that
+I am a bit scared that all mathematicians reading this will totally laugh at it.
 A smoother solution than nesting random function calls would be just taking 
-one random between 0 and 1 and pass it to an (easing function)[https://en.wikipedia.org/wiki/Inbetweening]. 
+one random between 0 and 1 and pass it to an [easing function](https://en.wikipedia.org/wiki/Inbetweening). 
 
 I'll be back to this and even more exciting topics. Cheers!

@@ -119,7 +119,7 @@ to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
 Theo does not play well when Tim is in the team because Tim married his ex-girlfriend
-and Jack plays like a mircle together with his identical twin Joe and so on. 
+and Jack plays like a miracle together with his identical twin Joe and so on. 
 For this reason, to find the best team you would might want to occasionally 
 try to add someone to the team who is not the best option measured by plain score. 
 There might be hidden synergies!

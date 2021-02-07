@@ -103,9 +103,9 @@ brown from the chocolate you just ate.
 But now let's get real and go back to our original problem of helping your Pac-Man mouse navigate
 through the maze... The point here is that if your mouse has a "GPS", 
 which equals a reward function to tell how far he is from the salvation 
-measured as a linear distance from maze's exit door, then actually a step
-further away from the exit door may be the right solution when 
-consequent steps are iterated, although it does not appear to be so right away. 
+measured as a linear distance from maze's exit door. In this setting a step
+further away from the exit door may actually be the right solution when 
+consequent steps are iterated, although it does not appear so right away. 
 
 However, the task of going through all steps would be just too enorm for a brute-force search algorithm, but 
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,

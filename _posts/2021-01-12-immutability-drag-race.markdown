@@ -76,7 +76,7 @@ Here is a JavaScript function that generates an array in an immutable way,
 using the spread operator to actually clone the array under construction
 during every iteration:
 
-```JavaScript
+{% highlight javascript %}
 const createArrayImmutableWay = (arraySize) => {
   let arrayUnderConstruction = [];
   for (i = 0; i < arraySize; i++) {
@@ -90,12 +90,12 @@ const createArrayImmutableWay = (arraySize) => {
   }  
   return arrayUnderConstruction;
 }
-```
+{% endhighlight %}
 
 In comparison, another function that just mutates the array under construction
 with "push" function:
 
-```JavaScript
+{% highlight javascript %}
 const createArrayMutableWay = (arraySize) => {
   const arrayUnderConstruction = [];
   for (i = 0; i < arraySize; i++) {
@@ -106,11 +106,11 @@ const createArrayMutableWay = (arraySize) => {
   }  
   return arrayUnderConstruction;
 }
-```
+{% endhighlight %}
 
 Ready, steady, go!
 
-```JavaScript
+{% highlight javascript %}
 const arraySize = 60000;
 
 let timeStart = new Date();
@@ -127,7 +127,7 @@ const mutableFunctionDuration = timeStop - timeStart;
 
 console.log(`immutable creation took ${immutableFunctionDuration} ms.`);
 console.log(`mutable creation took ${mutableFunctionDuration} ms.`);
-```
+{% endhighlight %}
 
 On my PC, the immutable execution with spread operator took whopping 
 *30 298* milliseconds while the pushy old way took only *22* milliseconds.
@@ -147,36 +147,36 @@ Okay, let's compare immutable and mutable array modification performances then!
 Here we have a typical immutable array modifier function that uses 
 a combination of map function and spread operator:
 
-```JavaScript
+{% highlight javascript %}
 const changeArrayPropertiesImmutableWay = (array) => array.map(entry => ({
     ...entry,
     name: "new name"
 }));
-```
+{% endhighlight %}
 
 Let's then code the competitor, which is a rather "old-fashioned" mutable array modifier:
 
-```JavaScript
+{% highlight javascript %}
 const changeArrayPropertiesMutableWay = (array) => {
     array.forEach(entry => {
       entry["name"] = "some other name";
     })
     return array;
 }
-```
+{% endhighlight %}
 
 We prepare the test by creating a rather big array with one million entries, 
 so we can be sure to find out who is who. I will use now the mutable 
 array generator I just made to generate the test data, because I just don't
 have time to wait until the end of the world to get my test data:
 
-```JavaScript
+{% highlight javascript %}
 const reallyBigArray = createArrayMutableWay(1000000);
-```
+{% endhighlight %}
 
 The race may start... Ready, steady, go!
 
-```JavaScript
+{% highlight javascript %}
 // Running the immutable modifier:
 
 let timeStart = new Date();
@@ -196,7 +196,7 @@ const mutableDuration = timeStop - timeStart;
 // Releasing the results:
 console.log(`immutable array modification took ${immutableDuration}`);
 console.log(`mutable array modification took ${mutableDuration}`);
-```
+{% endhighlight %}
 
 ### The Results
 

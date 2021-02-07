@@ -109,7 +109,7 @@ consequent steps are iterated, although it does not appear to be so right away.
 
 However, the task of going through all steps would be just too enorm for a brute-force search algorithm, but 
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
-also for coach...
+also for any soccer coach...
 
 ### Building A Soccer Team
 

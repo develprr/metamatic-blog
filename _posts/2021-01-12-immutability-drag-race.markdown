@@ -70,6 +70,11 @@ your software!
 
 ## The Immutable Vs Mutable Performance Drag Race
 
+To take my theorizations to the real world, let's code now a little
+bit to get a true picture of the performance trade-off that immutability
+comes with. We'll implement now some iterative functions using both immutable
+and mutable approaches!
+
 ### Creating New Arrays 
 
 Here is a JavaScript function that generates an array in an immutable way,

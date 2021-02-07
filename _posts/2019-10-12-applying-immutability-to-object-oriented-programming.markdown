@@ -34,22 +34,22 @@ First, we decide that a LanguageCourse can have a number of students that will a
 Let's create a student object. For simplicity, we'll define the student as a plain interface object at this point 
 that won't have any instance methods:
 
-```TypeScript
+{% highlight typescript %}
 interface StudentData {
   name: string;
   age: number;
 }
-```
+{% endhighlight %}
 
 Now we define language course's data interface to describe what a language course is: 
 
-```TypeScript
+{% highlight typescript %}
 interface LanguageCourseData {
    name: string;
    description: string;
    attendees: StudentData[];
 }
-```
+{% endhighlight %}
 
 This means that a language course has a name, description and any number of attendees, which are students.
 Now we are ready to go adding one student to a language course in a consistent OOP fashion. 
@@ -59,7 +59,7 @@ Now we are ready to go adding one student to a language course in a consistent O
 If apply  to add one student to the course, 
 we would write a standalone function for that:
 
-```TypeScript
+{% highlight typescript %}
 const addStudentToLanguageCourse = 
     (course: LanguageCourseData, student: StudentData): LanguageCourse => ({
     ...course,
@@ -68,7 +68,7 @@ const addStudentToLanguageCourse =
         student
     ]
 });
-```
+{% endhighlight %}
 
 The function above merges a student object into a language course object whereby the immutability 
 principle is applied - the existing course object isn't changed at all, rather a new language course object
@@ -84,7 +84,7 @@ modify those underlying data objects. By modifying I actually mean creating new 
 the immutability principle. It's just that "modify" is easier to speak out than the latter long phrase to explain
 that "modify" does not mean "mutate" here!
 
-```TypeScript
+{% highlight typescript %}
 class LanguageCourse {
 
     private data: LanguageCourseData;
@@ -105,35 +105,35 @@ class LanguageCourse {
     public getAttendeesCount = (): number => this.data.attendees.length;
     
 }
-```
+{% endhighlight %}
 
 I create now an object oriented language course that hasn't any attendees yet (empty array).
 
-```TypeScript
+{% highlight typescript %}
 const course: LanguageCourse = new LanguageCourse({
     name: "Learn ancient Alderaanian",
     description: "basic phrases",
     attendees: []
 });
-```
+{% endhighlight %}
 
 Now I have a course object. I add the first student:
 
-```TypeScript
+{% highlight typescript %}
 const firstStudent: StudentData = {
   name: "First-born Unicorn",
   age: 3121012
 }
 
 const courseWithStudent: LanguageCourse = course.addStudent(firstStudent);
-```
+{% endhighlight %}
 Let's verify that there's now one student enrolled:
 
-```TypeScript
+{% highlight typescript %}
 const attendeesCount: number = courseWithStudent.getAttendeesCount();
 console.log(atteendesCount);
 // It's going to be 1 :)
-```
+{% endhighlight %}
 
 ## Evaluating The Results
 

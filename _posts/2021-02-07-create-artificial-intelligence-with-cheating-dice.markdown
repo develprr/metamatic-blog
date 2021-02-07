@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Create Your AI With Onion Random"
-date:   2021-02-07 07:44 +0200
+title:  "Create Artificial Intelligence With Cheating Dice"
+date:   2021-02-07 10:22 +0200
 categories: metamatic
 ---
 
@@ -14,12 +14,11 @@ to find his way through the maze?
 
 And it is fantastic! Why? Because the scenario brings us to the very core
 of thinking about what on earth this much-touted thing really is, in its purest
-essence, this thing called *artificial intelligence*.
+essence, this thing called AI (**A**rtificial **I**ntelligence).
 
 ## How You Got Lost In The Maze
 
-Maybe you are one of those sad people who got addicted to all those
-shady online videos. You watched some Youtube tutorials
+Maybe you are one of those sad people who got stuck with all those tutorials
 explaining all sorts of AI concepts, got tricked by them. You gradually degraded 
 even deeper into the rat wheel, down to the point where you found yourself browsing
 Wikipedia articles about established core concepts of AI,
@@ -28,7 +27,7 @@ Markov chains and so much more!
 
 ... And then, you stumbled with equations, got lost in the maze of
 your thoughts, found yourself wondering how all these things can 
-help your Pac-Man mouse find a way out of *his maze*.
+help your Pacman monster find a way out of *his maze*.
 
 Don't be ashamed. Do not be pressed down by sorrow and desperation. 
 I got lost the very same way as you did. But I found the way out; 
@@ -64,12 +63,12 @@ That is physical intelligence.
 
 ### Neural Intelligence
 
-We can compare a plant with ideas or thoughts. If they are healthy, they survive and produce
-offspring. We humans, considering ourselves intelligent beings, don't actually
+We can compare a plant with ideas or thoughs. If it's healthy, it survives and produces
+offspring.We humans, considering ourselves intelligent beings, don't actually
 need to physically do a stupid thing to live out its consequences. We can sit and *think*
 what would happen if "I... ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
 
-Of course there are some exceptions!
+Of course there are some exceptions! 
 
 ### The Dawn Of Computer Intelligence 
 
@@ -89,11 +88,11 @@ Better search algorithms were invented, such as [Q-learing algorithm](https://en
 The core idea is that instead of totally evaluating all possible combinations,
 each evaluation of the path *usually* chooses the best next step,
 but not always! It *explores*. That means, it occasionally chooses
-a next step that isn't the obviously best one. This is because in a computer maze,
+a next step that isn't the obviously the best one. This is because in a computer maze,
 just as in the life in general, the obviously most rewarding next step
 often isn't the best path in the long term!
 
-If you get hungry and just grab a chocolate bar from the grocery and *then run*, 
+If you get hungry and just grab chocolate bar from the grocery and *then run*, 
 you'll be doing fine for five to twenty minutes, but not so much anymore when the police car
 stops in front of you when you sit in the park with your hands and face smeared
 brown from the chocolate you just ate.
@@ -103,58 +102,82 @@ brown from the chocolate you just ate.
 But now let's get real and go back to our original problem of helping your Pac-Man mouse navigate
 through the maze... The point here is that if your mouse has a "GPS", 
 which equals a reward function to tell how far he is from the salvation 
-measured as a linear distance from maze's exit door. In this setting a step
-further away from the exit door may actually be the right solution when 
-consequent steps are iterated, although it does not appear so right away. 
+measured as a linear distance from maze's exit door, then actually a step
+further away from the exit door may be the right solution when 
+consequent steps are iterated, although it does not appear to be so right away. 
 
 However, the task of going through all steps would be just too enorm for a brute-force search algorithm, but 
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
-also for any soccer coach...
+also for coach...
 
-### Building A Soccer Team
+## Building A Soccer Team
 
-A coach wants to build up a "dream-team" by starting from zero and 
+A Coach wants to build up a "dream-team" by starting from zero and 
 expanding his team player by player, after adding each player stopping
 to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
-Theo does not play well when Tim is in the team because Tim married his ex-girlfriend
-and Jack plays like a miracle together with his identical twin Joe and so on. 
-For this reason, to find the best team you would might want to occasionally 
-try to add someone to the team who is not the best option measured by plain score. 
-There might be hidden synergies!
+Theo does not play well when Tim is in the team and Jack plays better
+with his twin Joe and so on. For this reason, to find the best team you would
+might want to occasionally try to add someone to the team that is
+not the best option measured by plain score. There might be hidden
+synergies!
 
-## Onion Random To The Rescue
+## Cheating Dice To The Rescue
 
 At this point I want to introduce you to a super simple
-algorithm that I call **onion random** - I really don't know 
-if there is a better name for it, but I came up with this name because it somehow
-both sounds cool and actually describes it quite accurately. 
+algorithm that I call **cheating dice** - I wanted to call it first **random onion**
+but after letting my wife proof read this, I realized I could better explain 
+it with a comparison to "cheating dice". The cheating dice are special dice fiddled 
+to produce biased outcomes.
 
-Anyway, I find it really handy yet easy-to-grasp thing to serve as a core component of an AI solution,
-which is about mostly selecting the nearly best option
+With cheating dice, you might actually most likely get - but not always - number six, 
+and less likely number 5, and most unlikely number 1. Other configurations are possible
+when fiddled differently, for example having the results biased toward 1. 
+
+It's great for winning in board games, but it's  also *a fundamental principle for any intelligent behavior:*
+
+Whatever you do, you'll be most likely to get the best *known* results by routinely choosing the best steps
+you know from your experience and education to be the best ones... 
+
+But sometimes you have to try something else to find even better ways. That applies to everything, beginning from choosing
+the spice and ingredients for your soup to a mouse finding a path out of the maze, 
+to everything that exists under the Sun - and maybe even beyond!
+
+Anyway, I find this following algorithm handy yet easy-to-grasp thing 
+to serve as a core component of an AI solution, which is about mostly selecting the nearly best option
 but occasionally trying out a sub-optimal solution.
 
-Since I am currently in love with Ruby, I show my implementation in Ruby language:
+Since I am currently in love with Ruby (not cheating TypeScript though), 
+I show my implementation in Ruby language:
 
 {% highlight ruby %}
-def onion_random(max_random_integer, amount_of_onion_layers)
-  amount_of_onion_layers.times.reduce(max_random_integer) { 
-    |reduced_random_integer, iteration|
-    rand(reduced_random_integer)
+def throw_cheating_dice(max_number_limit, cheat_factor)
+  cheat_factor.times.reduce(max_number_limit) { |current_random_result, iteration|
+    rand(current_random_result)
   }.to_i
 end
 {% endhighlight %}
 
-With this core AI function, my friend, you'll get far in your life!
+What we get here is a fundamental function for artificial intelligence. It's a programmatic 
+implementation of biased dice. With this core AI function, my friend, you'll get far in your life!
 
 This function returns you a random integer number that is always smaller than 
-the **max_random_integer** that you give as a parameter. The other parameter,
-**amount_of_onion_layers** is also an integer, telling how many times you randomly
-reduce the max number. The result of the function is a random number that is more
-often close to zero but can be also near the max value you gave, but 
-rather rarely. You'll get quite sexy distribution curves with this one. The bigger value
-you give as **amount_of_onion_layers**, the steeper the curve will be toward zero.
+the **max_number_limit** that you give as a parameter. The other parameter,
+**cheat_factor** is also an integer, telling how many times you randomly
+reduce the max number. The bigger cheat_factor is, the more likely the function is to produce
+outcomes biased toward zero. But no matter how high the cheat_factor is, the
+change will always still exist that the highest possible nubmer, which is max_number_limit - 1.
+
+for example:
+{% highlight ruby %}
+result = throw_cheating_dice(100, 4)
+{% endhighlight %}
+
+You will get an outcome that is quite often zero or close to zero, but you may still
+occasionally get even 99.
+
+Needless to say, you are getting quite sexy distribution curves with cheating dice. 
 
 Your mouse in his maze will absolutely love this. 
 

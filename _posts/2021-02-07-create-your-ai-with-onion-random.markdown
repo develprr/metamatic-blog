@@ -113,7 +113,7 @@ also for any soccer coach...
 
 ### Building A Soccer Team
 
-A Coach wants to build up a "dream-team" by starting from zero and 
+A coach wants to build up a "dream-team" by starting from zero and 
 expanding his team player by player, after adding each player stopping
 to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores

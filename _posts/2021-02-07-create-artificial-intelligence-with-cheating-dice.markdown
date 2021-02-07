@@ -160,7 +160,7 @@ Since I like Ruby, I show my implementation in Ruby language:
 def onion_random(max_number_limit, bias_factor)
   bias_factor.times.reduce(max_number_limit) { |split_random|
     rand(split_random)
-  }.to_i
+  }
 end
 {% endhighlight %}
 
@@ -191,6 +191,6 @@ Your mouse in his maze will absolutely love this.
 Now, afer hyping up this super cool onion random algorithm, I must admit that
 I am a bit scared that all mathematicians reading this will totally laugh at it.
 A smoother solution than nesting random function calls would be just taking 
-one random between 0 and 1 and pass it to an [easing function](https://en.wikipedia.org/wiki/Inbetweening). 
+one random between 0 and 1 and pass it to a basic [mathematical function](https://en.wikipedia.org/wiki/Function_of_a_real_variable). 
 
 I'll be back to this and even more exciting topics. Cheers!

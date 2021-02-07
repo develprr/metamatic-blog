@@ -1,30 +1,27 @@
 ---
 layout: post
-title:  "Object Oriented Coding Is Improved Functional Coding"
+title:  "Applying Immutability To Object Oriented Programming"
 date:   2019-10-12 17:53:12 +0300
 categories: metamatic
 ---
 
-## The Failure of Functional Programming
+## About Programming Paradigms
 
-In recent years there has been a flood of publications and posts that promote the so called "functional programming"
-paradigm. These advocates try to convince its virtues at the expense of the object oriented paradigm.
+In recent years there has been a flood of publications about functional programming
+paradigm. It can be seen as a challenger to more traditional "imperative programming" approach. It appears also that
+sometimes "object oriented programming" is seen as the awkward cousin 
+of the entirely evil "imperative programming". You can't have one without the other in your party! 
 
-In reality, anybody who claims that "the functional programming paradigm" is superior to the object oriented approach,
-has most likely been misinformed in programming matters.
+Well, the case may actually not be that simple! It appears that there is often some confusion 
+that "immutability principle" is a specific feature of the FP alone.
+In the following I'll play around with objects and try to mix some immutability into object oriented programming approach.
 
-## OOP Is FP On Steroids
-
-Most publications that criticize the object oriented programmiog (OOP) paradigm make the mistake that they confuse some
-very basic principles. Most notably, advocates of functional programming (FP) commonly base their claims on assumption
-that the "immutability principle" is a specific feature of the FP alone which - in their view - cannot be applied in OOP at all.
-
-In the following I'll show this isn't true at all. In deed it's possible to apply the immutability principle in OOP with ease.
+Let's see if it wortks!
 
 ## Applying Immutability Principle In OOP
 
-In the example coming soon I'll use TypeScript programming language to highlight a powerful, yet very easy design
-pattern to apply the immutability principle in OOP.
+In the example coming soon I'll use TypeScript programming language to highlight a design
+pattern that embeds some immutability into OOP.
 
 Let's implement an object oriented **LanguageCourse** object that allows to add language courses. The
 *LanguageCourse* object must also be able to merge with other *LanguageCourse* objects.
@@ -56,11 +53,10 @@ interface LanguageCourseData {
 
 This means that a language course has a name, description and any number of attendees, which are students.
 Now we are ready to go adding one student to a language course in a consistent OOP fashion. 
-But not so fast! Let's remind ourselves first how it would be done in the FP scheme... 
 
-## The Functional Way
+## The Immutable Way
 
-If we were to use the highly touted "functional" design pattern to add one student to the course, 
+If apply  to add one student to the course, 
 we would write a standalone function for that:
 
 ```TypeScript
@@ -74,24 +70,10 @@ const addStudentToLanguageCourse =
 });
 ```
 
-The "functional" function above merges a student object into a language course object whereby the immutability 
+The function above merges a student object into a language course object whereby the immutability 
 principle is applied - the existing course object isn't changed at all, rather a new language course object
-is created altogether by taking advantage of TypeScript's (and yes, JavasSript's as well) fantastic spread operator.
+is created altogether by taking advantage of spread operator.
 The resulting course object is like its predecessor except its attendees array will now contain the given student object.
-
-Now, the common mistake is to think that the immutability principle is a feature of functional programming.
-This assumption is simply false. The immutability is by no means private property of FP. You can have it in OOP as well.
- 
-I'll show in the next example that it's in deed possible to incorporate the immutability principle with the good old OOP way.
-As a result we'll get code that is way more consistent than that "functional" approach which violently 
-haul functions out of their natural homes - namely, classes - and make them stand separately, brutally torn out
-of their contexts. Such cruelty inevitably leads to ugly long function names, such as **addStudentToLanguageCourse** instead
-of their neat OOP counterparts like **addStudent**. Moreover, functions grow parameter-hungry since they always need
-their subject to be passed as an argument instead of having them cosily available in their context, namely, the object instances
-that host them.
-
-This sort of "functional programming" may be sufficient for academic projects but it should not be applied in real
-business!
 
 ## The OOP Style Immutable Objects
 
@@ -101,10 +83,6 @@ OOP layer on top of the data. The OOP layer can be understood as a wrapper that 
 modify those underlying data objects. By modifying I actually mean creating new versions of the existing ones following
 the immutability principle. It's just that "modify" is easier to speak out than the latter long phrase to explain
 that "modify" does not mean "mutate" here!
-
-Now let's say goodbye to the medieval heresies of FP and brace for the second coming of the mighty OOP.
-
-It's time to add the OOP layer!
 
 ```TypeScript
 class LanguageCourse {
@@ -128,8 +106,6 @@ class LanguageCourse {
     
 }
 ```
-
-Don't you see, we are now safely back in the OOP land and still applying the immutability principle?
 
 I create now an object oriented language course that hasn't any attendees yet (empty array).
 
@@ -159,4 +135,18 @@ console.log(atteendesCount);
 // It's going to be 1 :)
 ```
 
-OOP is back! :)
+## Evaluating The Results
+
+These code samples prove that in deed it is possible to create object oriented
+code that applies immutability principle to object-bound instance methods. Therefore,
+it can hardly be claimed that mutability as is any argumant to avoid object 
+oriented programming. There is nothing to prevent you from placing
+mutable functions into object instances.
+
+Despite the fact that this technically works, it may not often 
+be the most intuitive approach to take on. In practice,
+Therefore I would be hesitant to largely take this kind of approach in a project, though.
+
+How about using classes as mere namespaces for functions? 
+I'll be soon back to the gloomy twighlight zone of playing around
+with exciting approaches that blend the deep waters of different programming approaches!

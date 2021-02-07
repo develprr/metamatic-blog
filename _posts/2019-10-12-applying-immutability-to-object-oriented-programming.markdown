@@ -16,7 +16,7 @@ Well, the case may actually not be that simple! It appears that there is often s
 that "immutability principle" is a specific feature of the FP alone.
 In the following I'll play around with objects and try to mix some immutability into object oriented programming approach.
 
-Let's see if it wortks!
+Let's see if it works!
 
 ## Applying Immutability Principle In OOP
 
@@ -103,7 +103,6 @@ class LanguageCourse {
     })
     
     public getAttendeesCount = (): number => this.data.attendees.length;
-    
 }
 {% endhighlight %}
 
@@ -139,7 +138,7 @@ console.log(atteendesCount);
 
 These code samples prove that in deed it is possible to create object oriented
 code that applies immutability principle to object-bound instance methods. Therefore,
-it can hardly be claimed that mutability as is any argumant to avoid object 
+it can hardly be claimed that mutability as is any argument to avoid object 
 oriented programming. There is nothing to prevent you from placing
 mutable functions into object instances.
 

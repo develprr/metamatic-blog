@@ -55,7 +55,7 @@ The animals, they *explore*.
 
 Now, there are many levels of exploration. The most primitive level is to
 really physically do things, both genial and crazy, common in the nature. 
-If a plant seed *randomly* ends up on a road by the quirk of a whirlwind, 
+If a plant seed *randomly* ends up on a road by the gust of whirlwind, 
 it dies and doesn't reproduce. But if it lands in the fertile soil, 
 however, its offspring will be numerous. 
 
@@ -63,7 +63,7 @@ That is physical intelligence.
 
 ### Neural Intelligence
 
-We can compare a plant with ideas or thoughs. If an idea is healthy, it survives and produces
+We can compare a plant with ideas or thoughts. If an idea is healthy, it survives and produces
 offspring - some fruitful action and even better ideas. We humans, considering ourselves intelligent beings, don't actually
 need to physically do a stupid thing to understand its consequences. We can sit down and *think*
 whether it would be wise if  "I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
@@ -106,17 +106,17 @@ consequent steps are iterated, although it does not appear to be so right away.
 
 However, the task of going through all steps would be just too enormous for a brute-force search algorithm, but 
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
-also for soccer coach when...
+also for a soccer coach when...
 
 ### Building a Soccer Team
 
-A coach wants to build up a "dream-team" by starting from zero and 
+A coach wants to build up a "dream team" by starting from zero and 
 expanding his team player by player. After adding each player, he stops
 to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
 Theo plays miserably when Tim is in the team (maybe because Tim married his ex-girlfriend?) 
-and Jack plays way better with his identical twin Joe and so on. For this reason, to find the best team you would
+and Jack plays way better with his identical twin Joe on board and so on. For this reason, to find the best team you would
 might want to occasionally try to add someone to the team that is
 not the best option measured by plain score. There might be hidden
 synergies!
@@ -124,8 +124,8 @@ synergies!
 ## Biased Dice to the Rescue
 
 At this point I want to introduce you to a super simple
-algorithm that I call **biased dice** - The biased dice are special dice fiddled 
-to produce biased outcomes.
+algorithm that I call now **biased dice**. The biased dice are special dice that have been manipulated
+by setting internal weights and maybe fiddled a little bit at corners to produce biased outcomes.
 
 With biased dice, you might actually most likely get - but not always - number six, 
 and less likely number 5, and most unlikely number 1. Other configurations are possible
@@ -169,7 +169,7 @@ This function returns you a random integer number that is always smaller than
 the **max_number_limit** that you give as a parameter. The other parameter,
 **bias_factor** is also an integer, telling how many times you randomly
 reduce the max number. The bigger cheat_factor is, the more likely the function is to produce
-outcomes biased toward zero. But no matter how high the cheat_factor is, the
+outcomes biased toward zero. But no matter how high the bias factor is, the
 change will always still exist that the highest possible nubmer, which is max_number_limit - 1.
 
 for example:
@@ -184,11 +184,9 @@ Needless to say, you are getting quite sexy distribution curves with cheating di
 
 Your mouse in his maze will absolutely love this. 
 
-### Better Implementation With Easing Functions
+### Better Implementation With Exponential Function
 
-Now, afer hyping up this super cool onion random algorithm, I must admit that
-I am a bit scared that all mathematicians reading this will totally laugh at it.
 A smoother solution than nesting random function calls would be just taking 
-one random between 0 and 1 and pass it to a basic [mathematical function](https://en.wikipedia.org/wiki/Function_of_a_real_variable). 
+one random between 0 and 1 and pass it to a [mathematical power function](https://en.wikipedia.org/wiki/Exponentiation). 
 
 I'll be back to this and even more exciting topics. Cheers!

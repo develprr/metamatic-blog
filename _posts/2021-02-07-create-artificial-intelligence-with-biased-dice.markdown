@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create Artificial Intelligence With Cheating Dice"
+title:  "Create Artificial Intelligence With Biased Dice"
 date:   2021-02-07 10:22 +0200
 categories: metamatic
 ---
@@ -63,12 +63,12 @@ That is physical intelligence.
 
 ### Neural Intelligence
 
-We can compare a plant with ideas or thoughs. If an idea is  healthy, it survives and produces
+We can compare a plant with ideas or thoughs. If an idea is healthy, it survives and produces
 offspring - some fruitful action and even better ideas. We humans, considering ourselves intelligent beings, don't actually
-need to physically do a stupid thing to live out its consequences. We can sit and *think*
-what would happen if "I... ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
+need to physically do a stupid thing to understand its consequences. We can sit and *think*
+would it be wise if  "I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
 
-Of course there are some exceptions! 
+Of course there are some exceptions!
 
 ### The Dawn Of Computer Intelligence 
 
@@ -123,17 +123,17 @@ might want to occasionally try to add someone to the team that is
 not the best option measured by plain score. There might be hidden
 synergies!
 
-## Cheating Dice To The Rescue
+## Biased Dice To The Rescue
 
 At this point I want to introduce you to a super simple
-algorithm that I call **cheating dice** - The cheating dice are special dice fiddled 
+algorithm that I call **biased dice** - The biaseddice are special dice fiddled 
 to produce biased outcomes.
 
-With cheating dice, you might actually most likely get - but not always - number six, 
+With biased dice, you might actually most likely get - but not always - number six, 
 and less likely number 5, and most unlikely number 1. Other configurations are possible
 when fiddled differently, for example having the results biased toward 1. 
 
-It's great for winning in board games, but it's  also *a fundamental principle for any intelligent behavior:*
+It's great for cheating in board games, but it's  also *a fundamental principle for any intelligent behavior:*
 
 Whatever you do, you'll be most likely to get the best *known* results by routinely choosing the best steps
 you know from your experience and education to be the best ones... 
@@ -146,9 +146,9 @@ Anyway, I find this following algorithm handy yet easy-to-grasp thing
 to serve as a core component of an AI solution, which is about mostly selecting the nearly best option
 but occasionally trying out a sub-optimal solution.
 
-### Applying Onion Random to Mimic Cheating Dice
+### Applying Onion Random to Mimic Biased Dice
 
-Let's implement something now that allows us to create the "cheating dice" effect.
+Let's implement something now that allows us to create the "biased dice" effect.
 I will call the following implementation "onion random" algorithm,
 because it justs creates a random number within given range, and then randomly splits
 the number into smaller numbers. Finally we get an outcome that is a random number

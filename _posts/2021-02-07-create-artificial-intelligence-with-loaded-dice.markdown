@@ -127,7 +127,7 @@ At this point I want to introduce you to a super simple
 algorithm that I call now **the loaded dice**. The loaded dice are special dice that have been manipulated
 by setting internal weights and maybe fiddled a little bit at corners to produce biased outcomes.
 
-With loaded dice, you might actually most likely get - but not always - number six, 
+With loaded dice, you most likely get - but not always - number six, 
 and less likely number 5, and most unlikely number 1. Other configurations are possible
 when fiddled differently, for example having the results biased toward 1. 
 
@@ -149,8 +149,8 @@ but occasionally trying out a sub-optimal solution.
 Let's implement something now that allows us to create the "loaded dice" effect.
 I will call the following implementation "onion random" algorithm,
 because it just creates a random number within given range between 0 and **initial_max_limit**, and then randomly limits
-the number again and again. Finally we get an outcome that is a random number
-that is more likely to be closer zero than the other end of the range.
+the number again and again. Finally we get an outcome that is a random number 
+more likely to be closer zero than the other end of the range.
 
 Since I like Ruby, I show my implementation in Ruby language:
 
@@ -158,7 +158,7 @@ Since I like Ruby, I show my implementation in Ruby language:
 def onion_random(initial_max_limit, bias_factor)
   bias_factor.times.reduce(initial_max_limit) { |new_max_limit|
     rand(new_max_limit)
-  }
+  }.to_i
 end
 {% endhighlight %}
 
@@ -168,7 +168,7 @@ implementation of biased dice. With this core AI function, my friend, you'll get
 This function returns you a random integer number that is always smaller than 
 the **initial_max_limit** that you give as a parameter. The other parameter,
 **bias_factor** is also an integer, telling how many times you randomly
-reduce the max number. The bigger cheat_factor is, the more likely the function is to produce
+reduce the max number. The bigger bias_factor is, the more likely the function is to produce
 outcomes biased toward zero. But no matter how high the bias factor is, the
 chance will always exist that you still get the highest possible number, which is initial_max_limit - 1.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create Artificial Intelligence With Biased Dice"
+title:  "Create Artificial Intelligence with Biased Dice"
 date:   2021-02-07 10:22 +0200
 categories: metamatic
 ---
@@ -16,7 +16,7 @@ And it is fantastic! Why? Because the scenario brings us to the very core
 of thinking about what on earth this much-touted thing really is, in its purest
 essence, this thing called AI (**A**rtificial **I**ntelligence).
 
-## How You Got Lost In The Maze
+## How You Got Lost in the Maze
 
 Maybe you are one of those sad people who got stuck with all those tutorials
 explaining all sorts of AI concepts, got tricked by them. You gradually degraded 
@@ -34,7 +34,7 @@ I got lost the very same way as you did. But I found the way out;
 there is light at the end of the tunnel. There is a path
 for your Pac-Man mouse to find his way out of the maze!
 
-## The Core Essence Of Intelligence 
+## The Core Essence of Intelligence
 
 At the end of the day, isn't all intelligence made out of the same matter? It's
 about the will to find a better way to achieve something valuable, 
@@ -65,12 +65,10 @@ That is physical intelligence.
 
 We can compare a plant with ideas or thoughs. If an idea is healthy, it survives and produces
 offspring - some fruitful action and even better ideas. We humans, considering ourselves intelligent beings, don't actually
-need to physically do a stupid thing to understand its consequences. We can sit and *think*
-would it be wise if  "I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
+need to physically do a stupid thing to understand its consequences. We can sit down and *think*
+whether it would be wise if  "I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
 
-Of course there are some exceptions!
-
-### The Dawn Of Computer Intelligence 
+### The Dawn of Computer Intelligence
 
 Similarly to humans, computers can evaluate "ideas" and pick the best
 ones. Back in 1997, world chess champion [Garry Gasparov was beaten by IBM
@@ -97,7 +95,7 @@ you'll be doing fine for five to twenty minutes, but not so much anymore when th
 stops in front of you when you sit in the park with your hands and face smeared
 brown from the chocolate you just ate.
 
-## Back To The Maze
+## Back to the Maze
 
 But now let's get real and go back to our original problem of helping your Pac-Man mouse navigate
 through the maze... The point here is that if your mouse has a "GPS", 
@@ -110,7 +108,7 @@ However, the task of going through all steps would be just too enormous for a br
 very doable for a *Q-learning like* approach. And not only for the mouse in the maze,
 also for soccer coach when...
 
-### Building A Soccer Team
+### Building a Soccer Team
 
 A coach wants to build up a "dream-team" by starting from zero and 
 expanding his team player by player. After adding each player, he stops
@@ -123,17 +121,17 @@ might want to occasionally try to add someone to the team that is
 not the best option measured by plain score. There might be hidden
 synergies!
 
-## Biased Dice To The Rescue
+## Biased Dice to the Rescue
 
 At this point I want to introduce you to a super simple
-algorithm that I call **biased dice** - The biaseddice are special dice fiddled 
+algorithm that I call **biased dice** - The biased dice are special dice fiddled 
 to produce biased outcomes.
 
 With biased dice, you might actually most likely get - but not always - number six, 
 and less likely number 5, and most unlikely number 1. Other configurations are possible
 when fiddled differently, for example having the results biased toward 1. 
 
-It's great for cheating in board games, but it's  also *a fundamental principle for any intelligent behavior:*
+It's great for cheating in board games, but it's also *a fundamental principle for any intelligent behavior:*
 
 Whatever you do, you'll be most likely to get the best *known* results by routinely choosing the best steps
 you know from your experience and education to be the best ones... 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create Artificial Intelligence with Biased Dice"
+title:  "Create Artificial Intelligence with Loaded Dice"
 date:   2021-02-07 10:22 +0200
 categories: metamatic
 ---
@@ -121,13 +121,13 @@ might want to occasionally try to add someone to the team that is
 not the best option measured by plain score. There might be hidden
 synergies!
 
-## Biased Dice to the Rescue
+## Loaded Dice to the Rescue
 
 At this point I want to introduce you to a super simple
-algorithm that I call now **biased dice**. The biased dice are special dice that have been manipulated
+algorithm that I call now **the loaded dice**. The loaded dice are special dice that have been manipulated
 by setting internal weights and maybe fiddled a little bit at corners to produce biased outcomes.
 
-With biased dice, you might actually most likely get - but not always - number six, 
+With loaded dice, you might actually most likely get - but not always - number six, 
 and less likely number 5, and most unlikely number 1. Other configurations are possible
 when fiddled differently, for example having the results biased toward 1. 
 
@@ -144,20 +144,20 @@ Anyway, I find this following algorithm handy yet easy-to-grasp thing
 to serve as a core component of an AI solution, which is about mostly selecting the nearly best option
 but occasionally trying out a sub-optimal solution.
 
-### Applying Onion Random to Mimic Biased Dice
+### Applying Onion Random to Mimic Loaded Dice
 
-Let's implement something now that allows us to create the "biased dice" effect.
+Let's implement something now that allows us to create the "loaded dice" effect.
 I will call the following implementation "onion random" algorithm,
-because it justs creates a random number within given range, and then randomly splits
-the number into smaller numbers. Finally we get an outcome that is a random number
-biased toward zero end of the range.
+because it just creates a random number within given range between 0 and **initial_max_limit**, and then randomly limits
+the number again and again. Finally we get an outcome that is a random number
+that is more likely to be closer zero than the other end of the range.
 
 Since I like Ruby, I show my implementation in Ruby language:
 
 {% highlight ruby %}
-def onion_random(max_number_limit, bias_factor)
-  bias_factor.times.reduce(max_number_limit) { |split_random|
-    rand(split_random)
+def onion_random(initial_max_limit, bias_factor)
+  bias_factor.times.reduce(initial_max_limit) { |new_max_limit|
+    rand(new_max_limit)
   }
 end
 {% endhighlight %}
@@ -166,11 +166,11 @@ What we get here is a fundamental function for artificial intelligence. It's a p
 implementation of biased dice. With this core AI function, my friend, you'll get far in your life!
 
 This function returns you a random integer number that is always smaller than 
-the **max_number_limit** that you give as a parameter. The other parameter,
+the **initial_max_limit** that you give as a parameter. The other parameter,
 **bias_factor** is also an integer, telling how many times you randomly
 reduce the max number. The bigger cheat_factor is, the more likely the function is to produce
 outcomes biased toward zero. But no matter how high the bias factor is, the
-chance will always exist that you still get the highest possible number, which is max_number_limit - 1.
+chance will always exist that you still get the highest possible number, which is initial_max_limit - 1.
 
 for example:
 {% highlight ruby %}
@@ -180,13 +180,13 @@ result = onion_random(100, 4)
 You will get an outcome that is quite often zero or close to zero, but you may still
 occasionally get even 99.
 
-Needless to say, you are getting quite sexy distribution curves with cheating dice. 
+Needless to say, you will be getting quite sexy distribution curves with this function. 
 
 Your mouse in his maze will absolutely love this. 
 
 ### Better Implementation With Exponential Function
 
-A smoother solution than nesting random function calls would be just taking 
-one random between 0 and 1 and pass it to a [mathematical power function](https://en.wikipedia.org/wiki/Exponentiation). 
+To tune up the implementation even more, a smoother solution than nesting random function calls 
+would be just taking one random number and pass it to a [mathematical power function](https://en.wikipedia.org/wiki/Exponentiation). 
 
 I'll be back to this and even more exciting topics. Cheers!

@@ -170,7 +170,7 @@ the **max_number_limit** that you give as a parameter. The other parameter,
 **bias_factor** is also an integer, telling how many times you randomly
 reduce the max number. The bigger cheat_factor is, the more likely the function is to produce
 outcomes biased toward zero. But no matter how high the bias factor is, the
-change will always still exist that the highest possible nubmer, which is max_number_limit - 1.
+chance will always exist that you still get the highest possible number, which is max_number_limit - 1.
 
 for example:
 {% highlight ruby %}

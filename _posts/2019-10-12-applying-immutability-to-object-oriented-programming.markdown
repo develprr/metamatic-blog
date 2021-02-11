@@ -18,7 +18,7 @@ In the following I'll play around with objects and try to mix some immutability 
 
 Let's see if it works!
 
-## Applying Immutability Principle In OOP
+## Applying Immutability Principle in OOP
 
 In the example coming soon I'll use TypeScript programming language to highlight a design
 pattern that embeds some immutability into OOP.
@@ -134,18 +134,18 @@ console.log(atteendesCount);
 // It's going to be 1 :)
 {% endhighlight %}
 
-## Evaluating The Results
+## Evaluating the Results
 
 These code samples prove that in deed it is possible to create object oriented
 code that applies immutability principle to object-bound instance methods. Therefore,
 it can hardly be claimed that mutability as is any argument to avoid object 
 oriented programming. There is nothing to prevent you from placing
-mutable functions into object instances.
+immutable functions into object instances.
 
 Despite the fact that this technically works, it may not often 
 be the most intuitive approach to take on. In practice,
 Therefore I would be hesitant to largely take this kind of approach in a project, though.
 
 How about using classes as mere namespaces for functions? 
-I'll be soon back to the gloomy twighlight zone of playing around
+I'll be soon back in the twighlight zone of playing around
 with exciting approaches that blend the deep waters of different programming approaches!

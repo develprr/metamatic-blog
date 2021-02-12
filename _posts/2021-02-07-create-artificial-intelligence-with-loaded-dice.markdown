@@ -41,7 +41,7 @@ about the will to find a better way to achieve something valuable,
 and it's about the curiosity to try alternative paths to find a 
 better way. All animals are inherently smart. They exercise this same behavior. 
 They mostly repeat the same pattern of doing these things they need to do,
-to survice and reproduce. 
+to survive and reproduce. 
 
 But they are unpredictable. They do unexpected things.
 Sometimes their foolish play causes them trouble, but sometimes 
@@ -51,24 +51,31 @@ behavior.
 
 The animals, they *explore*. 
 
-### Physical Intelligence
+### Existential Intelligence
 
 Now, there are many levels of exploration. The most primitive level is to
-really physically do things, both genial and crazy, common in the nature. 
-If a plant seed *randomly* ends up on a road by the gust of whirlwind, 
+establish insight only through *existing*. The existence can be "cursed"
+or "blessed", depending on where, when and how you exist. 
+If a sunflower seed ends up on a road by the gust of whirlwind, 
 it dies and doesn't reproduce. But if it lands in the fertile soil, 
 however, its offspring will be numerous. 
 
-That is physical intelligence.
+In a way we can say that the existential intelligence algorithm has solved 
+the question of fertile soil. From the results we can see that
+the highway is infertile, nothing grows on it. But look at the
+bloomy sunflower field beside the highway. The soil is fertile. 
 
 ### Neural Intelligence
 
-We can compare a plant with ideas or thoughts. If an idea is healthy, it survives and produces
-offspring - some fruitful action and even better ideas. We humans, considering ourselves intelligent beings, don't actually
-need to physically do a stupid thing to understand its consequences. We can sit down and *think*
-whether it would be wise if  "I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
+We can compare plants with ideas or thoughts. If an idea is healthy and
+pops up at the right time in the right place, it survives and produces
+offspring - some fruitful action and even better ideas. 
+But we humans, considering ourselves intelligent beings, don't actually
+need to physically do a stupid thing to understand its consequences. 
+We can sit down and *think* whether it would be wise if 
+"I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
 
-### The Dawn of Computer Intelligence
+### Computer Intelligence
 
 Similarly to humans, computers can evaluate "ideas" and pick the best
 ones. Back in 1997, world chess champion [Garry Gasparov was beaten by IBM
@@ -117,7 +124,7 @@ selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
 Theo plays miserably when Tim is in the team (maybe because Tim married his ex-girlfriend?) 
 and Jack plays way better with his identical twin Joe on board and so on. For this reason, to find the best team you would
-might want to occasionally try to add someone to the team that is
+might want to occasionally try to add someone to the team who is
 not the best option measured by plain score. There might be hidden
 synergies!
 

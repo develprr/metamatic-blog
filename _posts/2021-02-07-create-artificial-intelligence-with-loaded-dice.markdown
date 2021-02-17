@@ -23,16 +23,15 @@ explaining all sorts of AI concepts, got tricked by them. You gradually degraded
 even deeper into the rat wheel, down to the point where you found yourself browsing
 Wikipedia articles about established core concepts of AI,
 such as deep neural networks, Q-learning and reinforcement learning,
-Markov chains and so much more!
+[Markov chains](https://en.wikipedia.org/wiki/Markov_chain) and so much more!
 
 ... And then, you stumbled with equations, got lost in the maze of
 your thoughts, found yourself wondering how all these things can 
-help your Pac-Man mouse find a way out of *his maze*.
+help *your* Pac-Man find a way out of *his* maze.
 
-Don't be ashamed. Do not be pressed down by sorrow and desperation. 
-I got lost the very same way as you did. But I found the way out; 
-there is light at the end of the tunnel. There is a path
-for your Pac-Man mouse to find his way out of the maze!
+Do not be pressed down by sorrow and desperation!
+Maybe there is light at the end of the tunnel. 
+Let us set out together for an expedition trip into the maze of artificial intelligence!
 
 ## The Core Essence of Intelligence
 
@@ -70,7 +69,7 @@ bloomy sunflower field beside the highway. The soil is fertile.
 We can compare plants with ideas or thoughts. If an idea is healthy and
 pops up at the right time in the right place, it survives and produces
 offspring - some fruitful action and even better ideas. 
-But we humans, considering ourselves intelligent beings, don't actually
+Therefore we humans, considering ourselves intelligent beings, don't actually
 need to physically do a stupid thing to understand its consequences. 
 We can sit down and *think* whether it would be wise if 
 "I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
@@ -89,11 +88,11 @@ were to be invented.
 
 ### Sparing Search Algorithms
 
-Better search algorithms were invented, such as [Q-learing algorithm](https://en.wikipedia.org/wiki/Q-learning).
+Better search algorithms were invented, such as [Q-learning algorithm](https://en.wikipedia.org/wiki/Q-learning).
 The core idea is that instead of totally evaluating all possible combinations,
 each evaluation of the path *usually* chooses the best next step,
 but not always! It *explores*. That means, it occasionally chooses
-a next step that isn't the obviously the best one. This is because in a computer maze,
+a next step that isn't the obviously best one. This is because in a computer maze,
 just as in the life in general, the obviously most rewarding next step
 often isn't the best path in the long term!
 
@@ -123,7 +122,8 @@ to think who would be the best addition for the currently existing
 selection of players. Mathematically, adding those who have the best scores
 would create the dream team that always wins. But in reality,
 Theo plays miserably when Tim is in the team (maybe because Tim married his ex-girlfriend?) 
-and Jack plays way better with his identical twin Joe on board and so on. For this reason, to find the best team you would
+and Jack plays way better with his identical twin Joe on board and so on. 
+For this reason, to find the best team you would
 might want to occasionally try to add someone to the team who is
 not the best option measured by plain score. There might be hidden
 synergies!

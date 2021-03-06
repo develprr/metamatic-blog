@@ -53,13 +53,13 @@ The animals, they *explore*.
 ### Existential Intelligence
 
 Now, there are many levels of exploration. The most primitive level is to
-establish insight only through *existing*. The existence can be "cursed"
-or "blessed", depending on where, when and how you exist. 
+establish insight only through *existing*. The existence can be *cursed*
+or *blessed*, depending on where, when and how you exist. 
 If a sunflower seed ends up on a road by the gust of whirlwind, 
 it dies and doesn't reproduce. But if it lands in the fertile soil, 
 however, its offspring will be numerous. 
 
-In a way we can say that the existential intelligence algorithm has solved 
+In a way we can say that the existential intelligence has solved 
 the question of fertile soil. From the results we can see that
 the highway is infertile, nothing grows on it. But look at the
 bloomy sunflower field beside the highway. The soil is fertile. 
@@ -72,7 +72,7 @@ offspring - some fruitful action and even better ideas.
 Therefore we humans, considering ourselves intelligent beings, don't actually
 need to physically do a stupid thing to understand its consequences. 
 We can sit down and *think* whether it would be wise if 
-"I ehm... just snatch a chocolate bar from grocery to fill my stomach... Nope."
+"I ehm... just steal a chocolate bar from grocery to fill my stomach... Nope."
 
 ### Computer Intelligence
 

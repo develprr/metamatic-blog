@@ -9,19 +9,19 @@ categories: metamatic
 
 In recent years there has been a flood of publications about functional programming
 paradigm. It can be seen as a challenger to more traditional "imperative programming" approach. It appears also that
-sometimes "object oriented programming" is seen as the awkward cousin 
-of the entirely evil "imperative programming". You can't have one without the other in your party! 
+sometimes "object oriented programming" is seen as the awkward drunk cousin 
+of the entirely evil "imperative programming". You can't have one without the other at your party! 
 
 Well, the case may actually not be that simple! It appears that there is often some confusion 
-that "immutability principle" is a specific feature of the FP alone.
+that "immutability principle" is a specific feature of the functional programming (**FP**) alone.
 In the following I'll play around with objects and try to mix some immutability into object oriented programming approach.
 
 Let's see if it works!
 
-## Applying Immutability Principle in OOP
+## Applying Immutability Principle in Object Oriented Programming
 
 In the example coming soon I'll use TypeScript programming language to highlight a design
-pattern that embeds some immutability into OOP.
+pattern that embeds some immutability into object oriented programming (**OOP**).
 
 Let's implement an object oriented **LanguageCourse** object that allows to add language courses. The
 *LanguageCourse* object must also be able to merge with other *LanguageCourse* objects.

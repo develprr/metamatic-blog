@@ -147,4 +147,4 @@ be the most intuitive approach to take on. In practice,
 Therefore I would be hesitant to largely take this kind of approach in a project, though.
 
 How about using classes as mere namespaces for functions? 
-I'll be soon back in the twighlight zone of mixing the deep waters of code!
+I'll be soon back in the twilight zone of mixing the deep waters of code!

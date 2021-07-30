@@ -7,7 +7,7 @@ categories: metamatic
 
 ## About Programming Paradigms
 
-In recent years there has been a flood of publications about functional programming
+In recent years there, has been a flood of publications about functional programming
 paradigm. It can be seen as a challenger to more traditional "imperative programming" approach. It appears also that
 sometimes "object oriented programming" is seen as the awkward drunk cousin 
 of the entirely evil "imperative programming". You can't have one without the other at your party! 
@@ -147,5 +147,4 @@ be the most intuitive approach to take on. In practice,
 Therefore I would be hesitant to largely take this kind of approach in a project, though.
 
 How about using classes as mere namespaces for functions? 
-I'll be soon back in the twighlight zone of playing around
-with exciting approaches that blend the deep waters of different programming approaches!
+I'll be soon back in the twighlight zone of mixing the deep waters of code!

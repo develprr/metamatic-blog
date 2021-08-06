@@ -7,14 +7,15 @@ categories: metamatic
 
 ## About Programming Paradigms
 
-In recent years there, has been a flood of publications about functional programming
-paradigm. It can be seen as a challenger to more traditional "imperative programming" approach. It appears also that
-sometimes "object oriented programming" is seen as the awkward drunk cousin 
+In recent years, there has been a flood of publications about the so called "functional programming"
+paradigm. The paradigm can be seen as a challenger to the more traditional "imperative programming" approach. 
+It appears also that sometimes this "object oriented programming" is seen as the awkward drunk cousin 
 of the entirely evil "imperative programming". You can't have one without the other at your party! 
 
-Well, the case may actually not be that simple! It appears that there is often some confusion 
-that "immutability principle" is a specific feature of the functional programming (**FP**) alone.
-In the following I'll play around with objects and try to mix some immutability into object oriented programming approach.
+Well, the case may actually not be that simple! It appears that there is often some confusion whereby
+many people think that the immutability principle is a specific feature 
+of the functional programming (**FP**) alone. In the following I'll play around with objects and try 
+to mix some immutability into object oriented programming approach.
 
 Let's see if it works!
 

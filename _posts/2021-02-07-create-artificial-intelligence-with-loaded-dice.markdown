@@ -96,7 +96,7 @@ a next step that isn't the obviously best one. This is because in a computer maz
 just as in the life in general, the obviously most rewarding next step
 often isn't the best path in the long term!
 
-If you get hungry and just grab a chocolate bar from the grocery and *then run*, 
+If you get hungry and just steal a chocolate bar from the grocery and *then run*, 
 you'll be doing fine for five to twenty minutes, but not so much anymore when the police car
 stops in front of you when you sit in the park with your hands and face smeared
 brown from the chocolate you just ate.

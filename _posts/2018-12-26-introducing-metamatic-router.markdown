@@ -5,6 +5,18 @@ date:   2018-12-26 16:48:12 +0300
 categories: metamatic
 ---
 
+## EDIT 2021-12-30: this article is deprecated!
+
+```
+Please do not try to install libraries described here, 
+since they are currently fairly outdated and 
+the support libraries have changed,
+rendering the examples useless for now!
+```
+
+Original article:
+
+
 When developing JavaScript web apps, there are multiple options available for enabling client-side routing in browser-based UI software. 
 When coding with React, you can use many available router libraries to enable routing.
 

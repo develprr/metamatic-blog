@@ -5,6 +5,15 @@ date:   2018-12-11 18:28:12 +0300
 categories: metamatic
 ---
 
+## EDIT 2021-12-31: this article is deprecated!
+
+```
+Please do not try to install libraries described here, 
+since they are currently fairly outdated and 
+the support libraries have changed,
+rendering the examples useless for now!
+```
+
 ## The Problem of State Defining Sub-URLs
 
 A very typical situation in JavaScript based web apps is that they use client-side urls, 

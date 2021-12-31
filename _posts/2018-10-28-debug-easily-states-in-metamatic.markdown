@@ -5,6 +5,15 @@ date:   2018-10-28 20:03:00 +0300
 categories: metamatic
 ---
 
+## EDIT 2021-12-31: this article is deprecated!
+
+```
+Please do not try to install libraries described here, 
+since they are currently fairly outdated and 
+the support libraries have changed,
+rendering the examples useless for now!
+```
+
 When you implement your application using Metamatic™, you will get a robust and clear data management scheme that is 
 very easily debuggable and viewable using your browser's default developer tools.
 

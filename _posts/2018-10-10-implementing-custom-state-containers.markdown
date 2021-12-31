@@ -5,7 +5,15 @@ date:   2018-10-10 18:46:12 +0300
 categories: metamatic
 ---
 
-**EDIT 2018-12-11: this article is deprecated!**
+## EDIT 2021-12-31: this article is deprecated!
+
+```
+Please do not try to install libraries described here, 
+since they are currently fairly outdated and 
+the support libraries have changed,
+rendering the examples useless for now!
+```
+
  
 The Metamatic Framework provides functions **store** and **update** functions are most likely all what you need for state container management. 
 Nevertheless, there may still be situations that user wants to do some old-school state container coding and define state containers by themselves. The good news is that Metamatic supports even that as well.

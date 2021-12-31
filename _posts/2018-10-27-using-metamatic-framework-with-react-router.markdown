@@ -4,6 +4,17 @@ title:  "Using Metamatic Framework With React Router"
 date:   2018-10-27 22:28:12 +0300
 categories: metamatic
 ---
+
+## EDIT 2021-12-31: this article is deprecated!
+
+```
+Please do not try to install libraries described here, 
+since they are currently fairly outdated and 
+the support libraries have changed,
+rendering the examples useless for now!
+```
+
+
 The Metamatic™ framework sits very well together with React routing scheme. The following  
 example of a React main class implementing both React-Routes and Metamatic-based state container would look somewhat like this:
 

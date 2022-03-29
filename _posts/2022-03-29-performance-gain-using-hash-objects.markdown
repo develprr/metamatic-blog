@@ -103,17 +103,25 @@ ArrayFindPerformanceTest.test_find_method
 {% endhighlight %}
 
 On my machine, I am getting durations around 0.15 seconds to find
-my entry from the list of one million strings. This type
-of situation may often occur when you execute a database query
+my entry from the list of one million strings. Let's stop here for a second and think about this a little. 
+First of all, why on earth would you do this and filter arrays at all in your code?
+
+This kind of a situation may occur, for example, when you execute a database query
 and then further filter the data in your code. You might want
-to do that because sometimes you need to apply conditions
+to do so because sometimes you need to apply conditions
 that are too complex or impossible to express in the database query
 only.
+
+Okay, then the other question. To spend 0.15 seconds to comb through 
+one million entries, is it good or bad? It certainly beats hands down any librarian,
+at least a librarian without a PC, of course. But the truth is that if your code has to
+spend those 0.15 seconds iterating lists all over again, that innocent tiny glitch 
+will turn into a monster that slowly eats up your master piece 
+and keeps you waking up sweaty in the middle of the night!
 
 Let's imagine a situation that you have to make multiple searches
 on the array in hand. So let's extend the test method a bit and wrap the array
 into a Hash object before finding our entry:
-
 
 {% highlight ruby %}
 
@@ -135,4 +143,3 @@ puts "hash access is #{array_find_duration / hash_access_duration} times faster!
 I just found out that placing the list into a hash object was a really good idea.
 My PC tells me that getting my object of interest from the hash was almost 30 000
 times faster than finding it from the list!
-

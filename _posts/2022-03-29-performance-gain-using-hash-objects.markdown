@@ -6,7 +6,7 @@ categories: metamatic
 ---
 
 When did the humanity experience the golden age of software code performance
-optimization? I would give me biased answer, it was in the 1980's. 
+optimization? I would give my biased answer, it was in the 1980's. 
 No, I don't have any hard data to support this claim. I just remember how
 games kept evolving on some very limited hardware, back in those days 
 of my childhood.

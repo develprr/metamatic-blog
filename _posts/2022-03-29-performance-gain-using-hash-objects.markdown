@@ -118,18 +118,18 @@ into a Hash object before finding our entry:
 
 {% highlight ruby %}
 
-    hash = array.reduce({}) { |hash, entry| 
-      hash[entry] = entry
-      hash
-    }
-    
-    hash_access_start = Time.now.to_f
-    result = hash["a-999984"]
-    hash_access_finish = Time.now.to_f
-  
-    hash_access_duration = hash_access_finish - hash_access_start
-    puts "hash access duration: #{hash_access_duration}"
-    puts "hash access is #{array_find_duration / hash_access_duration} times faster!"
+hash = array.reduce({}) { |hash, entry| 
+  hash[entry] = entry
+  hash
+}
+
+hash_access_start = Time.now.to_f
+result = hash["a-999984"]
+hash_access_finish = Time.now.to_f
+
+hash_access_duration = hash_access_finish - hash_access_start
+puts "hash access duration: #{hash_access_duration}"
+puts "hash access is #{array_find_duration / hash_access_duration} times faster!"
 
 {% endhighlight %}
 

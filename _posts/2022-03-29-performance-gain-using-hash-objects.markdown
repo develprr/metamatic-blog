@@ -52,10 +52,9 @@ and looking into the logic at the very root level is powerful!
 
 ## Lists vs hashes
 
-Now, time to compile this article into something practical and  
-have a look at how lists are being accessed very
-commonly in almost any software and how some hard-rooted coding habits 
-can be dealing devastating blows to code perfomance! 
+Now, time to compile this article into something practical and have a look 
+at how lists are being accessed very commonly in almost any software and 
+how some tightly-sitting coding habits can be dealing devastating blows to code perfomance! 
 
 I'll use Ruby language for example,
 but this principle applies to every other modern programming language,

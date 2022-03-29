@@ -28,7 +28,7 @@ for that whiny piece of hardware!
 
 In today's abundance of computer hardware and super efficient 
 CPUs, it appears that software of our time is often quite 
-crappily crafted from the performance perspective.
+lousily crafted, at least seen from the performance perspective.
 
 There's no lack of articles on Medium and other forums promoting
 software "paradigms" that are quite disastrous for the CPU

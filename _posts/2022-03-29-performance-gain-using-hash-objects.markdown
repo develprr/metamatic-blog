@@ -50,7 +50,7 @@ Instead, the important thing to do is to have a look into the code at
 the fundamental level and ask the question, "what does this code really do". 
 Although this might sound boring, I will say that going back to basics is powerful!
 
-## Lists vs hashes
+## Lists versus hashes
 
 Now, time to compile this article into something practical and have a look 
 at how lists are being accessed very commonly in almost any software and 

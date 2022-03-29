@@ -48,8 +48,7 @@ It turns out, often the best approach to optimize code does not
 involve introducing another framework X to magically "fix everything".
 Instead, the important thing to do is to have a look into the code at 
 the fundamental level and ask the question, "what does this code really do". 
-Although this might sound boring, I will say that going back to basics
-and looking into the logic at the very root level is powerful!
+Although this might sound boring, I will say that going back to basics is powerful!
 
 ## Lists vs hashes
 

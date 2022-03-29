@@ -53,7 +53,7 @@ Although this might sound boring, I will say that going back to basics is powerf
 ## Lists versus hashes
 
 Now, time to compile this article into something practical and have a look 
-at how lists are being accessed very commonly in almost any software and 
+at how lists are very commonly being accessed in almost any software and 
 how some tightly-sitting coding habits can be dealing devastating blows to code perfomance! 
 
 I'll use Ruby language for the example,

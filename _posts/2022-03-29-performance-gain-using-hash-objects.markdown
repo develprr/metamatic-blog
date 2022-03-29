@@ -113,15 +113,17 @@ that are too complex or impossible to express in the database query
 only.
 
 Okay, then the other question. To spend 0.15 seconds to comb through 
-one million entries, is it good or bad? It certainly beats hands down any librarian,
-at least a librarian without a PC, of course. But the truth is that if your code has to
+one million entries, is it good or bad? It certainly beats hands down any librarian 
+(at least a librarian without a PC, of course). 
+But the truth is that if your code has to
 spend those 0.15 seconds iterating lists all over again, that innocent tiny glitch 
 will turn into a monster that slowly eats up your master piece 
 and keeps you waking up sweaty in the middle of the night!
 
-Let's imagine a situation that you have to make multiple searches
-on the array in hand. So let's extend the test method a bit and wrap the array
-into a Hash object before finding our entry:
+So maybe there is a way to optimize this a code little. If there is a list in the memory
+and you have to access it multiple times, then wrapping the list into a hash object
+may actually be worth trying:
+
 
 {% highlight ruby %}
 

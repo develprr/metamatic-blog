@@ -105,9 +105,9 @@ ArrayFindPerformanceTest.test_find_method
 
 On my machine, I am getting durations around 0.15 seconds to find
 my entry from the list of one million strings. This type
-of situation may often occur when you execute a database entry
+of situation may often occur when you execute a database query
 and then further filter the data in your code. You might want
-to do that because sometimees you need to apply conditions
+to do that because sometimes you need to apply conditions
 that are too complex or impossible to express in the database query
 only.
 

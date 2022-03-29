@@ -7,8 +7,9 @@ categories: metamatic
 
 When did the humanity experience the golden age of software code performance
 optimization? I would give me biased answer, it was in the 1980's. 
-No, I don't have any hard data to support this claim. I just remember,
-I was a kid back in those days.
+No, I don't have any hard data to support this claim. I just remember how
+games kept evolving on some very limited hardware, back in those days 
+of my childhood.
 
 ## The golden years of code optimization
 
@@ -30,9 +31,9 @@ In today's abundance of computer hardware and super efficient
 CPUs, it appears that software of our time is often quite 
 lousily crafted, at least seen from the performance perspective.
 
-There's no lack of articles on Medium and other forums promoting
+There's no lack of articles on so many forums promoting
 software "paradigms" that are quite disastrous for the CPU
-performance. It may look like vanity even to bother to look at performance,
+performance. It may appear like vanity even to bother to look at performance,
 but the reality will eventually hit hard when you have to
 create software that has to process huge quantities of data.
 
@@ -56,8 +57,8 @@ Now, time to compile this article into something practical and have a look
 at how lists are being accessed very commonly in almost any software and 
 how some tightly-sitting coding habits can be dealing devastating blows to code perfomance! 
 
-I'll use Ruby language for example,
-but this principle applies to every other modern programming language,
+I'll use Ruby language for the example,
+but the principle applies to every other modern programming language,
 such as Python, JavaScript, Java etc. 
 
 Let's find an entry from an array using the convenient array find method:

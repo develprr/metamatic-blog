@@ -19,7 +19,7 @@ In Finland, the gaming computer of every school boy was the iconic
 The Commodore era lasted about one decade before the market was finally
 saturated with the next generation 16-bit computers.
  
-What is truly remarkable, is just how much software improved
+What is truly remarkable, is just how much the software improved
 during those long ten years. The games written for Commodore 64
 toward the end of the era were true master pieces of software code
 optimization. It's just mind blowing how complex games emerged 

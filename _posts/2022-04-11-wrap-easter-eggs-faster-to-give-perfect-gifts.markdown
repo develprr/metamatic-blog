@@ -5,13 +5,13 @@ date:   2022-04-11 06.19.00 +0300
 categories: metamatic
 ---
 
-## So much about Legos 
+## Starting with Legos 
 
 Let's say that you have a basket full of Legos and you want to
 build something. It may be really annoying to find the right pieces
 from the basket. Ideally, you would buy a handy toolbox shelf
-containing lots of small tranparent boxes or pockets, 
-so you could sort out your Legos and put them into into their
+containing lots of small transparent boxes or pockets, 
+so you could sort out your Legos and put them into their
 dedicated pockets based on their type.
 
 Now, if you have ever really tried it you will say it's just
@@ -19,7 +19,7 @@ an insane task to do that - you are not going to be doing
 much else than sorting out Legos if you go for it. You'll be doing it
 only to realize that they are all mixed up again at the next occasion.
 
-So wnough with Legos. Let's talk about something merrier, 
+So much about Legos. Let's talk about something merrier, 
 it's already Easter for God's sake!
 
 ## About easter eggs, then
@@ -32,7 +32,7 @@ if the cost of pre-organization is high in relation to the expected gain
 in the actual target activity, it may fundamentally affect the calculus
 on how much sense it makes to optimize in the first place.
 
-For example, yf you want wrap Easter eggs into fancy paper and it is a
+For example, if you want wrap Easter eggs into fancy paper and it is a
 major hassle, you may want just to leave it altogether and focus on something that
 is actually fun. So let's forget about easter eggs.
 
@@ -45,12 +45,12 @@ I entirely skipped a very important aspect - the cost.
 I wrote earlier that it can be up to 30 000 times faster to find entries
 from an array if you wrap the array first into a hash object.
 
-Well, if yous spend a lot of time wrapping an array into a hash object
+Well, if you spend a lot of time wrapping an array into a hash object
 and then use it just once, that may not be very useful. But the situation
-changes dramatically if the array is to be accessed multpile times.
+changes dramatically if the array is to be accessed multiple times.
  
 Now the essential question is, how much does it actually cost to wrap an array into 
-a hash object? Let's find out
+a hash object? Let's find out!
 
 ## Measuring duration
 

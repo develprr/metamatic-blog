@@ -5,10 +5,10 @@ date:   2022-04-11 06.19.00 +0300
 categories: metamatic
 ---
 
-## Starting with Legos 
+## Starting with Legos, though
 
 Let's say that you have a basket full of Legos and you want to
-build something. It may be really annoying to find the right pieces
+build something out of them. It may be really annoying to find the right pieces
 from the basket. Ideally, you would buy a handy toolbox shelf
 containing lots of small transparent boxes or pockets, 
 so you could sort out your Legos and put them into their
@@ -24,10 +24,10 @@ it's already Easter for God's sake!
 
 ## About easter eggs, then
 
-The same problematic applies to all aspects in life - 
+The same dilemma applies to all aspects in life - 
 you can achieve some reasonable cost saving and get things done
 faster if you do some preparational organization first - but it is also very
-important to take into account the cost of the preparation -
+important to take into account the cost of preparation -
 if the cost of pre-organization is high in relation to the expected gain
 in the actual target activity, it may fundamentally affect the calculus
 on how much sense it makes to optimize in the first place.
@@ -56,8 +56,8 @@ a hash object? Let's find out!
 
 Now that time is money and CPU time is expensive, you will actually
 be measuring time here. So let's make the fundamental element,
-a method to measure duration of any given procedure. For the clarity
-of expression, I use the Ruby language here again:
+a method to measure duration of any given procedure. For clarity
+of expression, I'll use Ruby language here again:
 
 {% highlight ruby %}
   def measure_duration(proc)
@@ -118,8 +118,7 @@ You can also use the traditional for-loop:
     hash = {}
     last_index = people.length-1
     for i in 0..last_index do 
-      egg = eggs[i]
-      egg[egg[:name]] = egg
+      hash[egg[:name]] = eggs[i]
     end
     hash
 end
@@ -149,7 +148,7 @@ Not to forget the boosted-up variant of the latter, the mutable reduce-loop:
 
 ## Let's measure them all for once!
 
-And not only once, but some ten thousand times. Namely,
+And not only once, but some ten thousand times! Namely,
 it turns out that if you measure something like this once or twice or thrice,
 you will be getting wildly different outcomes. So to really
 measure how long time it takes to measure a procedure, let's run the 
@@ -197,16 +196,16 @@ end
 ## The results
 
 I am getting the following results when running the test:
-{% highlight ruby %}
+```
   Wrapping array using immutable reduce loop took 0.0025952794075012205 ms.
   Wrapping array using mutable reduce loop took   0.0002493852853775024 ms.
   Wrapping array using each loop took             0.00020642895698547362 ms.
   Wrapping array using for loop took              0.00021767702102661133 ms.
-{% endhighlight %}
-
+```
 ## Conclusion
 
-It appears that each-loop is definitely the fastest way to wrap an array of
-easter egg objects into a hash object. Just in case if you ever need to!
+It appears that you should be avoiding the immutable reduce-loop like a disease.
+Instead, the each-loop is definitely the fastest way to wrap an array of
+easter eggs into a hash object. Just in case if you ever need to!
 
 Happy Easter!

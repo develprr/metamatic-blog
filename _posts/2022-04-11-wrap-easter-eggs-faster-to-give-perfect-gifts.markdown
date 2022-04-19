@@ -103,24 +103,24 @@ so let's examine them in detail.
 You can use the each-loop:
 
 {% highlight ruby %}
-  def wrap_easter_eggs_to_hash_by_name_using_each_loop(eggs)
-      hash = {}
-      eggs.each { |egg|
-        hash[egg[:name]] = egg
-      }
-  end
+def wrap_easter_eggs_to_hash_by_name_using_each_loop(eggs)
+  hash = {}
+  eggs.each { |egg|
+    hash[egg[:name]] = egg
+  }
+end
 {% endhighlight %}
 
 You can also use the traditional for-loop:
 
 {% highlight ruby %}
-  def wrap_easter_eggs_to_hash_by_name_using_for_loop(eggs)
-    hash = {}
-    last_index = people.length-1
-    for i in 0..last_index do 
-      hash[egg[:name]] = eggs[i]
-    end
-    hash
+def wrap_easter_eggs_to_hash_by_name_using_for_loop(eggs)
+  hash = {}
+  last_index = people.length-1
+  for i in 0..last_index do 
+    hash[egg[:name]] = eggs[i]
+  end
+  hash
 end
 {% endhighlight %}
 
@@ -128,22 +128,22 @@ The sleek but slow immutable reduce-loop:
 
 {% highlight ruby %}
 
-  def wrap_easter_eggs_to_hash_by_name_using_immutable_reduce_loop(eggs)
-    eggs.reduce({}) { |hash,egg|
-      hash.merge egg[:name] => egg
-    }
-  end
+def wrap_easter_eggs_to_hash_by_name_using_immutable_reduce_loop(eggs)
+  eggs.reduce({}) { |hash,egg|
+    hash.merge egg[:name] => egg
+  }
+end
 {% endhighlight %}
 
 Not to forget the boosted-up variant of the latter, the mutable reduce-loop:
 
 {% highlight ruby %}
-  def self.wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop(eggs)
-    eggs.reduce({}) { |hash,egg|
-      hash[egg[:name]] = egg
-      hash
-    }
-  end
+def self.wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop(eggs)
+  eggs.reduce({}) { |hash,egg|
+    hash[egg[:name]] = egg
+    hash
+  }
+end
 {% endhighlight %}
 
 ## Let's measure them all at once!
@@ -156,39 +156,39 @@ wrappers 10 000 times and take the average of them!
 
 {% highlight ruby %}
 def test_performance_of_hash_wrapping_methods
-    eggs = lay_easter_eggs
+  eggs = lay_easter_eggs
 
-    immutable_reduce_loop_time = 0
-    mutable_reduce_loop_time = 0
-    each_loop_time = 0
-    for_loop_time = 0
-    
-    run_count = 10000
-    run_count.times.each {
-    
-      immutable_reduce_loop_time += measure_duration proc {
-        wrap_easter_eggs_to_hash_by_name_using_immutable_reduce_loop eggs
-      }
-      
-      mutable_reduce_loop_time += measure_duration proc {
-        wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop eggs
-      }
-    
-      each_loop_time += measure_duration proc {
-        wrap_easter_eggs_array_to_hash_by_name_using_each_loop eggs
-      }
-      
-      for_loop_time += measure_duration proc {
-        wrap_easter_eggs_to_hash_by_name_using_for_loop eggs
-      }
+  immutable_reduce_loop_time = 0
+  mutable_reduce_loop_time = 0
+  each_loop_time = 0
+  for_loop_time = 0
+  
+  run_count = 10000
+  run_count.times.each {
+  
+    immutable_reduce_loop_time += measure_duration -> {
+      wrap_easter_eggs_to_hash_by_name_using_immutable_reduce_loop eggs
     }
     
-    puts %{
-      Wrapping array using immutable reduce loop took #{immutable_reduce_loop_time/run_count} s.
-      Wrapping array using mutable reduce loop took   #{mutable_reduce_loop_time/run_count} s.
-      Wrapping array using each loop took             #{each_loop_time/run_count} s.
-      Wrapping array using for loop took              #{for_loop_time/run_count} s.
+    mutable_reduce_loop_time += measure_duration -> {
+      wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop eggs
     }
+  
+    each_loop_time += measure_duration -> {
+      wrap_easter_eggs_array_to_hash_by_name_using_each_loop eggs
+    }
+    
+    for_loop_time += measure_duration -> {
+      wrap_easter_eggs_to_hash_by_name_using_for_loop eggs
+    }
+  }
+  
+  puts %{
+    Wrapping array using immutable reduce loop took #{immutable_reduce_loop_time/run_count} s.
+    Wrapping array using mutable reduce loop took   #{mutable_reduce_loop_time/run_count} s.
+    Wrapping array using each loop took             #{each_loop_time/run_count} s.
+    Wrapping array using for loop took              #{for_loop_time/run_count} s.
+  }
 end
 
 {% endhighlight %}

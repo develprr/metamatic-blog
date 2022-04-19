@@ -15,26 +15,26 @@ so you could sort out your Legos and put them into their
 dedicated pockets based on their type.
 
 Now, if you have ever really tried it you will say it's just
-an insane task to do that - you are not going to be doing
+an insane task - you are not going to be doing
 much else than sorting out Legos if you go for it. You'll be doing it
 only to realize that they are all mixed up again at the next occasion.
 
 So much about Legos. Let's talk about something merrier, 
 it's already Easter for God's sake!
 
-## About easter eggs, then
+## About Easter eggs, then
 
 The same dilemma applies to all aspects in life - 
 you can achieve some reasonable cost saving and get things done
-faster if you do some preparational organization first - but it is also very
-important to take into account the cost of preparation -
+faster if you do some preparation first - but it is also very
+important to take the cost of preparation into account -
 if the cost of pre-organization is high in relation to the expected gain
 in the actual target activity, it may fundamentally affect the calculus
 on how much sense it makes to optimize in the first place.
 
-For example, if you want wrap Easter eggs into fancy paper and it is a
-major hassle, you may want just to leave it altogether and focus on something that
-is actually fun. So let's forget about easter eggs.
+For example, if you want to wrap Easter eggs into a fancy paper and it is a
+major hassle, you may just want to leave it altogether and focus on something that
+is actually fun. So let's forget about Easter eggs.
 
 ## About coding, then
 
@@ -138,7 +138,7 @@ The sleek but slow immutable reduce-loop:
 Not to forget the boosted-up variant of the latter, the mutable reduce-loop:
 
 {% highlight ruby %}
-  def self.wrap_eggs_to_hash_by_name_using_mutable_reduce_loop(eggs)
+  def self.wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop(eggs)
     eggs.reduce({}) { |hash,egg|
       hash[egg[:name]] = egg
       hash
@@ -146,7 +146,7 @@ Not to forget the boosted-up variant of the latter, the mutable reduce-loop:
   end
 {% endhighlight %}
 
-## Let's measure them all for once!
+## Let's measure them all at once!
 
 And not only once, but some ten thousand times! Namely,
 it turns out that if you measure something like this once or twice or thrice,
@@ -171,23 +171,23 @@ def test_performance_of_hash_wrapping_methods
       }
       
       mutable_reduce_loop_time += measure_duration proc {
-        wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop people
+        wrap_easter_eggs_to_hash_by_name_using_mutable_reduce_loop eggs
       }
     
       each_loop_time += measure_duration proc {
-        wrap_easter_eggs_array_to_hash_by_name_using_each_loop people
+        wrap_easter_eggs_array_to_hash_by_name_using_each_loop eggs
       }
       
       for_loop_time += measure_duration proc {
-        wrap_easter_eggs_to_hash_by_name_using_for_loop people
+        wrap_easter_eggs_to_hash_by_name_using_for_loop eggs
       }
     }
     
     puts %{
-      Wrapping array using immutable reduce loop took #{immutable_reduce_loop_time/run_count} ms.
-      Wrapping array using mutable reduce loop took   #{mutable_reduce_loop_time/run_count} ms.
-      Wrapping array using each loop took             #{each_loop_time/run_count} ms.
-      Wrapping array using for loop took              #{for_loop_time/run_count} ms.
+      Wrapping array using immutable reduce loop took #{immutable_reduce_loop_time/run_count} s.
+      Wrapping array using mutable reduce loop took   #{mutable_reduce_loop_time/run_count} s.
+      Wrapping array using each loop took             #{each_loop_time/run_count} s.
+      Wrapping array using for loop took              #{for_loop_time/run_count} s.
     }
 end
 
@@ -197,15 +197,15 @@ end
 
 I am getting the following results when running the test:
 ```
-  Wrapping array using immutable reduce loop took 0.0025952794075012205 ms.
-  Wrapping array using mutable reduce loop took   0.0002493852853775024 ms.
-  Wrapping array using each loop took             0.00020642895698547362 ms.
-  Wrapping array using for loop took              0.00021767702102661133 ms.
+  Wrapping array using immutable reduce loop took 0.0025952794075012205 s.
+  Wrapping array using mutable reduce loop took   0.0002493852853775024 s.
+  Wrapping array using each loop took             0.00020642895698547362 s.
+  Wrapping array using for loop took              0.00021767702102661133 s.
 ```
 ## Conclusion
 
 It appears that you should be avoiding the immutable reduce-loop like a disease.
 Instead, the each-loop is definitely the fastest way to wrap an array of
-easter eggs into a hash object. Just in case if you ever need to!
+Easter eggs into a hash object. Just in case if you ever need to!
 
 Happy Easter!

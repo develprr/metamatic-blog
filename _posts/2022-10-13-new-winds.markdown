@@ -5,7 +5,7 @@ date:   2022-10-13 19.50.00 +0300
 categories: metamatic
 ---
 
-## Learning from tutorials in back in the 80's
+## Back in the 80's
 
 In the 80's, there was no Internet. If you had an MSX computer and lived
 in north Finland, you were messed. There were no games available for that

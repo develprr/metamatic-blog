@@ -18,7 +18,7 @@ computer game!
 
 Together with my brother, I spent hours and hours all over again typing that code 
 into the machine to get an MSX-Basic based game. The games were of course crap. 
-But nevertheless ,I was enthralled. I kept tweaking it to see how code changes
+But nevertheless, I was enthralled. I kept tweaking it to see how code changes
 would alter the program's behaviour.  Looking back from here to that time, however, 
 I probably should have also played football. (But that's another story.)
 
@@ -29,36 +29,37 @@ in any other branch. It is good to be a software developer, but only if
 you have a constantly curious mind and you are ready to learn new things.
 
 I have encountered it many times in my life that the more comfortable
-you get in a any given project - the more furious the winds of change are
-when they finally rise.
+you get in any given project - the more furious the winds of change are
+when they finally arise.
 
 When the weather turns windy after a long period of relative calmness, 
 the right way to encounter the weather change is not to be torn from the ground 
-like an old rotten wind mill, but rather to be like a sail boat that just
-turns the sails and adapts itself to embrace it as the long-awaited empowering craft!
+like an old rotten wind mill, but to rather be like a sail boat that just
+turns the sails and adapts itself to embrace the new stream as the long-awaited empowering craft!
 
 ## How to stay relevant
 
 There is no question that in software development very
-few things are more important than continuously learning new things 
+few things are more important than continuously learning new matters 
 to stay relevant. The question, however, is how to maintain that mindset 
 over time. For junior developers, the only option really is to study hard and
 explore how to go about it - and that is, because they have a more
 limited set of design patterns or implementation patterns than more
 experienced coders. But having matured patterns about how to keep implementing
-code and features at an "impressive pace" can actually be a danger in disguise
-- because it's exactly those home-grown mental patterns of solving things
-that can also make a seasoned developer to close eyes from new emerging technologies
-and paradigms - up to the point that the day comes when the change is in front of you
+code and features at an "impressive pace" can actually be a danger in disguise -
+
+because it's exactly those home-grown mental patterns of solving things
+that can also make a seasoned developer to close their eyes from new emerging technologies
+and paradigms - up to the point that the day comes when the change stands in front of you
 like a tsunami - and then it is too late! 
 
 ## Learning from tutorials
 
 Luckily, there are some quite robust patterns that you can follow to
 keep learning, renewing your knowledge base and keeping your skillset
-up-to-date: tutorials! As this is no surprise, surprising however
+up to date: tutorials! As this is no surprise, surprising however
 is how many people just keep ignoring all the available free material
-on the Internet that can help you learn more and more - and instead just
+on the Internet that could help them learn more and more - and instead just
 waste their time on all that entertainment that all "toktiks" and "flixnets"
 (or whatever) keep force-feeding with all the power of their intelligent algorithms - to 
 keep you stupid!
@@ -66,13 +67,13 @@ keep you stupid!
 Learning from tutorials on a daily basis - it is possible. But it requires
 you to always remember that you **must keep learning**. Another thing to remember
 when learning from tutorials is to be honest to yourself and patient with
-results. That going through a tutorial is almost useless if you just copy-paste the code from the
+results. To remember that going through a tutorial is almost useless if you just copy-paste the code from the
 examples into your project before attempting to run it. 
 Instead, I recommend everybody who wants to learn from tutorials to really 
 take the pain to manually type in everything and to try to think what the
 code means. Very few things are more profoundly satisfying than having implemented
 the examples of a tutorial correctly and you actually understand the
-code that you have written!
+code that you have typed!
 
 ## Why I wrote this?
 

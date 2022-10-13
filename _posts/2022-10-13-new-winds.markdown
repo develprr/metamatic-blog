@@ -8,7 +8,7 @@ categories: metamatic
 ## Back in the 80's
 
 In the 80's, there was no Internet. If you had an MSX computer and lived
-in north Finland, you were messed. There were no games available for that
+in Northern Finland, you were messed. There were no games available for that
 Japanese piece of crap. But the MSX computer had a pre-installed programming
 language console, called "MSX Basic". And there was a monthly published
 programming magazine "Mikrobitti". The magazine provided software code listings that

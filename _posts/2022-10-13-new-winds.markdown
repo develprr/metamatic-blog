@@ -18,7 +18,7 @@ computer game!
 
 Together with my brother, I spent hours and hours all over again typing that code 
 into the machine to get an MSX-Basic based game. The games were of course crap. 
-But nevertheless, I was enthralled. I kept tweaking it to see how code changes
+But nevertheless, I was enthralled. I kept tweaking the code to see how the changes
 would alter the program's behaviour.  Looking back from here to that time, however, 
 I probably should have also played football. (But that's another story.)
 

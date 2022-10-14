@@ -8,18 +8,18 @@ categories: metamatic
 ## Back in the 80's
 
 In the 80's, there was no Internet. If you had an MSX computer and lived
-in Northern Finland, you were messed. There were no games available for that
-Japanese piece of crap. But the MSX computer had a pre-installed programming
+in Northern Finland, you were messed. There were very few games available for that
+Japanese piece of garbage. But the MSX computer had a pre-installed programming
 language console, called "MSX Basic". And there was a monthly published
 programming magazine "Mikrobitti". The magazine provided software code listings that
 spanned over dozens of pages. If you really manually copied all that code from 
-the magazine into your PC **without mistakes** you would finally have a real 
+the magazine into your PC you would finally have a real 
 computer game!
 
 Together with my brother, I would spend countless hours typing that code 
 into the machine to get an MSX-Basic based game. The games were of course crap. 
 But nevertheless, I was enthralled. I would keep tweaking the code to see how the changes
-would alter the program's behaviour. Looking back from here to that time, however, 
+altered the program's behaviour. Looking back from here to that time, however, 
 I probably should have also played football. (But that's another story.)
 
 ## Change is the only constant

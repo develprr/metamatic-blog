@@ -16,10 +16,10 @@ spanned over dozens of pages. If you really manually copied all that code from
 the magazine into your PC **without mistakes** you would finally have a real 
 computer game!
 
-Together with my brother, I spent hours and hours all over again typing that code 
+Together with my brother, I would spend countless hours typing that code 
 into the machine to get an MSX-Basic based game. The games were of course crap. 
-But nevertheless, I was enthralled. I kept tweaking the code to see how the changes
-would alter the program's behaviour.  Looking back from here to that time, however, 
+But nevertheless, I was enthralled. I would keep tweaking the code to see how the changes
+would alter the program's behaviour. Looking back from here to that time, however, 
 I probably should have also played football. (But that's another story.)
 
 ## Change is the only constant

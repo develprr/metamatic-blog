@@ -35,12 +35,12 @@ when they finally arise.
 When the weather turns windy after a long period of relative calmness, 
 the right way to encounter the weather change is not to be torn from the ground 
 like an old rotten wind mill, but to rather be like a sail boat that just
-turns the sails and adapts itself to embrace the new stream as the long-awaited empowering force!
+turns the sails and adapts itself to embrace the new current as the long-awaited empowering force!
 
 ## How to stay relevant
 
 There is no question that in software development very
-few things are more important than continuously learning new matters 
+few things are more important than the habit of continuously learning new matters 
 to stay relevant. The question, however, is how to maintain that mindset 
 over time. For junior developers, the only option really is to study hard and
 explore how to go about it - and that is, because they have a more
@@ -49,7 +49,7 @@ experienced coders. But having matured patterns about how to keep implementing
 code and features at an "impressive pace" can actually be a danger in disguise -
 
 because it's exactly those home-grown mental patterns of solving things
-that can also make a seasoned developer to close their eyes from new emerging technologies
+that can also make a seasoned developer close their eyes from new emerging technologies
 and paradigms - up to the point that the day comes when the change stands in front of you
 like a tsunami - and then it is too late! 
 

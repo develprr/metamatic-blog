@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About State Management libraries in React-based User Interfaces
-date:   2022-10-13 09.02.13 +0200
+title: About State Management Libraries in React-based User Interfaces
+date:   2023-01-05 09.02.13 +0200
 categories: Metamatic Systems
 ---
 
@@ -13,15 +13,13 @@ such as Redux, Recoil, MobX, Flux et cetera.
 
 Believe me, once upon a time I even wrote my own state management library!
 
-But now let's dive in to the question - what are state management libraries,
-and why would you need one!
-
 ## Why do we need state management
 
-When creating modern user interfaces for a professional
+Now let's dive in to the question - what are state management libraries,
+and why would you need one! When creating modern user interfaces for a professional
 portal, that has multiple pages, views or tabs and that needs to dynamically
 interact with server side data, the challenges of keeping data in sync
-between different components becomes obvious. 
+between different components becomes obvious. Let's inspect this in detail! 
 
 ## An example use case
 
@@ -36,17 +34,16 @@ cart.
 When you add an item to the cart, you expect that the number of total
 items grows by one, yet the list of items should be also immediately updated.
 
-So clearly we have here two components displaying two different data, namely,
+So clearly we have here two components displaying two different data. Namely,
 a summary box or icon showing the total number of your items,
 and a list component showing the entire list of your items.
 
-So clearly the summary data can be understood as a derivative of the list data
-- once you have the list data, you can derive also the total number of items out of that data. 
+And obviously the summary data can be understood as a derivative of the list data - 
+once you have the list data, you can derive also the total number of items out of that data. 
 
-Therefore it is quite obvious that these two data must be always in sync - 
-when one component is updated with the list data, there is no question that
-the summary data showing the total number of items in the list must be immediately
-and without delay or exception up to date with the list.
+Therefore it is quite evident that these two data must be always in sync - 
+when the list component is updated with the list data, there is no question that
+the summary data showing the total number of items must be immediately updated as well.
 
 Now, we are approaching the problem that explains why state management libraries
 exist!
@@ -67,27 +64,27 @@ Let's express this with some pseudo code:
   myTotalPriceIcon.updatePrice(totalPrice)
   
   // etc.. etc...
-``
+```
 
-While this looks obvious, updating components will become more cumbersome
-when the application grows, and the risk increases that you forget to update some component
-or that the code to sync between components isn't invoked at the right time in the right place,
+While this looks obvious, the task of updating components will become more cumbersome
+when the application grows, and the risk increases that you forget to add the update invocation
+for some component or that the code to sync between components isn't invoked at the right time,
 or that removing some components breaks the application, or that slight changes in the data
-breaks the chain, or these update methods exist in various places conflicting with each other 
-- the ways of breaking up the logic are many and this can turn the user interface
+breaks the chain, or these update methods exist in various places conflicting with each other:
+The ways of breaking up the logic are many so this approach can turn the user interface
 buggy, unreliable and hard to maintain over time.
 
 Believe me, once upon a time I tried even this by myself!
 
 ## Solving data syncing with state management
 
-To put it sort, all state management libraries solve the above mentioned problems roughly
-around the principle. They provide a structure and tools to automate updating the UI
-components upon changes in the data. They allow to *subsribe* components to *listen* changes in data
-or their derivations, so once a component is coupled up with the state manager utitlity,
+To put it short, all state management libraries solve the above mentioned problems roughly
+around the same principle. They provide a structure and tools to automate updating the UI
+components upon changes in the data. They allow to *subsribe* components to *listen* for changes in 
+the source data or its derivations, so once a component is coupled up with the state manager utitlity,
 the state manager will ensure that once data is loaded from the server endpoint, 
 all derivations (if needed) will be automatically calculated by the state management mechanism
-and the components are uploaded.
+and the components are updated.
 
 ## Which state management library to choose?
 

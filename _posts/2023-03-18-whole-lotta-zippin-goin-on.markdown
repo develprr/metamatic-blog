@@ -37,7 +37,7 @@ Let's say that we have boys and girls and we want to zip them together into coup
 So we have two arrays:
 ```ruby
 girls = ["Suzanne", "Maria", "Laura", Eva"]
-boys =  ["Simon", "Andy", "Tom", "Tim"]
+boys  = ["Simon", "Andy", "Tom", "Tim"]
 ```
 
 Zip them together!
@@ -51,10 +51,10 @@ with the power of the mighty zip function!
 
 ```ruby
 [
-	["Suzanne", "Simon"],
-	["Maria", "Andy"],
-	["Laura", "Tom"],
-	["Eva", "Tim"]
+   ["Suzanne", "Simon"],
+   ["Maria", "Andy"],
+   ["Laura", "Tom"],
+   ["Eva", "Tim"]
 ]
 ```
 
@@ -69,9 +69,9 @@ to calculate the dot product:
 
 ```ruby
 def calculate_dot_product(array1, array2)
-	array1.zip(array2).map { |v1, v2|
-		v1 * v2 
-	} .inject(:+)
+   array1.zip(array2).map { |v1, v2|
+      v1 * v2 
+   } .inject(:+)
 end
 ```
 

@@ -58,13 +58,14 @@ with the power of the mighty zip function!
 ]
 ```
 
-To modernize this algorithm, consider applying multi-assignment, 
-one-to-many or many-to-many relationships and even more!
+To further modernize this algorithm, consider applying solo-assignment, 
+one-to-many or many-to-many relationships, girls-only lists, boys-only pattern matching 
+and even more!
 
 ## Do the dot
 
 Getting over this example, let's have a look how to seriously apply the zip function
-to calculate dot product:
+to calculate the dot product:
 
 ```ruby
 def calculate_dot_product(array1, array2)

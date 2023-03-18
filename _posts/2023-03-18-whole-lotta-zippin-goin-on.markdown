@@ -58,6 +58,9 @@ with the power of the mighty zip function!
 ]
 ```
 
+To modernize this algorithm, consider applying multi-assignment, 
+one-to-many or many-to-many relationships and even more!
+
 ## Do the dot
 
 Getting over this example, let's have a look how to seriously apply the zip function

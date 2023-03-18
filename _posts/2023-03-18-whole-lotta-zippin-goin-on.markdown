@@ -1,7 +1,7 @@
 ---
 layout: post
 title: There's a whole lotta zippin' goin' on
-date:   2023-03-18 18:23.25 +0200
+date:   2023-03-18 18.23.25 +0200
 categories: Metamatic Systems
 ---
 

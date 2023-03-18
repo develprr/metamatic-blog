@@ -58,9 +58,8 @@ with the power of the mighty zip function!
 ]
 ```
 
-To further modernize this algorithm, consider applying solo-assignment, 
-one-to-many or many-to-many relationships, girls-only lists, boys-only pattern matching 
-and even more!
+To further modernize this algorithm, consider applying the *shuffle* method to get
+some follow-up randomization and vibes, one-to-many or many-to-many relationships and even more!
 
 ## Do the dot
 
@@ -85,4 +84,4 @@ Psst! The answer is 42.
 
 Moving on from here, the road is wide open to so many interesting things to come.
 
-I'll be back zipping all around the place, ready or not!
+I'll be back zipping around all over the place, ready or not!

@@ -69,8 +69,8 @@ so let's have a look under the hood and see how the engine ticks.
 
 ## Understanding the Cosine Similarity
 
-To calculate the cosine similarity, just take the (dot product)[https://www.metamatic.net/metamatic/systems/2023/03/18/whole-lotta-zippin-goin-on.html] of the two vectors
-representing each applicant to be compared and divide it with the product of their norms. 
+To calculate the cosine similarity, just take the [dot product](https://www.metamatic.net/metamatic/systems/2023/03/18/whole-lotta-zippin-goin-on.html)
+of the two vectors representing each applicant to be compared and divide it with the product of their norms. 
 Actually, these kinds of things are so much easier to express in a programming languge:
 
 ```ruby

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time to Talk about Values
-date:   2023-003-28 09.29.13 +0300
+date:   2023-03-28 09.29.13 +0300
 categories: Metamatic Systems
 ---
 
@@ -13,7 +13,7 @@ Et cetera. Obviously, the values matter. A lot!
 
 The real question is, how do you know whether someone shares your values? Let's find out!
 
-## A practical real-world example
+## A Practical Real-World Example
 
 Let's say that an interstellar insurgency group called the Jedi Order 
 in a far-away galaxy wants to hire another Jedi knight to turn the tide in their hopeless

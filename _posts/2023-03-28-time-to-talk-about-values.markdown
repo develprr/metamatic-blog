@@ -84,7 +84,6 @@ class CosineSimilarity
   end
 
 end
-
 ```
 To further improve the process, you might want to apply coefficents to each
 property depending on how much each value matters to *you* in this game of Jedi.

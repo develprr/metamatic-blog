@@ -13,9 +13,9 @@ Et cetera. Obviously, the values matter. A lot!
 
 The real question is, how do you know whether someone shares your values? Let's find out!
 
-## A Practical Real-World Example
+## A practical Real-World Example
 
-Let's say that an interstellar insurgency group called the Jedi Order 
+Let's say that an interstellar insurgency group that is knwon as "the Jedi Order" 
 in a far-away galaxy wants to hire another Jedi knight to turn the tide in their hopeless
 fight against the Evil Empire. Now, there are many warriors in the galaxy 
 who say they are a true Jedi while they are not. 
@@ -37,7 +37,7 @@ opinion about rebels (0-100): 100
 
 Placing the values into a vector, we get:
 
-```
+```ruby
   jedi_order_values = [8,2,0,100]
 ```
 
@@ -62,7 +62,7 @@ Calculating the cosine similarity with the Jedi Order for both candidates:
 ```
 
 We get result 0.993 for the first applicant and result 0.989 for the second candidate.
-Clearly, we'll hire the applicant number 2.
+Clearly, we'll hire the applicant number 1.
 
 I know that every reader is deeply impressed by this magic bullet at this point, 
 so let's have a look under the hood and see how the engine ticks.

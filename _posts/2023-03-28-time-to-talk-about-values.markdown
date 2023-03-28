@@ -28,10 +28,12 @@ the Jedi Order? Well, we can use the *force* to find it out, or we can use the..
 Looking at the Jedi knights that we already have (or had), we know
 the average values of a typical Jedi knight:
 
+```ruby
 number of light sabers:       8
 number of robotic pets:       2
 opinion about empire (0-100): 0
 opinion about rebels (0-100): 100
+```
 
 Placing the values into a vector, we get:
 

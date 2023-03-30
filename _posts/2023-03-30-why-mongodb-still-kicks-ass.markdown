@@ -10,7 +10,7 @@ thinking how to manage your many-to-many relationships!
 
 Now, if you ever worked with relational databases, this is rather trivial.
 I know that many people hate relational databases because of their
-rigid schema requirements on your tables. Having a predefined can 
+rigid schema requirements on your tables. Having a predefined schemas can 
 can be good or bad, depending on the case. 
 
 ## When are relational databases bad?
@@ -24,7 +24,7 @@ can be quite awkward, resulting in a huge number of mostly empty columns in your
 
 Having worked for years on projects that used relational databases,
 it was really inspiring to start using the MongoDB in projects about seven years ago. 
-Namely, the MongoDB is a document databse, meaning that you don't have to define the schema
+Namely, the MongoDB is a document database, meaning that you don't have to define the schema
 for each table (known as "collection" in MongoDB) and you can really
 easily insert a lot more complex objects into the database than you would
 be able to do with relational databases.
@@ -51,7 +51,7 @@ queries efficiently.
 ## Solving big data through partitioning
 
 Now we are approaching a key point here. Creating collections in MongoDB
-is really easy and cheap. In MongoDB, you can have 28000 collections in
+is really easy and cheap. In MongoDB, you can have 28 000 collections in
 one database! And remember that "database" here is just a namespace 
 to group collections. This means that when you use MongoDB, you can *and you should*
 split data into multiple collections when your data grows big.
@@ -61,7 +61,7 @@ all sensory data from all your machines into MongoDB.
 
 Now, if you used just one table to store all logs that each
 laundry machine is generating, your table would blow up very soon.
-Luckily, with MongoDB you would easily make your landy machine corporation
+Luckily, with MongoDB you would easily make your laundry machine corporation
 scalable by storing each laundry machine's log data into a separate table (collection),
 so the number of your laundry manchines would equal the number of your tables.
 
@@ -102,7 +102,7 @@ don't have that problem.
 
 ## Not all data is big
 
-In anylaundry service corporation, there is a need for both big data
+In any laundry service corporation, there is a need for both big data
 and *not so big* data. Actually, it may be the case that the only real need
 for supporting big data is when you are dealing with laundry machine logs.
 You also have lots of other data that isn't so huge and isn't also expected

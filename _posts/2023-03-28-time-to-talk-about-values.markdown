@@ -100,20 +100,17 @@ Let's express this in Ruby:
 
 
 ```ruby
-
 class Norm
   
   def self.calculate(vector)
     Math.sqrt(vector.reduce(0) { |sum_of_squares, value|
-			sum_of_squares += value ** 2
-		})
+      sum_of_squares += value ** 2
+    })
   end
 
 end
-
 ```
-
-Next time, we'll be dvelving into the fruitful topic about who is normal, 
-who is not, why it matters and how to find out!
+Next time, let's dvelve into the topic about who is normal, who is not, 
+why it matters and how to find out!
 
 Cheers!

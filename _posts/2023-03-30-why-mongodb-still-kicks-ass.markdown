@@ -5,31 +5,33 @@ date:   2023-03-30 09.18.00 +0300
 categories: Metamatic Systems
 ---
 
-The springtime is coming. So it's more relevant than ever to start
-thinking how to manage your many-to-many relationships!
+The spring is coming. So it's more relevant than ever to start thinking 
+how to manage your many-to-many relationships!
 
-Now, if you ever worked with relational databases, this is rather trivial.
-I know that many people hate relational databases because of their
-rigid schema requirements on your tables. Having a predefined schemas can 
-can be good or bad, depending on the case. 
+Now, if you ever worked with relational databases, this is rather trivial. 
+I know that many people hate relational databases because of their rigid schema 
+requirements on your tables. 
 
-## When are relational databases bad?
+Having a predefined schemas can can be good or bad, depending on the case.
 
-For example, if it's expected that your data may not be uniform
-and your data entries may significantly vary, then defining all
-properties that a table may contain as a fixed number of nullable columns
-can be quite awkward, resulting in a huge number of mostly empty columns in your table.
+## Why MongoDB?
 
-## How about MongoDB?
+MongoDB, being a document database, has a certain edge over 
+relational databases because it doesn't require a schema for each table.
+
+Many people hate relational databases because of their rigid 
+schema requirements on your tables.  
+Having a predefined schemas can can be good or bad, depending on the case.
 
 Having worked for years on projects that used relational databases,
-it was really inspiring to start using the MongoDB in projects about seven years ago. 
-Namely, the MongoDB is a document database, meaning that you don't have to define the schema
+it was really inspiring to start using MongoDB.  
+
+Namely, MongoDB is a document database, meaning that you don't have to define the schema
 for each table (known as "collection" in MongoDB) and you can really
 easily insert a lot more complex objects into the database than you would
 be able to do with relational databases.
 
-The MongoDB also has quite good query and aggregation tools, making
+MongoDB also has good query and aggregation features, making
 agile and combinatory queries possible similarly to SQL. With MongoDB,
 you can do inner joins and combine data from multiple collections (tables),
 similarly to SQL. Also, with MongoDB you can create pipelines out of 
@@ -37,7 +39,7 @@ your aggregation queries, storing results into transitional collections.
 This aggregation mechanism allows quite complex data transformations.
 
 This is a concept that SQL databases don't know and it makes
-the MongoDB a very powerful tool.
+MongoDB a very powerful tool.
 
 ## How about big data?
 
@@ -53,8 +55,11 @@ queries efficiently.
 Now we are approaching a key point here. Creating collections in MongoDB
 is really easy and cheap. In MongoDB, you can have 28 000 collections in
 one database! And remember that "database" here is just a namespace 
-to group collections. This means that when you use MongoDB, you can *and you should*
+to group collections. Therefore you can have practically an unlimited
+number of collections. This means that when you use MongoDB, you can *and you should*
 split data into multiple collections when your data grows big.
+
+## How does this help my laundry service corporation?
 
 Let's say that you have a laundry service corporation and you are storing
 all sensory data from all your machines into MongoDB.
@@ -63,7 +68,7 @@ Now, if you used just one table to store all logs that each
 laundry machine is generating, your table would blow up very soon.
 Luckily, with MongoDB you would easily make your laundry machine corporation
 scalable by storing each laundry machine's log data into a separate table (collection),
-so the number of your laundry manchines would equal the number of your tables.
+so the number of your laundry machines would equal the number of your tables.
 
 Now, this might sound like a heresy in the old SQL world, but it's a quite
 obvious solution in the world of MongoDB. You could then further partition
@@ -76,7 +81,7 @@ own collection that is year specific:
 
 ## Why not just use DynamoDB?
 
-Amazon's DynamoDB is a relatively new kid in the block. Similarly it's a document DB
+Amazon's DynamoDB is a relatively new kid on the block. Similarly it's a document DB
 that does not have schema for the table.
 
 DynamoDB promises that you can use just one table and store everything into
@@ -94,8 +99,11 @@ in MongoDB.
 ## So which is better?
 
 When you use DynamoDB, you marry yourself to the Amazon family.
-This is entirely fine. However, the DynamoDB makes it harder to execute 
-more complex combinatory queries to your data. You will need to define your tables from early
+This is entirely fine. The difference is that with DynamoDB,
+you *must* be on Amazon. With MongoDB, you *can* be on Amazon.
+
+The other difference is that DynamoDB makes it harder to execute more complex combinatory queries 
+to your data. You will need to define your tables from early
 on to serve a certain query approach. If you want to make different queries
 later, you may be facing a major problem. With MongoDB's powerful queries, you
 don't have that problem.
@@ -107,7 +115,7 @@ and *not so big* data. Actually, it may be the case that the only real need
 for supporting big data is when you are dealing with laundry machine logs.
 You also have lots of other data that isn't so huge and isn't also expected
 to grow very fast. This data could something like the customer data,
-employer data, financial data, inventory data etc. All kinds of other data
+employee data, financial data, inventory data etc. All kinds of other data
 that isn't growing rapidly. For this kind of data, DynamoDB isn't very suitable.
 You should not try to solve every problem with the same tool. 
 

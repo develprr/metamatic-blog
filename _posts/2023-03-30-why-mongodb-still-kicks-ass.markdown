@@ -8,14 +8,14 @@ categories: Metamatic Systems
 The spring is coming. So it's more relevant than ever to start thinking 
 how to manage your many-to-many relationships!
 
-# The problem with relational databases
+## The problem with relational databases
 
 Now, if you ever worked with relational databases, this is rather trivial. 
-I know that many people hate relational databases because of their rigid schema 
+But I know that many people hate relational databases because of their rigid schema 
 requirements on your tables. 
 
 Having a predefined schemas can can be good or bad, depending on the case.
-If you have a huge amount of data coming in, in the form of logs
+If you have a huge amount of data coming in in the form of logs
 or sensory data, containing entries with potentially varying properties,
 there's a problem. 
 
@@ -39,9 +39,10 @@ it was really inspiring to start using MongoDB.
 Namely, MongoDB is a document database, meaning that you don't have to define the schema
 for each table (known as "collection" in MongoDB) and you can really
 easily insert a lot more complex objects into the database than you would
-be able to do with relational databases.
+be able to do with relational databases - and still execute fine-grained
+queries to your data almost as if t was a relattional database.
 
-MongoDB also has good query and aggregation features, making
+MongoDB has good query and aggregation features, making
 agile and combinatory queries possible similarly to SQL. With MongoDB,
 you can do inner joins and combine data from multiple collections (tables),
 similarly to SQL. Also, with MongoDB you can create pipelines out of 
@@ -112,7 +113,7 @@ When you use DynamoDB, you marry yourself to the Amazon family.
 This is entirely fine. The difference is that with DynamoDB,
 you *must* be on Amazon. With MongoDB, you *can* be on Amazon.
 
-The other difference is that DynamoDB makes it harder to execute more complex combinatory queries 
+The other difference to DynamoDB is that DynamoDB makes it harder to execute more complex combinatory queries 
 to your data. You will need to define your tables from early
 on to serve a certain query approach. If you want to make different queries
 later, you may be facing a major problem. With MongoDB's powerful queries, you

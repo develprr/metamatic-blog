@@ -14,10 +14,9 @@ Now, if you ever worked with relational databases, this is rather trivial.
 But I know that many people hate relational databases because of their rigid schema 
 requirements on your tables. 
 
-Having a predefined schemas can can be good or bad, depending on the case.
-If you have a huge amount of data coming in in the form of logs
-or sensory data, containing entries with potentially varying properties,
-there's a problem. 
+Having a fixed predefined schema can be good or bad, depending on the case.
+If you have a huge amount of data coming in in the form of logs, 
+containing entries with potentially varying properties, there's a problem. 
 
 If it's expected that your data may not be uniform and your data entries
 may significantly vary, then defining all properties that a table may contain as a
@@ -73,7 +72,7 @@ split data into multiple collections when your data grows big.
 ## How does this help my laundry service corporation?
 
 Let's say that you have a laundry service corporation and you are storing
-all sensory data from all your machines into MongoDB.
+all log data from all your machines into MongoDB.
 
 Now, if you used just one table to store all logs that each
 laundry machine is generating, your table would blow up very soon.

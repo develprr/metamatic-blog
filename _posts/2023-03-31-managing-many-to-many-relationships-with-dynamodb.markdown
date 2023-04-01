@@ -36,19 +36,17 @@ partitions are - your attention is on how to define keys - partition keys and so
 After all, those keys define how the database is split. 
 Let's study what this really means!
 
-## Implementing a many-to-many relationship on DynamoDB
+## Implementint one-to-many relationships on DynamoDB
 
-Let's have a look how to practically implement a many-to-many relationship
+Let's start with one-to-many relationships and have a look how to practically implement such 
 with DynamoDB. Let me implement a DynamoDB model that has many schools
-that can have many pupils. However one pupil can be a member of many schools.
+that can have many pupils. 
+
+Later we will take into account that one pupil can be a member of many schools.
 And then there are also courses! Each pupil can attend many courses
 and each course will have many pupils. A complete mess...
 
 Can't wait to solve it!
-
-At work, I would do this with TypeScript programming language. 
-However, since it's good to have hobbies that are not work-related, 
-I'll use Ruby also in this example. Let's go!
 
 # Preparations for the "education business"
 
@@ -220,5 +218,32 @@ end
 
 ```
 
-Next time, we will be going big and see how to find all courses of a school
-with DynamoDB. Take care!
+Quite likely you will encounter a situation that you need to list all
+courses available at any given school. DynamoDB's sort key makes this possible. 
+You can do queries by patterns in the sort key, suchs "begins-with" or "ends-with" etc.
+Since we just defined the syntax for Course object's sort key, we know that a
+Course object's source key starts with prefix *COURSE#*. Therefore we have 
+to implement a query that looks for items having the involved school's
+exact partition key (to look into the right partition) and whose sort key
+starts with Course object's sort key prefix:
+
+```ruby
+def self.find_by_school_id(school_id)
+  $client.query({
+    table_name: :schools,
+    key_condition_expression: "#PK = :PK and begins_with(#SK, :SK)",
+    expression_attribute_names: {
+      "#PK" => "PK",
+      "#SK" => "SK",
+    }
+    expression_attribute_values: {
+      PK: School.get_partition_key(school_id),
+      SK: "COURSE#"
+    }
+  })
+end
+
+```
+
+Next time, we will be going big and see how to actually implement a many-to-many
+relation with DynamoDB. Take care!

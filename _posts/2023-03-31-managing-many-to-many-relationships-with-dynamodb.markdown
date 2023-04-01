@@ -81,7 +81,7 @@ Good enough for this demo!
 
 ```ruby
 def generate_random_id
-  "#{Time.now.ti}:#{rand(9999999999)}"
+  "#{Time.now.to_i}:#{rand(9999999999)}"
 end
 ```
 

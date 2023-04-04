@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Landing on planet DynamoDB 
+title: Landing on Planet DynamoDB 
 date:   2023-03-31 06.38.00 +0300
 categories: Metamatic Systems
 ---
@@ -36,7 +36,7 @@ partitions are - your attention is on how to define keys - partition keys and so
 After all, those keys define how the database is split. 
 Let's study what this really means!
 
-## Implementint one-to-many relationships on DynamoDB
+## Implementing one-to-many relationships on DynamoDB
 
 Let's start with one-to-many relationships and have a look how to practically implement such 
 with DynamoDB. Let me implement a DynamoDB model that has many schools
@@ -112,7 +112,7 @@ can be fetched from the database:
 
 ```ruby
 def self.get_partition_key(school_id)
-  "SCHOOL##{school_id}
+  "SCHOOL##{school_id}"
 end
 ```
 
@@ -211,7 +211,7 @@ def self.find_by_id(school_id,course_id)
     table_name: :schools,
     key: {
       PK: School.get_partition_key(school_id),
-      SK: get_sert_key(course_id)
+      SK: get_sort_key(course_id)
     }
   }).item
 end
@@ -235,7 +235,7 @@ def self.find_by_school_id(school_id)
     expression_attribute_names: {
       "#PK" => "PK",
       "#SK" => "SK",
-    }
+    },
     expression_attribute_values: {
       PK: School.get_partition_key(school_id),
       SK: "COURSE#"
@@ -245,5 +245,62 @@ end
 
 ```
 
-Next time, we will be going big and see how to actually implement a many-to-many
-relation with DynamoDB. Take care!
+# Adding pupils to schools
+
+Similarly to courses, one school has many pupils. We decided
+earlier that one pupil can attend many schools. But to to start with
+something, we'll assume that a pupil has their main school where they belong to.
+So we'll implement the Pupil class the way that when a pupil is created,
+it must be assigned to a school already at its creation. At this point,
+Pupil class is very similar to Course class:
+
+```ruby
+class Pupil
+
+  def self.get_sort_key(pupil_id)
+    "PUPIL##{pupil_id}"
+  end
+
+  def self.create_one(school_id, pupil_id, name)
+    $client.put_item({
+      table_name: :schools,
+      item: {
+        PK: School.get_partition_key(school_id),
+        SK: get_sort_key(pupil_id),
+        name: name
+      }
+    })
+  end
+  
+  def self.find_by_school_id(school_id)
+    $client.query({
+      table_name: :schools,
+      key_condition_expression: "#PK = :PK and begins_with(#SK, :SK)",
+      expression_attribute_names: {
+        "#PK" => "PK",
+        "#SK" => "SK",
+      },
+      expression_attribute_values: {
+        PK: School.get_partition_key(school_id),
+        SK: "PUPIL#"
+      }
+    })
+  end
+  
+  def self.find_by_id(school_id,pupil_id)
+    $client.get_item({
+      table_name: :schools,
+      key: {
+        PK: School.get_partition_key(school_id),
+        SK: get_sort_key(pupil_id)
+      }
+    }).item
+  end
+  
+end
+
+```
+
+Next time, we will find out how to assign pupils to courses.
+
+See you soon!

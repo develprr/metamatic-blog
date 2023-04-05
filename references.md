@@ -6,6 +6,10 @@ permalink: /references/
 
 Metamatic has carried out many great projects with fantastic partners and customers.
 
+### Witted Megacorp
+
+Successful partnership with [Witted Megacorp](https://witted.com)'s fantastic team since 2019! 
+
 ### Talented Solutions
 Working together with Talented Network, Metamatic made the world perhaps a little bit better place by helping a major Finnish health care service provider 
 update their public web portal.

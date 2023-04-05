@@ -48,6 +48,11 @@ and each course will have many pupils. A complete mess...
 
 Can't wait to solve it!
 
+But first things first, we'll start with a one-to-many model. In this model,
+a school can have many courses and pupils:
+
+![Debugging States]({{ site.baseurl }}/assets/one-school-many-courses-and-pupils.png)
+
 # Preparations for the "education business"
 
 Since DynamoDB is *unstructured* from the schematic point of view,

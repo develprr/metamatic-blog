@@ -311,6 +311,6 @@ end
 As our next step, we'll assing courses to pupils. As a result,
 we will get a many-to-many relationship between pupils and courses.
 
-![many-to-many]({{ site.baseurl }}/assets/many-to-may-pupils-courses.png) 
+![many-to-many]({{ site.baseurl }}/assets/many-to-many-pupils-courses.png) 
 
 See you soon!

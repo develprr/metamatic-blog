@@ -5,6 +5,13 @@ date:   2023-03-31 06.38.00 +0300
 categories: Metamatic Systems
 ---
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 [DynamoDB](https://docs.aws.amazon.com/dynamodb/index.html) is an intriguing concept. 
 It introduces a single-table design model. This means that you could - and should - be stuffing all different kinds of objects
 into one database table. This may sound crazy for anybody arriving from

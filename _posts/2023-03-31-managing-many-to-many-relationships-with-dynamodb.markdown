@@ -5,13 +5,6 @@ date:   2023-03-31 06.38.00 +0300
 categories: Metamatic Systems
 ---
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
 [DynamoDB](https://docs.aws.amazon.com/dynamodb/index.html) is an intriguing concept. 
 It introduces a single-table design model. This means that you could - and should - be stuffing all different kinds of objects
 into one database table. This may sound crazy for anybody arriving from
@@ -58,7 +51,7 @@ Can't wait to solve it!
 But first things first, we'll start with a one-to-many model. In this model,
 a school can have many courses and pupils:
 
-![Debugging States]({{ site.baseurl }}/assets/one-school-many-courses-and-pupils.png)
+![one-to-many]({{ site.baseurl }}/assets/one-school-many-courses-and-pupils.png)
 
 # Preparations for the "education business"
 

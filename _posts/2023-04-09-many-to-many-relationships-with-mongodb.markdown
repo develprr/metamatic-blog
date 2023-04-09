@@ -63,11 +63,11 @@ Another practical example of a many-to-many scenario in the real world would
 be a school that can have many courses and pupils. Yet each pupil can attend 
 many courses and each course will be attended by many pupils.
 
-To start with, let's describe the scenario first with TypeScript models. 
+To start with, let's describe the scenario first with typescript models. 
 This makes sense, because we will be soon loading data from MongoDB into those
-TypeScript objects:
+typescript objects:
 
-```TypeScript
+```typescript
 interface ISchool {
   _id: string;
   name: string;
@@ -109,7 +109,7 @@ objects on database level when working with MongoDB.
 ## Finding schools, courses and students
 
 Now, let's find some schools, pupils and courses. I implement a handler called "School"
-that contains the functions to do that. TypeScript is a fantastic programming language
+that contains the functions to do that. typescript is a fantastic programming language
 because it supports nicely both a more "functional" like approach, yet also providing
 structures that allow a more traditional "object-oriented" approach, familiar to those
 coming from planet Java. I'll play a bit here and mix in something from both worlds.
@@ -120,7 +120,7 @@ to persist our objects into MongoDB. I will use namespaces here this time.
 Have a look at my *School* handler that finds a school by ID and merges school's pupils and courses
 into the result with a lookup:
 
-```TypeScript
+```typescript
 
 namespace School {
 
@@ -158,7 +158,7 @@ For our example, let's add two imaginary schools, and populate the first one
 with courses and pupils. Finally, we add them all into MongoDB with handler utilities
 that we just implemented:
 
-```TypeScript
+```typescript
 
   // Defining the first school:
   const schoolMalmo: ISchool = {
@@ -209,7 +209,7 @@ that we just implemented:
 
 Next, let's implement DB injectors for all our entities that we created:
 
-```TypeScript
+```typescript
 namespace School {
  
   const collectionName: string = "schools";
@@ -229,7 +229,7 @@ with compact code, the choice is yours!
 
 Alright, I cut the crap now and add the items. Just do it!
 
-```TypeScript
+```typescript
 await School.insertMany(schools);
 await Course.insertMany(courses);
 await Pupil.insertMany(pupils);
@@ -237,7 +237,7 @@ await Pupil.insertMany(pupils);
 
 And finally, get the results: 
 
-```TypeScript
+```typescript
 await School.findByIdWithCoursesAndPupils("malmo");
 ```
 
@@ -276,7 +276,7 @@ In our example, a course should be able to have many pupils
 and one pupil should be attending many courses. It can be done by adding 
 an association object, a design pattern well known in relational databases:
 
-```TypeScript
+```typescript
 interface IPupilCourse {
   _id?: string;
   courseId: string;
@@ -288,7 +288,7 @@ interface IPupilCourse {
 
 Now, adding a pupil to a course: 
 
-```TypeScript
+```typescript
 
 const pupilCourse: IPupilCourse = {
   _id: `${courseMatematik._id}:${pupilOne._id}`,
@@ -302,7 +302,7 @@ await PupilCourse.insertMany([pupilCourse]);
 
 And finally, let's implement a query to find all pupils by course ID:
 
-```TypeScript
+```typescript
 
 export namespace PupilCourse {
 

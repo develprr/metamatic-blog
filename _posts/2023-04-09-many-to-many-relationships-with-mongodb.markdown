@@ -27,8 +27,8 @@ away? Are they some ancient artifacts of the past? I don't think so. Let me expl
 A database that supports the relational database model is a database
 that supports relational concepts like one-to-one, one-to-many and many-to-many.
 
-This is a really natural way to see the world. Actually,
-I can hardly think about the world without relations at all! Can you?
+Let's think about it. Isn't it a really natural way to see the world? Actually,
+can you think about the world without relations at all?
 
 For example, think about a mother. Think about her children. A mother can have one
 or many children. It's safe to say that a mother and a child has a one-to-many 

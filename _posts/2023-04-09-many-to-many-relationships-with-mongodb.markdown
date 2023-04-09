@@ -125,7 +125,7 @@ into the result with a lookup:
 namespace School {
 
   export const findByIdWithCoursesAndPupils = async (schoolId: string): 
-	Promise<ISchool[]> => await mongoClient.aggregate("schools", [
+	Promise<ISchool[]> => await MongoClient.aggregate("schools", [
 	  {
 		$match: {
 		  _id: schoolId
@@ -134,16 +134,16 @@ namespace School {
 	  {
 		$lookup: {
 		  from: "courses,
-		  localField: "schoolId",
-		  foreignField: "_id",
+		  localField: "_id",
+		  foreignField: "schoolId",
 		  as: "courses"
 		}
 	  },
 	  {
 		$lookup: {
 		  from: "pupils",
-		  localField: "schoolId",
-		  foreignField: "_id",
+		  localField: "_id",
+		  foreignField: "schoolId",
 	 	  as: "pupils"
 	    }
 	  }
@@ -152,8 +152,122 @@ namespace School {
 
 ```
 
-Here we have it. The ease of a schemaless document database peppered with agile 
-queries comparable to SQL databases. This is MongoDB.
+# Populating collections with data
+
+For our example, let's add two imaginary schools, and populate the first one 
+with courses and pupils. Finally, we add them all into MongoDB with handler utilities
+that we just implemented:
+
+```TypeScript
+
+  // Defining the first school:
+  const schoolMalmo: ISchool = {
+	_id: "malmo",
+	name: "Malmö Grundskula Svärje"
+  };
+ 
+  // Defining another school:
+  const schoolHermosa: ISchool = {
+	_id: "hermosa",
+	name: "Escuela Hermosa Colombiana"
+  };
+
+  // Placing the chools into an array:
+  const schools: ISchool[] = [schoolMalmo, schoolHermosa];
+
+  // Adding a pupil to the first school:
+  const pupilOne: IPupil = {
+	_id: "elev1",
+	schoolId: schoolMalmo._id,
+	name: "Elva Tolva"
+  };
+
+  // Adding another pupil to the first school:
+  const pupilTwo: IPupil = {
+	_id: "elev2",
+	schoolId: schoolMalmo._id,
+	name: "Åckso Någonannan"
+  };
+
+  // Assinging the pupils into an array: 
+  const pupils: IPupil[] = [pupilOne, pupilTwo];
+
+  // Adding two courses to the first school:
+  const courses: ICourse[] = [
+	{
+	  _id: "engelska",
+	  schoolId: schoolMalmo._id,
+	  name: "läser vi engelska mykke vidare"
+	},
+	{
+	  _id: "matematiken",
+	  schoolId: schoolMalmo._id,
+	  name: "matematiken för alla"
+	}
+  ];
+```
+
+Next, let's implement DB injectors for all our entities that we created:
+
+```TypeScript
+namespace School {
+ 
+	const collectionName: string = "schools";
+
+	export const insertMany = (schools: ISchool[]) => MongoClient.insertMany(collectionName, schools);
+
+}
+
+```
+
+And write similar type-checking insert methods for other classes. If you are lazy you can also
+just use the generic method ```MongoClient.insertMany(collectionName, entries)``` directly
+but then you lose type-checking. With TypeScrpt, type-safe with boilerplate or relax-style
+with compact code, the choice is yours!
+
+Now, cut the crap and add the items. Just do it!
+```TypeScript
+await School.insertMany(schools);
+await Course.insertMany(courses);
+await Pupil.insertMany(pupils);
+````
+
+And finally, get the results: 
+
+```TypeScript
+await School.findByIdWithCoursesAndPupils("malmo");
+```
+The database returns our school with all its courses and pupils
+just the way we wanted:
+
+```JSON
+{
+    "_id": "malmo",
+    "name": "Malmö Grundskula Svärje",
+    "courses": [{
+        "_id": "engelska",
+        "schoolId": "malmo",
+        "name": "läser vi engelska mykke vidare"
+    }, {
+        "_id": "matematiken",
+        "schoolId": "malmo",
+        "name": "matematiken för alla"
+    }],
+    "pupils": [{
+        "_id": "elev1",
+        "schoolId": "malmo",
+        "name": "Elva Tolva"
+    }, {
+        "_id": "elev2",
+        "schoolId": "malmo",
+        "name": "Åckso Någonannan"
+    }]
+}
+
+```
+
+That's it! The ease of a schemaless document database peppered with agile 
+queries comparable to SQL databases. This is MongoDB!
 
 See you soon!
 

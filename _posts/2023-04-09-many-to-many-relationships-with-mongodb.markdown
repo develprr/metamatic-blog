@@ -124,8 +124,8 @@ into the result with a lookup:
 
 namespace School {
 
-	export const findByIdWithCoursesAndPupils = async (schoolId: string): 
-	  Promise<ISchool[]> => await mongoClient.aggregate("schools", [
+  export const findByIdWithCoursesAndPupils = async (schoolId: string): 
+	Promise<ISchool[]> => await mongoClient.aggregate("schools", [
 	  {
 		$match: {
 		  _id: schoolId
@@ -144,10 +144,10 @@ namespace School {
 		  from: "pupils",
 		  localField: "schoolId",
 		  foreignField: "_id",
-		  as: "pupils"
-		}
+	 	  as: "pupils"
+	    }
 	  }
-	]);
+  ]);
 }
 
 ```

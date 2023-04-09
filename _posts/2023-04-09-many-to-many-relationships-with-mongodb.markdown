@@ -30,11 +30,12 @@ that supports relational concepts like one-to-one, one-to-many and many-to-many.
 Let's think about it. Isn't it a really natural way to see the world? Actually,
 can you think about the world without relations at all?
 
-For example, think about a mother. Think about her children. A mother can have one
-or many children. It's safe to say that a mother and a child has a one-to-many 
-relationship. It doesn't work otherwise. If you have a mother without children,
-it's not a mother. It's something else. The way we humans see the world,
-it's all about relations. Relational databases organize object similarly
+For example, think about a school. A school can has many pupils. Typically, 
+a pupil belongs to one school. That's a typical one-to-many relation. A course
+can be attended by many pupils. Yet one pupil may be attending many courses. This 
+is a many-to-many relation.
+
+Relational databases organize object similarly
 into object types that are stored in their own groups, or "tables". These
 databases offer a simple and powerful concept to organize the relations 
 between these objects in a way that is very natural, mimicking the way 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Many to Many Relationships with MongoDB 
+title: Agile Data Management with MongoDB 
 date:   2023-04-09 05.01.00 +0300
 categories: Metamatic Systems
 ---
@@ -105,4 +105,56 @@ have separate handler objects such as *School*, *Pupil* and *Course*.
 Next time, let's check out how to build and keep relationships between these 
 objects on database level when working with MongoDB.
 
-Cheers!
+## Finding schools, courses and students
+
+Now, let's find some schools, pupils and courses. I implement a handler called "School"
+that contains the functions to do that. TypeScript is a fantastic programming language
+because it supports nicely both a more "functional" like approach, yet also providing
+structures that allow a more traditional "object-oriented" approach, familiar to those
+coming from planet Java. I'll play a bit here and mix in something from both worlds.
+
+You could use class instances, static classes or even namespaces to implement the handlers 
+to persist our objects into MongoDB. I will use namespaces here this time. 
+
+Have a look at my *School* handler that finds a school by ID and merges school's pupils and courses
+into the result with a lookup:
+
+```TypeScript
+
+namespace School {
+
+	export const findByIdWithCoursesAndPupils = async (schoolId: string): 
+	  Promise<ISchool[]> => await mongoClient.aggregate("schools", [
+	  {
+		$match: {
+		  _id: schoolId
+		}
+	  },
+	  {
+		$lookup: {
+		  from: "courses,
+		  localField: "schoolId",
+		  foreignField: "_id",
+		  as: "courses"
+		}
+	  },
+	  {
+		$lookup: {
+		  from: "pupils",
+		  localField: "schoolId",
+		  foreignField: "_id",
+		  as: "pupils"
+		}
+	  }
+	]);
+}
+
+```
+
+Here we have it. The ease of a schemaless document database peppered with agile 
+queries comparable to SQL databases. This is MongoDB.
+
+See you soon!
+
+
+

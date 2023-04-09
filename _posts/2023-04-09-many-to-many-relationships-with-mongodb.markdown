@@ -30,7 +30,7 @@ that supports relational concepts like one-to-one, one-to-many and many-to-many.
 Let's think about it. Isn't it a really natural way to see the world? Actually,
 can you think about the world without relations at all?
 
-For example, think about a school. A school can has many pupils. Typically, 
+For example, think about a school. A school can have many pupils. Typically, 
 a pupil belongs to one school. That's a typical one-to-many relation. A course
 can be attended by many pupils. Yet one pupil may be attending many courses. This 
 is a many-to-many relation.
@@ -43,7 +43,7 @@ we see the world as well. Therefore, the relational databases will hardly go awa
 
 ## In a way, MongoDB is a relational database
 
-It's a quite common to think that a relational database equals an SQL database.
+It's quite common to think that a relational database equals an SQL database.
 SQL is a query language used to make database queries to relational databases.
 I challenge this view because MongoDB, not being an SQL database since it doesn't
 support SQL queries, makes it possible to combine data in a way very
@@ -69,26 +69,26 @@ TypeScript objects:
 
 ```TypeScript
 interface ISchool {
-    _id: string;
-    name: string;
-    courses?: ICourse[];
-    pupils?: IPupil[]
+  _id: string;
+  name: string;
+  courses?: ICourse[];
+  pupils?: IPupil[]
 }
 
 interface IPupil {
-    _id: string;
-    schoolId: string;
-    name: string;
-    school?: ISchool;
-    courses?: ICourse[]
+  _id: string;
+  schoolId: string;
+  name: string;
+  school?: ISchool;
+  courses?: ICourse[]
 }
 
 interface ICourse {
-    _id: string;
-    schoolId: string; 
-    name: string;
-    school?: ISchool;
-    pupils?: ICourse[];
+  _id: string;
+  schoolId: string; 
+  name: string;
+  school?: ISchool;
+  pupils?: ICourse[];
 }
 ```
 
@@ -212,9 +212,9 @@ Next, let's implement DB injectors for all our entities that we created:
 ```TypeScript
 namespace School {
  
-	const collectionName: string = "schools";
+  const collectionName: string = "schools";
 
-	export const insertMany = (schools: ISchool[]) => MongoClient.insertMany(collectionName, schools);
+  export const insertMany = (schools: ISchool[]) => MongoClient.insertMany(collectionName, schools);
 
 }
 
@@ -227,7 +227,8 @@ just use the generic method ```MongoClient.insertMany(collectionName, entries)``
 but then you lose type-checking. With TypeScrpt, type-safe with boilerplate or relax-style
 with compact code, the choice is yours!
 
-Now, cut the crap and add the items. Just do it!
+Alright, I cut the crap now and add the items. Just do it!
+
 ```TypeScript
 await School.insertMany(schools);
 await Course.insertMany(courses);
@@ -239,6 +240,7 @@ And finally, get the results:
 ```TypeScript
 await School.findByIdWithCoursesAndPupils("malmo");
 ```
+
 The database returns our school with all its courses and pupils
 just the way we wanted:
 
@@ -335,6 +337,3 @@ I'll be back with more examples from the exciting world of managing data with Mo
 Cheers!
 
 See you soon!
-
-
-

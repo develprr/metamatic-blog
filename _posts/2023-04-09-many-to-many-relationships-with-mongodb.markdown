@@ -12,7 +12,7 @@ better for you. Check out document databases!
 
 The best document databases that we have here in the future allow you to 
 insert different kinds of complex objects into your ~~tables~~ collections 
-without the headache casting fixed schemas on your tables, and still have all the benefits
+without the headache of casting fixed schemas on your tables, and still have all the benefits
 of an SQL database - indexing, sophisticated queries, joins and still supporting
 the timeless relational model. Isn't it fantastic to live in the future?
 
@@ -53,11 +53,11 @@ to SQL-based relational databases. If you wish!
 
 ## Getting hands dirty
 
-That's all about philosophy for now. I'll show next how to make the most the 
+That's all about philosophy for now. I'll show next how to make the most of the 
 relational databases with MongoDB, while still enjoying the fruit of flexibility of a document
 based database. Let's get started and implement...
 
-## Many-to-many models in MongoDB!
+## One-to-many and many-to-many models with MongoDB!
 
 Another practical example of a many-to-many scenario in the real world would
 be a school that can have many courses and pupils. Yet each pupil can attend 

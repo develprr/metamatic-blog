@@ -5,9 +5,9 @@ date:   2023-04-09 05.01.00 +0300
 categories: Metamatic Systems
 ---
 
-Welcome to the future! Hey visitor, time traveller, do you come from the 
+Hey visitor, welcome to the future! Do you come from the 
 dark ages of the last decade where giant relational databases ruled?
-Don't worry, it's year 2023 now we have moved on: we have something 
+Don't worry, it's year 2023 now and we have moved on: we have something 
 better for you. Check out document databases! 
 
 The best document databases that we have here in the future allow you to 

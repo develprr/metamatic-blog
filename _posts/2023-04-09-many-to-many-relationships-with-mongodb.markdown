@@ -220,6 +220,8 @@ namespace School {
 
 ```
 
+## One-to-many with MongoDB
+
 And write similar type-checking insert methods for other classes. If you are lazy you can also
 just use the generic method ```MongoClient.insertMany(collectionName, entries)``` directly
 but then you lose type-checking. With TypeScrpt, type-safe with boilerplate or relax-style
@@ -266,8 +268,71 @@ just the way we wanted:
 
 ```
 
-That's it! The ease of a schemaless document database peppered with agile 
-queries comparable to SQL databases. This is MongoDB!
+## Many-to-many with MongoDB
+
+In our example, a course should be able to have many pupils
+and one pupil should be attending many courses. It can be done by adding 
+an association object, a design pattern well known in relational databases:
+
+```TypeScript
+interface IPupilCourse {
+  _id?: string;
+  courseId: string;
+  pupilId: string;
+  courses?: ICourse[];
+  pupils?: IPupil[];
+}
+```
+
+Now, adding a pupil to a course: 
+
+```TypeScript
+
+const pupilCourse: IPupilCourse = {
+  _id: `${courseMatematik._id}:${pupilOne._id}`,
+  courseId: courseMatematik._id,
+  pupilId: pupilOne._id,
+}
+
+await PupilCourse.insertMany([pupilCourse]);
+
+```
+
+And finally, let's implement a query to find all pupils by course ID:
+
+```TypeScript
+
+export namespace PupilCourse {
+
+  const collectionName: string = "pupils-courses";
+
+  export const insertMany = (pupilCourses: IPupilCourse[]) => MongoClient.insertMany(collectionName, pupilCourses);
+
+  export const findPupilsByCourseId =  async (courseId: string) => await MongoClient.aggregate(collectionName, [
+    {
+      $match: {
+        courseId
+      },
+    },
+    {
+      $lookup: {
+        from: "pupils",
+        localField: "pupilId",
+        foreignField: "_id",
+        as: "pupils"
+      }
+    }
+  ]);
+
+}
+```
+
+The ease of a schemaless document database peppered with agile 
+queries comparable to SQL databases - that's MongoDB! 
+
+I'll be back with more examples from the exciting world of managing data with MongoDB.
+
+Cheers!
 
 See you soon!
 

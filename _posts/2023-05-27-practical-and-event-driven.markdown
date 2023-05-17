@@ -104,7 +104,7 @@ app.get('/my-event-driven-endpoint', async (req: Request, res: Response) => { {
 
 The solution above effectively enables event driven communication between your UI client app
 and your web server endpoint. To proceed from here to a plain, simple, cheap and
-effective working solution, connect your server endpoint to listen to changes a real database,
+effective working solution, connect your server endpoint to listen to changes in a real database,
 such as MongoDB (or whatever). Possibly also wrap your client-side updater function
 into a React app. And deploy the web server endpoint to the AWS cloud in an EC2 container.
 

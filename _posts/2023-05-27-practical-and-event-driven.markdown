@@ -70,7 +70,7 @@ const handleServerEvent = () => {
   sseSource.onmessage = function (event) {
 	const dataElement = document.getElementById("data"); // a DOM element in the UI.
 	const { content } = JSON.parse(event.data);
-	dataElement.textContent = ticker;
+	dataElement.textContent = content;
   };
   const closeStream = () => sseSource.close(); 
 }	 

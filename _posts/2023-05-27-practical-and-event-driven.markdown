@@ -18,14 +18,6 @@ So let me add another principle to the mix. To me it comes as self-evident that 
 most obvious solution is usually the best solution, and as a bonus 
 it's also usually the simplest solution. How about you?
 
-Yet the Internet says, there are people (they often call themselves "architects")
-whose job is to discredit the obviously simple and effective solutions 
-and introduce "proper" solutions, that typically make costs explode by one order of magnitude
-and delay the deliverables beyond the event horizon into some fuzzy
-future that probably never materializes before some half-baked start-up competitor
-snatches the booty. 
-
-
 ## Thinking too big
 
 Yet this is also the reason why start-ups still have a great chance
@@ -64,13 +56,13 @@ simplest possible solution to implement an event-driven application.
 Now, let's say that we need an event driven web application. Every time there's 
 change in database, the change should immediately be reflected to the UI.
 
-To go event-driven you just need a ~~huge Kafka cluster fart~~ simple JavaScript
+To go event-driven you just need a simple JavaScript
 vanilla code snippet and basic understanding what JavaScript's readily available
 *EventSource* object can do for you.
 
 So let's naively implement the JavaScript based UI code to read events that the server will be pushing:
 
-```JavaScript
+```javascript
  
 const handleServerEvent = () => {
   const sseSource = new EventSource("http://127.0.0.1:8080/my-event-driven-endpoint");
@@ -89,7 +81,7 @@ to the UI every time there's data available:
 
 And the backend endpoint written for Express server in NodeJS: 
 
-```JavaScript
+```javascript
 app.get('/my-event-driven-endpoint', async (req: Request, res: Response) => { {
     
     // set response headers to enable event driven communication:
@@ -121,9 +113,6 @@ have thousands of customers - you'll be doing fine with a single naive Node web 
 in its happy container for quite some time - go for Lambdas or Kuberneter clusters
 only when you really have the customers and huge number of online users.
 
-Just hire a practical consultant to do all this for you for some thousands of bucks.
-If you like! Or if not, just throw a million or two out of the window to get
-something totally disproportionate in your current situation!
 
 I'll be back generating this stuff directly out of my biological Human GPT.
 

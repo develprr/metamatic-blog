@@ -36,7 +36,7 @@ too early, meaning that you try to implement a *big* and *scalable* architecture
 already at the point when you have about zero customers,
 
 you are probably thinking *too big*. Every solution should be goal oriented
-and solve the problems and challenges that you have *right now*. For
+and solve the problems and challenges that you have right now. For
 example, typically you should not try to implement "localization support" to translate
 your app into all possible languages when you don't have a single customer etc.
 It's almost always the best option to find a practical solution to a practical
@@ -50,7 +50,7 @@ coders tend to think that software is similar to physical items -
 by design, you can't just refactor an existing tractor to a main battle tank.
 This physical world thinking is quite often erratically mirrored into software business.
 
-But in reality, software is like clay - you can just endlesslyu keep modifying and reforming it
+But in reality, software is like clay - you can just endlessly keep modifying and reforming it
 to match the changed requirements (if you can code, of course). There is no
 need to throw spent millions out of the window and start everything *from scratch*.
 You could - and most often, *should* keep modifying your product - especially if it's already
@@ -59,7 +59,7 @@ making some real money - instead of possibly going to point zero all over again.
 Okay, now, this was the prelude. So let me get practical and describe the
 simplest possible solution to implement an event-driven application.
 
-## Going event driven easy, cheap and effectively
+## Going event driven easy and cheap
 
 Now, let's say that we need an event driven web application. Every time there's 
 change in database, the change should immediately be reflected to the UI.
@@ -121,7 +121,7 @@ have thousands of customers - you'll be doing fine with a single naive Node web 
 in its happy container for quite some time - go for Lambdas or Kuberneter clusters
 only when you really have the customers and huge number of online users.
 
-Just hire a practical consultant to do all this for you for some thousands of bugs.
+Just hire a practical consultant to do all this for you for some thousands of bucks.
 If you like! Or if not, just throw a million or two out of the window to get
 something totally disproportionate in your current situation!
 

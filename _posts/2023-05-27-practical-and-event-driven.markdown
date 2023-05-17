@@ -109,7 +109,7 @@ such as MongoDB (or whatever). Possibly also wrap your client-side updater funct
 into a React app. And deploy the web server endpoint to the AWS cloud in an EC2 container.
 
 How about the endpoint scalability? You don't need to worry about it until you 
-have thousands of customers - you'll be doing fine with a single naive Node web server 
+have dozens or hundreds of customers - you'll be doing fine with a single naive Node web server 
 in its happy container for quite some time - go for Lambdas or Kuberneter clusters
 only when you really have the customers and huge number of online users.
 

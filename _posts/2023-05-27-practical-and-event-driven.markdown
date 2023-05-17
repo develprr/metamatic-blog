@@ -11,7 +11,7 @@ their simplicity!
 ## Stupid is as stupid does
 
 Now this thing I just wrote may also sound the stupidest thing you possibly heard today -
-just because, well, actually, why? Because it is obvious, self-evident
+just because, well, actually, why? Because it is just too obvious, self-evident
 and simple!
 
 So let me add another principle to the mix. To me it comes as self-evident that the 
@@ -112,7 +112,6 @@ How about the endpoint scalability? You don't need to worry about it until you
 have dozens or hundreds of customers - you'll be doing fine with a single naive Node web server 
 in its happy container for quite some time - go for Lambdas or Kuberneter clusters
 only when you really have the customers and huge number of online users.
-
 
 I'll be back generating this stuff directly out of my biological Human GPT.
 

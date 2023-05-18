@@ -14,7 +14,7 @@ Now this thing I just wrote may also sound the stupidest thing you possibly hear
 just because, well, actually, why? Because it is just too obvious, self-evident
 and simple!
 
-So let me add another principle to the mix. To me it comes as self-evident that the 
+So let me add another principle to the mix. To me it comes as a matter of course that the 
 most obvious solution is usually the best solution, and as a bonus 
 it's also usually the simplest solution. How about you?
 

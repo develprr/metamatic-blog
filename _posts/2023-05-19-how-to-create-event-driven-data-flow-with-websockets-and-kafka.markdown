@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Lubricate Your Data Flow With Kafka and Web Sockets
+title: Lubricate Your Data Flow With Kafka and Web Sockets
 date:   2023-05-19 15.00.00 +0300
 categories: Metamatic Systems
 ---

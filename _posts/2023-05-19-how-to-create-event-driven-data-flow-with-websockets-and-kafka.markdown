@@ -7,7 +7,7 @@ categories: Metamatic Systems
 
 Hey you right there on the other side of the display! I congratulate you for being
 chosen by the Algorithm to view this particular blog post, because
-today I am going to rumble like thinder about how you can make your data 
+today I am going to rumble like thunder about how you can make your data 
 flow through your systems as smoothly as silk and and as fast as lightning!
 
 Refering to my previous blog posts that discussed different database solutions

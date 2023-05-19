@@ -25,7 +25,7 @@ lubricated the same way in order to serve as a relieable cash cow.
 When something is changed in a database, we want that change to timely propagate from the database into all systems
 that depend on that data. Tuning organization's systems to communicate with each
 other with minimal delays is good for almost any business, regardless of 
-which business we talk - banking, finance, insurcance, just name it!
+which business we talk - banking, finance, insurance, just name it!
 
 ## The problem
 
@@ -37,8 +37,8 @@ temperature, load, program and power consumption. We want to store all the data 
 a huge database. Every time when a log entry is written to the database, 
 we want it to immediately propagate to the browser based user interface that
 the the staff then monitors. We want the data flow to be event-driven. 
-Each client node of the data flow system should not be doing expensive continuous short-polling to 
-its server counterpart. Rather, the event should be pushing the changes to the client part.
+Each client - or consumer - node of the data flow in the system should not be doing expensive continuous short-polling to 
+its provider counterpart. Rather, the provider part should be pushing the changes to the consumer part.
 
 So what to do?
 
@@ -61,16 +61,16 @@ serves your UI, we are talking about a *backend-for-frontend*, or **BFF**.
 This API can't be a universal or generic API, it must not be designed to potentially serve many
 different kinds of clients. It's a dedicated single purpose API to serve the one and only UI - 
 its endpoints are optimized for that particular UI. When you want it to behave in an event-driven
-fashion and immediately to push a laundry log entry to the UI once it enters to the endpoint 
+fashion and immediately push each laundry log entry to the UI once it enters to the endpoint 
 from the database, web sockets are the best way implement it!
 
 ### Use Kafka and web sockets to write two-way event driven server endpoint
 
 Now let's write an event driven backend endpoint that is event driven in both ways - 
-it gets the data event in an event driven way from the database - and further on, it then pushes
+it gets the data event in an event driven way from the database and further on pushes
 that data to the UI as an event as well. So two-fold event-driven! Let's write this
-magic NodeJS endpoint right now. Let us make it subscribe to Kafka to listen for data events.
-When an event enters the endpoint, it just calmly pushes the event further over 
+magic endpoint with TypeScript and NodeJS right now. Let us make it subscribe to Kafka to listen for data events.
+When an event enters the endpoint, the endpoint just calmly pushes it further over 
 a web socket to the UI:
 
 ```typescript

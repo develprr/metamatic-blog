@@ -14,13 +14,13 @@ Refering to my previous blog posts that discussed different database solutions
 to store and access huge amounts of data in databases without choking them,
 let's touch the other side of the coin now.
 
-## Who needs a lubricated system?
+## Who needs a lubricated engine?
 
-Namely, it is not going to be helpful to access and store your data easily
+It is not helpful helpful to access your data easily
 if you can't make it smoothly flow to every place where it is needed.
 Just as any combustion engine needs to be lubricated with the best synthetic 
-oils to work properly and smoothly, also every business system aneeds to be 
-lubricated the same way in order to serve as a relieable cash cow.  
+oils to work properly and smoothly, the same way every business system needs to be 
+lubricated as well in order to serve as a relieable cash cow.  
 
 When something is changed in a database, we want that change to timely propagate from the database into all systems
 that depend on that data. Tuning organization's systems to communicate with each
@@ -56,20 +56,20 @@ To implement an even driven architecture for the UI, we need to be writing
 a browser-based user interface application that *listens* for data changes provided
 by its web server endpoint. Therefore the API to serve the UI cannot be a classic REST API, 
 since a REST API supports only query-response based scenarios. When you are implementing an API that
-serves your UI, we are talking about a *backend-for-frontend*, or **BFF**. 
+serves your UI, we are talking about a [backend for frontend](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends), or **BFF**. 
 
 This API can't be a universal or generic API, it must not be designed to potentially serve many
 different kinds of clients. It's a dedicated single purpose API to serve the one and only UI - 
 its endpoints are optimized for that particular UI. When you want it to behave in an event-driven
 fashion and immediately push each laundry log entry to the UI once it enters to the endpoint 
-from the database, web sockets are the best way implement it!
+from the database, [web sockets](https://en.wikipedia.org/wiki/WebSocket) are the best way implement it!
 
 ### Use Kafka and web sockets to write two-way event driven server endpoint
 
 Now let's write an event driven backend endpoint that is event driven in both ways - 
 it gets the data event in an event driven way from the database and further on pushes
 that data to the UI as an event as well. So two-fold event-driven! Let's write this
-magic endpoint with TypeScript and NodeJS right now. Let us make it subscribe to Kafka to listen for data events.
+magic endpoint with TypeScript and NodeJS right now. Let us make it subscribe to [Kafka](https://kafka.apache.org/) to listen for data events.
 When an event enters the endpoint, the endpoint just calmly pushes it further over 
 a web socket to the UI:
 
@@ -98,7 +98,64 @@ socketServer.listen(process.env.SOCKET_PORT, () => {
 ```
 
 Quite mind-blowing how little code we needed for this, isn't it? 
-Alright folks, stay tuned, next time I will reveal to you how I implemented my secretive
-*LaundryEventKafkaConsumer* that listens to Kafka service that delivers
+Alright folks, stay tuned, next, let's have a look at my secretive
+*LaundryEventKafkaConsumer* that listens to Kafka service which in turn delivers
 laundry machine log entries from the deep databases of our mighty
-Laundry service corporation!
+Laundry service corporation:
+
+```typescript
+import { Consumer, Kafka } from 'kafkajs'
+
+export namespace LaundryEventConsumer {
+
+  // Define Kafka client:
+  const kafka: Kafka = new Kafka({
+    clientId: 'laundry-app',
+    brokers: ['localhost:9092'],
+  })
+
+  // Structure of event call back functions:
+  type EventCallback = (event: any) => void
+
+  // Kafka consumer to listen for Kafka events:
+  const consumer: Consumer = kafka.consumer({ groupId: 'laundry-group' })
+
+  // Array of callbacks to be called upon a Kafka event:
+  const eventCallbacks: EventCallback[] = []
+
+  // Providing a way to add a new call back to the consumer:
+  export const addEventCallback = (callback: EventCallback) => {
+    eventCallbacks.push(callback)
+  }
+
+  // Invoke this to connect to Kafka and start listening:
+  export const run = async () => {
+
+    // Connect Kafka consumer to Kafka
+    await consumer.connect();
+
+    // Subscribe to laundry machine log topic:
+    await consumer.subscribe({
+      topic: 'laundry-machine-logs',
+      fromBeginning: true,
+    })
+
+    // Finally, start the consumer:
+    await consumer.run({
+      eachMessage: async ({ topic, partition, message }) => {
+        const event = {
+          partition,
+          offset: message.offset,
+          value: message.value.toString(),
+        }
+        // Broadcast the received Kafka event to all listeners:
+        eventCallbacks.forEach((callback: EventCallback) => {
+          callback(event)
+        })
+      },
+    })
+  }
+}
+```
+
+That would it be this time folks, thanks for reading!

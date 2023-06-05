@@ -155,12 +155,11 @@ when your system receives and serializes objects from external interfaces,
 HTTP requests, database queries or files. If those objects aren't
 what expected, coding-time or compile-time type-checking won't help you
 at all. It helped you write your code right for the ideal case and
-it even helped you to write your tests right. 
-
-But when your code is in production and receiving objects over HTTP requests
-it won't be checking anything when it gets a mismatching one - a property that your schema 
+it even helped you to write your tests right, but when your code is in 
+production and receiving objects over HTTP requests it won't be checking 
+anything when it gets a mismatching one - a property that your schema 
 defined as obligatory may still be missing and enter into your function
-crashing it from inside, because the lack of runtime type checking. And 
+crashing it from inside, because of the lack of runtime type checking. And 
 the same may happen as a result of a database query or when the system serializes
 an object from the disk. 
 
@@ -174,7 +173,7 @@ didn't match the expectation. This saves you from a lot of debugging effort.
 Of course you can also add runtime validation in TypeScript (for example
 with [Yup](https://www.npmjs.com/package/yup) library) but it's then 
 always manual extra effort on top of TypeScript's native compile-time type
-checking. Can't have one with another!
+checking. Can't have one without the other!
 
 
 I'll be back coding in Python, you can be sure about that. Cheers!

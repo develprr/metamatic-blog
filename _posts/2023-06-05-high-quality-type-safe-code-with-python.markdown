@@ -101,7 +101,7 @@ Now, this code executes because it correctly instantiates the structure
 of a user. But if you don't have the constructor object right, your
 code fails!
 
-# But it's only runtime checking!
+# But it's only runtime checking...
 
 Pydantic provides robust TypeScript-like schema validation and checking
 but it only works in runtime. Unlike with TypeScript code, your editor won't still be nagging in 

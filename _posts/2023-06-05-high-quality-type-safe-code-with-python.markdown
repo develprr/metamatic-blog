@@ -39,7 +39,7 @@ to functions that aren't expecting them and referring to object properties that 
 
 In TypeScript, this problem rarely occurs because you *can't* make these kinds of mistakes. Firstly, the editor
 will already warn you about the mistakes when you are only starting to write
-it, and secondly, even if your ignore this warning, the code won't even 
+them, and secondly, even if you ignore this warning, the code won't even 
 compile so you won't be running it before it's right. 
 
 None of these gatekeepers really work in Python. Well, there is a feature

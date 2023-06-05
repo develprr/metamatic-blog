@@ -32,9 +32,8 @@ there is nothing to prevent you from passing wrong type of objects as
 parameters to your functions. 
 
 It is a very common in Python code that an object you have at hand isn't actually 
-the kind of an object you *believe* it is. This makes you pass the object 
-to functions that aren't expecting it and you are trying to use properties 
-and functions from that object that don't actually exist. 
+the kind of an object you *believe* it is. This makes you passing objects 
+to functions that aren't expecting them and referring to object properties that do not exist. 
 
 *And you will be spending a lot of time debugging your code!*
 

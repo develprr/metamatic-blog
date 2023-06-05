@@ -7,7 +7,7 @@ categories: Metamatic Systems
 
 If you are experienced in [Java](https://en.wikipedia.org/wiki/Java_%28programming_language%29) or 
 [TypeScript](https://en.wikipedia.org/wiki/TypeScript) and then start coding
-in [Python](https://en.wikipedia.org/wiki/Python_(programming_language) language, my bet is that the first thing that will be making
+in [Python](https://en.wikipedia.org/wiki/Python_%28programming_language_%28) language, my bet is that the first thing that will be making
 you annoyed is the lack of strong typing!
 
 There is a reason why TypeScript language has become immensely popular

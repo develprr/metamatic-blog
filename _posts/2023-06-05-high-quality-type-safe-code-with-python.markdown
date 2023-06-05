@@ -1,0 +1,141 @@
+---
+layout: post
+title: High Quality Type-Safe Code With Python
+date:   2023-06-05 7.23.00 +0300
+categories: Metamatic Systems
+---
+
+If you are experienced in [Java](https://en.wikipedia.org/wiki/Java_%28programming_language%29) or 
+[TypeScript](https://en.wikipedia.org/wiki/TypeScript) and then start coding
+in [Python](https://en.wikipedia.org/wiki/Python_(programming_language) language, my bet is that the first thing that will be making
+you annoyed is the lack of strong typing!
+
+There is a reason why TypeScript language has become immensely popular
+in recent years. And the reason is - surprise - the [strong typing](https://en.wikipedia.org/wiki/Strong_and_weak_typing) that it 
+provides! If this wasn't the reason, everybody would be using just [JavaScript](https://en.wikipedia.org/wiki/JavaScript) -
+it is not to be forgotten that TypeScript is really just a hack
+on top of the actual underlying programming language beneath, which is JavaScript.
+All TypeScript code is transpiled into the real programming language,
+JavaScript, before its actual execution!
+
+# Why lack of strong typing in Python sucks
+
+If you never really wrote code in any other language than Python,
+you may not even be aware what sucks with Python. But if you arrive at the planet
+Python from the planet TypeScript, you will immediatelly realize the problem.
+
+your functions may perfectly work in your unit test bench but when you
+use them in your execution code, nothing works anymore and everything just
+blows up. This is because in the laborary environment of your unit tests,
+you are at least passing the right kind of objects as arguments to 
+your functions. But when you are writing the actual execution code, 
+there is nothing to prevent you from passing wrong type of objects as
+parameters to your functions. 
+
+It is a very common in Python code that an object you have at hand isn't actually 
+the kind of an object you *believe* it is. This makes you pass the object 
+to functions that aren't expecting it and you are trying to use properties 
+and functions from that object that don't actually exist. 
+
+*And you will be spending a lot of time debugging your code!*
+
+In TypeScript, this problem rarely occurs because you *can't* make this kind of mistakes. Firstly, the editor
+will already warn you about the mistakes when you are only starting to write
+it, and secondly, even if your ignore this warning, the code won't even 
+compile so you won't be running it before it's right. 
+
+None of these gatekeepers really work in Python. Well, there is a feature
+called [hints](https://docs.python.org/3/library/typing.html) in Python, 
+but in my honest opinion, it doesn't really work that well. Because
+it does just what it promises. It may give your editor *hints* about
+what kind of objects should be passed as arguments but it won't actually prevent
+you from typing and running erratic code.  
+
+But no worries, there is a fix. Let's have a look at it!
+
+# Fix Python with Pydantic library
+
+The good news is that you actually *can* achieve about the same level
+of type safety in Python code as you natively get in TypeScript, if you use
+[Pydantic](https://pydantic.dev/). Let's use Pydantic now and define 
+a user that has many addresses:
+
+```python
+from typing import List, Optional
+from pydantic import BaseModel, StrictStr, StrictInt
+
+class Address(BaseModel):
+  street_name: StrictStr
+  street_number: StrictInt
+  postal_code: StringStr
+  country: StrictStr
+
+class User(BaseModel):
+  id: StrictInt
+  name: StrictStr
+  addresses: List[Address] = []
+```
+
+And *now* whe are starting to get here some robust schema definitions,
+familiar from TypeScript language! Let me instantiate a user with 
+some addresses:
+
+```python
+ user = User(**{
+      'id': 124,
+      'name': 'Jon Doe',
+      'addresses': [{
+        'street_name': 'Sesam Street',
+        'street_number': 1,
+        'postal_code': 54321,
+        'country: 'Everland'
+      },
+      {
+        'street_name': 'Vinegar Valley',
+        'street_number': 12,
+        'postal_code': 123456,
+        'country: 'Neverland'
+      }]
+  })
+```
+
+Now, this code executes because it correctly instantiates the structure
+of a user. But if you don't have the constructor object right, your
+code fails!
+
+# But it's only runtime checking!
+
+Pydantic provides robust TypeScript-like schema validation and checking
+but it only works in runtime. Unlike with TypeScript code, your editor won't still be nagging in 
+the first place when you are actually writing the mistake. But there are also 
+
+Namely, TypeScript's [compile-time](https://en.wikipedia.org/wiki/Compile_time) 
+type checking does come with its own problems. It may prevent you
+from *writing* faulty code, but it won't be helping you in production environment
+when your system receives and serializes objects from external interfaces,
+HTTP requests, database queries or files. If those objects aren't
+what expected, coding-time or compile-time type-checking won't help you
+at all. It helped you write your code right for the ideal case and
+it even helped you to write your tests right. 
+
+But when your code is in production and receiving objects over HTTP requests
+it won't be checking anything when it gets a mismatching one - a property that your schema 
+defined as obligatory may still be missing and enter into your function
+crashing it from inside, because the lack of runtime type checking. And 
+the same may happen as a result of a database query or when the system serializes
+an object from the disk. 
+
+On the contrary, runtime type checking that you get with Pydantic, 
+prevents erratic and malformed objects from entering your system when it is in production. 
+It will be easier to debug what is wrong in your production system when you have robust
+runtime gatekeepers on your instances - you will immediately see from 
+the error logs that the error was caused because a HTTP request object
+didn't match the expectation. This saves you from a lot of debugging efort.
+
+Of course you can also add runtime validation also in TypeScript (for example
+with [Yup](https://www.npmjs.com/package/yup) library) but it's then 
+always manual extra effort on top of TypeScript's native compile-time type
+checking. Can't have one with another!
+
+
+I'll be back coding in Python, you can be sure about that. Cheers!

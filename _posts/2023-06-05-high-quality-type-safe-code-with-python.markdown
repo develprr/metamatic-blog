@@ -46,7 +46,7 @@ None of these gatekeepers really work in Python. Well, there is a feature
 called [hints](https://docs.python.org/3/library/typing.html) in Python, 
 but in my honest opinion, it doesn't really work that well. Because
 it does just what it promises. It may give your editor *hints* about
-what kind of objects should be passed as arguments but it won't actually prevent
+what kinds of objects should be passed as arguments but it won't actually prevent
 you from typing and running erratic code.  
 
 But no worries, there is a fix. Let's have a look at it!

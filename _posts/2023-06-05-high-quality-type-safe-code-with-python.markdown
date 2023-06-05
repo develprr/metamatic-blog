@@ -15,7 +15,7 @@ in recent years. And the reason is - surprise - the [strong typing](https://en.w
 provides! If this wasn't the reason, everybody would be using just [JavaScript](https://en.wikipedia.org/wiki/JavaScript) -
 it is not to be forgotten that TypeScript is really just a hack
 on top of the actual underlying programming language beneath, which is JavaScript.
-All TypeScript code is transpiled into the actual JavaScript code before its execution!
+All TypeScript code is transpiled into the actual JavaScript code before its execution.
 
 # Why lack of strong typing in Python sucks
 
@@ -99,13 +99,55 @@ some addresses:
 
 Now, this code executes because it correctly instantiates the structure
 of a user. But if you don't have the constructor object right, your
-code fails!
+code fails.
+
+# It's a list of strings, but is it really?
+
+Let me show another example. You are writing code that utilizies a certain
+external library. You believe that your function is getting a list of strings
+when invoking some function from the library. But is your assumption correct?
+
+You will be better off debugging your code if your functions cannot be accessed
+at all by wrong kinds of objects. For example, you will be better off when you 
+think that have list of strings, you really have a list of strings and 
+you can be sure about that because the execution would never even start
+on that code if it wasn't a list of strings. So let's have a look at [my
+implementation of a wrapper](https://github.com/develprr/gensim-utility/blob/main/src/stringlist.py) 
+that ensures  you really have a list of strings when you believe you have a list of strings:
+
+```python
+from typing import List
+from pydantic import BaseModel, StrictStr
+
+class StringList(BaseModel):
+  items: List[StrictStr]
+  
+  @staticmethod
+  def new(strings: list[str]):
+    return StringList(**{
+      'items': ['list', 'of', 'words']
+    })
+
+def test_instantiation():
+  assert(type(StringList.new(['list', 'of', 'words']))) == StringList
+```
+
+Using these kinds of encapsulations in your code can really boost your 
+productivity and make debugging easier when you can be sure that the 
+objects that your code handles actually are the kinds of objects your 
+code assumes them to be. And if not, your gatekeeping constructor functions
+will alarm you about the case, so you won't be spending your time debugging
+places thar aren't the problem.
+
+In contrast to a common belief, it's a sign for good quality,
+not bad quality, when you start getting stuff done really fast!
 
 # But it's only runtime checking
 
 Pydantic provides robust TypeScript-like schema validation and checking
 but it only works in runtime. Unlike with TypeScript code, your editor won't still be nagging in 
-the first place when you are actually writing the mistake.
+the first place when you are actually writing the mistake. But is this really so 
+bad? There are two sides also on this coin!
 
 Namely, TypeScript's [compile-time](https://en.wikipedia.org/wiki/Compile_time) 
 type checking does come with its own problems. It may prevent you

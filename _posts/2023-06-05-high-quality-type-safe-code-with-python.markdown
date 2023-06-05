@@ -109,8 +109,8 @@ when invoking some function from the library. But is your assumption correct?
 
 You will be better off debugging your code if your functions cannot be accessed
 at all by wrong kinds of objects.  You are fortunate if you can be sure
-that you really have a list of strings when you think that you have a list of strings
-- because the execution would never even start on that code otherwise. So let's have a look at [my
+that you really have a list of strings when you think that you have a list of strings - 
+because the execution would never even start on that code otherwise. So let's have a look at [my
 implementation of a wrapper](https://github.com/develprr/gensim-utility/blob/main/src/stringlist.py) 
 that ensures that you really have a list of strings when you believe you have a list of strings:
 

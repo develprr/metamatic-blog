@@ -79,22 +79,22 @@ familiar from TypeScript language! Let me instantiate a user with
 some addresses:
 
 ```python
- user = User(**{
-      'id': 124,
-      'name': 'Jon Doe',
-      'addresses': [{
-        'street_name': 'Sesam Street',
-        'street_number': 1,
-        'postal_code': 54321,
-        'country: 'Everland'
-      },
-      {
-        'street_name': 'Vinegar Valley',
-        'street_number': 12,
-        'postal_code': 123456,
-        'country: 'Neverland'
-      }]
-  })
+user = User(**{
+  'id': 124,
+  'name': 'Jon Doe',
+  'addresses': [{
+    'street_name': 'Sesam Street',
+    'street_number': 1,
+    'postal_code': 54321,
+    'country: 'Everland'
+  },
+  {
+    'street_name': 'Vinegar Valley',
+    'street_number': 12,
+    'postal_code': 123456,
+    'country: 'Neverland'
+  }]
+})
 ```
 
 Now, this code executes because it correctly instantiates the structure
@@ -108,12 +108,11 @@ external library. You believe that your function is getting a list of strings
 when invoking some function from the library. But is your assumption correct?
 
 You will be better off debugging your code if your functions cannot be accessed
-at all by wrong kinds of objects. For example, you will be better off when you 
-think that have list of strings, you really have a list of strings and 
-you can be sure about that because the execution would never even start
-on that code if it wasn't a list of strings. So let's have a look at [my
+at all by wrong kinds of objects.  You are fortunate if you can be sure
+that you really have a list of strings when you think that you have a list of strings
+- because the execution would never even start on that code otherwise. So let's have a look at [my
 implementation of a wrapper](https://github.com/develprr/gensim-utility/blob/main/src/stringlist.py) 
-that ensures  you really have a list of strings when you believe you have a list of strings:
+that ensures that you really have a list of strings when you believe you have a list of strings:
 
 ```python
 from typing import List
@@ -139,8 +138,8 @@ code assumes them to be. And if not, your gatekeeping constructor functions
 will alarm you about the case, so you won't be spending your time debugging
 places thar aren't the problem.
 
-In contrast to a common belief, it's a sign for good quality,
-not bad quality, when you start getting stuff done really fast!
+*In contrast to a common belief, it's a sign for good quality,
+not bad quality, when you are actually getting stuff done!*
 
 # But it's only runtime checking
 

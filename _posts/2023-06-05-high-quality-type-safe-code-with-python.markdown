@@ -15,8 +15,7 @@ in recent years. And the reason is - surprise - the [strong typing](https://en.w
 provides! If this wasn't the reason, everybody would be using just [JavaScript](https://en.wikipedia.org/wiki/JavaScript) -
 it is not to be forgotten that TypeScript is really just a hack
 on top of the actual underlying programming language beneath, which is JavaScript.
-All TypeScript code is transpiled into the real programming language,
-JavaScript, before its actual execution!
+All TypeScript code is transpiled into the actual JavaScript code before its execution!
 
 # Why lack of strong typing in Python sucks
 
@@ -24,7 +23,7 @@ If you never really wrote code in any other language than Python,
 you may not even be aware what sucks with Python. But if you arrive at the planet
 Python from the planet TypeScript, you will immediatelly realize the problem.
 
-your functions may perfectly work in your unit test bench but when you
+Your functions may perfectly work in your unit test bench but when you
 use them in your execution code, nothing works anymore and everything just
 blows up. This is because in the laborary environment of your unit tests,
 you are at least passing the right kind of objects as arguments to 

@@ -31,7 +31,7 @@ your functions. But when you are writing the actual execution code,
 there is nothing to prevent you from passing wrong type of objects as
 parameters to your functions. 
 
-It is a very common in Python code that an object you have at hand isn't actually 
+It is commonplace in Python code that an object you have at hand isn't actually 
 the kind of an object you *believe* it is. This makes you passing objects 
 to functions that aren't expecting them and referring to object properties that do not exist. 
 

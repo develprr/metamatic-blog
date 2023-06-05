@@ -15,7 +15,7 @@ in recent years. And the reason is - surprise - the [strong typing](https://en.w
 provides! If this wasn't the reason, everybody would be using just [JavaScript](https://en.wikipedia.org/wiki/JavaScript) -
 it is not to be forgotten that TypeScript is really just a hack
 on top of the actual underlying programming language beneath, which is JavaScript.
-All TypeScript code is transpiled into the actual JavaScript code before its execution.
+All TypeScript code is transpiled into JavaScript code before its actual execution.
 
 # Why lack of strong typing in Python sucks
 
@@ -154,8 +154,8 @@ from *writing* faulty code, but it won't be helping you in production environmen
 when your system receives and serializes objects from external interfaces,
 HTTP requests, database queries or files. If those objects aren't
 what expected, coding-time or compile-time type-checking won't help you
-at all. It helped you write your code right for the ideal case and
-it even helped you to write your tests right, but when your code is in 
+at all. It helped you write your code correctly for the ideal case and
+it even helped you write your tests right, but when your code is in 
 production and receiving objects over HTTP requests it won't be checking 
 anything when it gets a mismatching one - a property that your schema 
 defined as obligatory may still be missing and enter into your function

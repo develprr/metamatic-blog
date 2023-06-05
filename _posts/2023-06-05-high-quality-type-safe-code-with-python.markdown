@@ -86,13 +86,13 @@ user = User(**{
     'street_name': 'Sesam Street',
     'street_number': 1,
     'postal_code': 54321,
-    'country: 'Everland'
+    'country': 'Everland'
   },
   {
     'street_name': 'Vinegar Valley',
     'street_number': 12,
     'postal_code': 123456,
-    'country: 'Neverland'
+    'country': 'Neverland'
   }]
 })
 ```

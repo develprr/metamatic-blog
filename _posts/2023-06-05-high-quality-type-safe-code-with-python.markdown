@@ -130,7 +130,7 @@ runtime gatekeepers on your instances - you will immediately see from
 the error logs that the error was caused because a HTTP request object
 didn't match the expectation. This saves you from a lot of debugging effort.
 
-Of course you can also add runtime validation also in TypeScript (for example
+Of course you can also add runtime validation in TypeScript (for example
 with [Yup](https://www.npmjs.com/package/yup) library) but it's then 
 always manual extra effort on top of TypeScript's native compile-time type
 checking. Can't have one with another!

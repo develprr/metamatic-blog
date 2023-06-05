@@ -128,7 +128,7 @@ prevents erratic and malformed objects from entering your system when it is in p
 It will be easier to debug what is wrong in your production system when you have robust
 runtime gatekeepers on your instances - you will immediately see from 
 the error logs that the error was caused because a HTTP request object
-didn't match the expectation. This saves you from a lot of debugging efort.
+didn't match the expectation. This saves you from a lot of debugging effort.
 
 Of course you can also add runtime validation also in TypeScript (for example
 with [Yup](https://www.npmjs.com/package/yup) library) but it's then 

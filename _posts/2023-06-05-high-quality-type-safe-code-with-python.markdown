@@ -5,6 +5,8 @@ date:   2023-06-05 7.23.00 +0300
 categories: Metamatic Systems
 ---
 
+![type-checking]({{ site.baseurl }}/assets/type-checking.png)
+
 If you are experienced in [Java](https://en.wikipedia.org/wiki/Java_%28programming_language%29) or 
 [TypeScript](https://en.wikipedia.org/wiki/TypeScript) and then start coding
 in [Python](https://en.wikipedia.org/wiki/Python_%28programming_language_%28) language, my bet is that the first thing that will be making

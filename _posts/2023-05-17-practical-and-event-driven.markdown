@@ -12,7 +12,7 @@ Because it is just too obvious, self-evident and simple!
 
 So let me add another principle to the mix. To me it comes as a matter of course that the 
 most obvious solution is usually the best solution, and as a bonus 
-it's also usually the simplest solution. How about you?
+it's also usually the simplest solution.
 
 ## Thinking too big
 

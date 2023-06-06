@@ -6,13 +6,9 @@ categories: Metamatic Systems
 ---
 
 What is the greatest benefit of simple solutions? Well, literally, it's
-their simplicity!
-
-## Stupid is as stupid does
-
-Now this thing I just wrote may also sound the stupidest thing you possibly heard today -
-just because, well, actually, why? Because it is just too obvious, self-evident
-and simple!
+their simplicity! Now this thing I just wrote may also sound 
+the stupidest thing you possibly heard today just because, well, actually, why? 
+Because it is just too obvious, self-evident and simple!
 
 So let me add another principle to the mix. To me it comes as a matter of course that the 
 most obvious solution is usually the best solution, and as a bonus 
@@ -43,10 +39,9 @@ by design, you can't just refactor an existing tractor to a main battle tank.
 This physical world thinking is quite often erratically mirrored into software business.
 
 But in reality, software is like clay - you can just endlessly keep modifying and reforming it
-to match the changed requirements (if you can code, of course). There is no
-need to throw spent millions out of the window and start everything *from scratch*.
-You could - and most often, *should* keep modifying your product - especially if it's already
-making some real money - instead of possibly going to point zero all over again.
+to match the changed requirements (if you can code, of course). 
+You could - and most often, *should* keep modifying your product  
+instead of possibly going to point zero all over again when the requirements fluctuate.
  
 Okay, now, this was the prelude. So let me get practical and describe the
 simplest possible solution to implement an event-driven application.

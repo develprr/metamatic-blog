@@ -32,8 +32,8 @@ which business we talk - banking, finance, insurance, just name it!
 In our imaginary use case, let me talk about a laundry service corporation that
 operates a cluster of laundry machines. To be able to serve their customers
 well, the laundry machines need to be monitored. Let's say that each laundry
-machine generates a continuous flow of log data, reporting their current
-temperature, load, program and power consumption. We want to store all the data into 
+machine generates a continuous flow of log data, reporting their current cloth load, 
+laundry program, heat and power consumption. We want to store all the data into 
 a huge database. Every time when a log entry is written to the database, 
 we want it to immediately propagate to the browser based user interface that
 the the staff then monitors. We want the data flow to be event-driven. 

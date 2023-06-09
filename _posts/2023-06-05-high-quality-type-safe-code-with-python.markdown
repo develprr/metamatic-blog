@@ -126,7 +126,7 @@ class StringList(BaseModel):
   @staticmethod
   def new(strings: list[str]):
     return StringList(**{
-      'items': ['list', 'of', 'words']
+      'items': strings
     })
 
 def test_instantiation():

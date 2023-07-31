@@ -36,7 +36,7 @@ throw an error if anything else is fed in - a float, a string or whatever else.
 
 Let's check how to make it happen!
 
-In my example, I want to write a wrapper class for [Numpy]/https://numpy.org/) library's ndarray class.
+In my example, I want to write a wrapper class for [Numpy](/https://numpy.org/) library's ndarray class.
 That wrapper class must encapsulate the underlying type-unsafe [ndarray](https://numpy.org/doc/stable/reference/arrays.ndarray.html) 
 object and provide alternative constructors for initializing my ndarray 
 for quite specific ways that serve my shady purposes (that

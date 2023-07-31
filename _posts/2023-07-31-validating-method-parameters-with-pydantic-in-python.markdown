@@ -58,7 +58,7 @@ it would be an instance method. But you can't possibly invoke an instance
 method when you are only creating your instance at this point! 
 
 And applying **@validate_call** annotation, Pydantic will throw an error if
-you try to invoke the method with wrong kind of parameters. Bam!
+you try to invoke the method with wrong kinds of parameters. Bam!
 
 # Validating custom and third party objects
 

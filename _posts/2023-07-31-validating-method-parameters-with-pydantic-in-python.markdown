@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validating method parameters in Python
+title: Validating Method Parameters in Python
 date:   2023-07-31 5.49.00 +0300
 categories: Metamatic Systems
 ---
@@ -11,7 +11,7 @@ When you start coding in Python programming language as a coder who is routined 
 typed language such as TypeScript Java or C#, my bet is that first thing
 you want to enable in Python is strong typing. 
 
-At least, this was also one of the first things I started doing on Python when I finally
+At least, this was one of the first things I started doing on Python when I finally
 decided to go for it. It turns out, [Python](https://www.python.org/) is a fantastic programming language
 and it has the best selection of scientific libraries available so far.
 Luckily, it is also possible to fix that final annoyance that a former [TypeScript](https://en.wikipedia.org/wiki/TypeScript)

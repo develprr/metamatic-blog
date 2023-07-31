@@ -8,7 +8,7 @@ categories: Metamatic Systems
 ![type-checking]({{ site.baseurl }}/assets/method-with-input-parameters.png)
 
 When you start coding in Python programming language as a coder who is routined in some strongly
-typed language such as TypeScript Java or C#, my bet is that first thing
+typed language such as TypeScript, Java or C#, my bet is that first thing
 you want to enable in Python is strong typing. 
 
 At least, this was one of the first things I started doing on Python when I finally
@@ -30,7 +30,7 @@ every method to validate their input parameters!
 
 #  Validating method input parameters with Pydantic
 
-The use case is clear - if you write a method that excepts an integer value 
+The use case is clear - if you write a method that expects an integer value 
 as its input parameter, you want Python to type check that and immediately
 throw an error if anything else is fed in - a float, a string or whatever else.
 

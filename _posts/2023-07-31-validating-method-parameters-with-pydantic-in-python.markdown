@@ -39,8 +39,8 @@ Let's check how to make it happen!
 In my example, I want to write a wrapper class for [Numpy](/https://numpy.org/) library's ndarray class.
 That wrapper class must encapsulate the underlying type-unsafe [ndarray](https://numpy.org/doc/stable/reference/arrays.ndarray.html) 
 object and provide alternative constructors for initializing my ndarray 
-for quite specific ways that serve my *shady* purposes (that
-cannot stand the light of day!) - therefore I write a special constructor method to get
+in quite specific ways that serve my *shady* purposes 
+(that cannot stand the light of day!) - therefore I write a special constructor method to get
 a new instance of my MSArray class with a specially shaped ndarray object within: 
 
 ```python
@@ -63,7 +63,7 @@ you try to invoke the method with wrong kinds of parameters. Bam!
 # Validating custom and third party objects
 
 That's how Pydantic's parameter validation works for primitive data types (such as numbers and strings)
-but you need some additional definitions to make the validation framework to
+but you need some additional definitions to make the validation framework
 work also for more complex third party objects, such as Numpy's ndarray object et cetera.
 
 Let's make another constructor for our MSArray class that requires an ndarray as its

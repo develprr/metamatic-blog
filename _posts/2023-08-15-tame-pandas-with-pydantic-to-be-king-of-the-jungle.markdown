@@ -93,6 +93,6 @@ to actually implement effective and robust code.
 I hope this helps somebody out there. Let us come back together
 here to celebrate some fine pieces of software code.
 
-By the way, as Tarzan lives in Africa and Pandas are Asiatic, they probably
-never meet. But as we are already at the end of the story so there's
-nothing to do about it anymore!
+By the way, as Tarzan lives in Africa and Pandas are Asiatic, it's unlikely
+they ever meet. But as we are already at the end of the story 
+there is probably not much that can be done about it anymore at this stage.

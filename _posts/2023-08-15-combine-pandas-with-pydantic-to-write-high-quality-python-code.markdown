@@ -23,7 +23,7 @@ conversion and analysis goals.
 Therefore, let's have a look how to combine [Pydantic](https://pydantic.dev/) data validation 
 library with popular [Pandas](https://pandas.pydata.org/) to the glory of the
 Great Bureau of Data Science. 
-
+    
 For example, if we want to use Pandas library to create a two dimensional data frame,
 it can add an extra layer of readability and clarity to your code
 to wrap the essential data structures into your own wrapper classes that both safeguard

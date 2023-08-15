@@ -8,14 +8,14 @@ categories: Python Pydantic Pandas
 ![type-checking]({{ site.baseurl }}/assets/pydantic-panda.png)
 
 Let us imagine that you are [Tarzan](https://en.wikipedia.org/wiki/Tarzan) 
-and you fight the horrible and furious killer Pandas of the Jungle and finaly beat them. 
-Now after you have tamed them  you want to open their locked cage to feed them.
+and you fight the horrible and furious Jungle Pandas and finally beat them. 
+Now after you have tamed them you want to open their locked cage to feed them.
 
-When you insert the key into the lock, you certainly don't want to break the key or the lock
-if you accidentally insert the wrong key into the lock hole.
+When you insert the key into the lock, you certainly don't want to break
+the lock if you accidentally insert the wrong key into the lock hole.
 Ideally, the key should not fit in at all if it isn't the right one!
 
-Amazingly, also people of the city face similar situations every time when 
+Amazingly, also people in the city face similar situations every time when 
 they write some software code. Naturally, when you implement your functions
 you want to be sure that it's not possible to pass wrong parameters to your functions.
 
@@ -91,4 +91,8 @@ the earlier you can detect the errors the easier and faster it will be
 to actually implement effective and robust code.
 
 I hope this helps somebody out there. Let us come back together
-here to celebrate some fine pieces of software code!
+here to celebrate some fine pieces of software code.
+
+By the way, as Tarzan lives in Africa and Pandas are Asiatic, they probably
+never meet. But as we are already at the end of the story so there's
+nothing to do about it anymore!

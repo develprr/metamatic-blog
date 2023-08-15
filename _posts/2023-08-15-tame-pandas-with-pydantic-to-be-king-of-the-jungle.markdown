@@ -80,11 +80,11 @@ In the example above, we actually need to first instantiate a valid
 float array object (of type *D2FloatArray*) and a *StringList* object. 
 Now that even these basic types are encapsulated in their own wrappers
 as well, the last code line, the (erratic) instantiation of the actual MSDataFrame will
-never even be attempted since the second line of code is already wrong
+never even be attempted since the second line of the code is already wrong
 and will cause an exception. For the complete example, check out the 
 [Git repository](https://github.com/develprr/utility).
 
-I hope this example hightlights how using Pydantic in combination of
+I hope this example highlights how using Pydantic in combination with
 type-checking wrapper classes can move the point of failure closer to 
 program's starting point - which is really important because
 the earlier you can detect the errors the easier and faster it will be 

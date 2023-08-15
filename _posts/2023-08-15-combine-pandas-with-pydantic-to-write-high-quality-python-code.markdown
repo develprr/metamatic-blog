@@ -66,9 +66,9 @@ arrays and simple string lists.
 
 The great news with this approach is that we can ensure that the 
 code execution won't actually ever even reach the point at all where
-this constructor invoked if you didn't come up with the right parameters.
+this constructor is being invoked if you didn't come up with the right parameters.
 
-To clarify this, consider the following code:
+To clarify this, consider the e code:
 
 ```Python
 float_array = D2FloatArray.new([[161,47], [170.5, 72.4], [185.5, 91]])

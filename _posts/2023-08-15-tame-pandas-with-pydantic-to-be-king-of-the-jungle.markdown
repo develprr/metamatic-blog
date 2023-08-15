@@ -12,7 +12,7 @@ with [Pydantic](https://pydantic.dev/) data validation!
     
 If you want to use Pandas to create a two dimensional data frame,
 you can get an extra layer of readability and clarity to your code
-to wrap the essential data structures into your own wrapper classes that both safeguard
+when you wrap the essential data structures into their own wrapper classes that both safeguard
 the types of your objects at every step along the way and provide
 some instantiation and processing methods that are specific to your 
 use case.

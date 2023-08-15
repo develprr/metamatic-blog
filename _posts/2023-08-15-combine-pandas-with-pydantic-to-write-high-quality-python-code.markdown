@@ -64,10 +64,9 @@ columns that is a string list object.
 So clearly we have written here also our own little wrappers for two-dimensional 
 arrays and simple string lists.
 
-The great news with this approach is that this strong typing ensures
-that the code execution won't actually ever reach the point at all where
-this constructor invoked if you didn't come up with the right
-parameters.
+The great news with this approach is that we can ensure that the 
+code execution won't actually ever even reach the point at all where
+this constructor invoked if you didn't come up with the right parameters.
 
 To clarify this, consider the following code:
 

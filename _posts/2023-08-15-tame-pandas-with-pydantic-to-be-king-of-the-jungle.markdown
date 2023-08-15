@@ -7,7 +7,7 @@ categories: Python Pydantic Pandas
 
 ![type-checking]({{ site.baseurl }}/assets/pydantic-panda.png)
 
-Let us imagine that you are [Tarzan](https://en.wikipedia.org/wiki/Tarzan) 
+Imagine that you are [Tarzan](https://en.wikipedia.org/wiki/Tarzan) 
 and you fight the horrible and furious Jungle Pandas and finally beat them. 
 Now after you have tamed them you want to open their locked cage to feed them.
 

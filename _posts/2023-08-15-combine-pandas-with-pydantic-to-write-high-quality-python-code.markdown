@@ -38,8 +38,7 @@ than the right way!
 
 ```Python
 import pandas
-from typing import List
-from pydantic import BaseModel, ConfigDict, ValidationError, validate_call
+from pydantic import BaseModel, ConfigDict, validate_call
 from d2floatarray import D2FloatArray
 from stringlist import StringList
 
@@ -68,7 +67,7 @@ The great news with this approach is that we can ensure that the
 code execution won't actually ever even reach the point at all where
 this constructor is being invoked if you didn't come up with the right parameters.
 
-To clarify this, consider the e code:
+To clarify this, consider the following code:
 
 ```Python
 float_array = D2FloatArray.new([[161,47], [170.5, 72.4], [185.5, 91]])
@@ -85,10 +84,9 @@ and will cause an exception. For the complete example, check out the
 
 I hope this example hightlights how using Pydantic in combination of
 type-checking wrapper classes can move the point of failure closer to 
-program's execution starting point - which is really important because
+program's starting point - which is really important because
 the earlier you can detect the errors the easier and faster it will be 
-to actually implement effective and robust
-code.
+to actually implement effective and robust code.
 
 I hope this helps somebody out there. Let us come back together
 here to celebrate some fine pieces of software code!

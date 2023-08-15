@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Combine Pandas With Pydantic to Write High Quality Python Code
-date:   2023-08-15 2.07 +0300
+date:   2023-08-15 8.07 +0300
 categories: Python Pydantic Pandas
 ---
 
@@ -56,8 +56,7 @@ class MSDataFrame(BaseModel):
       'dataframe': pandas.DataFrame(d2array.ndarray.T, columns.list)
     })
 ``` 
-Now have a look at the custom constructors *new_from_list* and 
-*new_from_d2_float_array*. With a little help from Pydantic, this
+Now have a look at the custom constructor *new_from_d2_float_array*. With a little help from Pydantic, this
 custom data frame class makes sure that it can only be instantiated
 using a two dimensional array of float numbers and a list of 
 columns that is a string list object.

@@ -86,9 +86,9 @@ and will cause an exception. For the complete example, check out the
 I hope this example hightlights how using Pydantic in combination of
 type-checking wrapper classes can move the point of failure closer to 
 program's execution starting point - which is really important because
-the earlier during program's execution cycle you can detect the errors
-the easier and faster it will be to actually implement functional and robust
+the earlier you can detect the errors the easier and faster it will be 
+to actually implement effective and robust
 code.
 
-I hope this helps somebody out there wherever you are. Let us come back together
-here to celebrate fine pieces of software code!
+I hope this helps somebody out there. Let us come back together
+here to celebrate some fine pieces of software code!

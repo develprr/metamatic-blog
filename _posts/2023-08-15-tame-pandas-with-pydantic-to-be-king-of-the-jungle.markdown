@@ -88,10 +88,7 @@ I hope this example hightlights how using Pydantic in combination of
 type-checking wrapper classes can move the point of failure closer to 
 program's starting point - which is really important because
 the earlier you can detect the errors the easier and faster it will be 
-to actually implement effective and robust code.
-
-I hope this helps somebody out there. Let us come back together
-here to celebrate some fine pieces of software code.
+to actually implement effective and robust code!
 
 By the way, as Tarzan lives in Africa and Pandas are Asiatic, it's unlikely
 they ever meet. But as we are already at the end of the story 

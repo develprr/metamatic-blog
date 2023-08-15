@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Combine Pandas With Pydantic to Write High Quality Python Code
+title: Combine Pandas With Pydantic to Be King of the Jungle
 date:   2023-08-15 8.07 +0300
 categories: Python Pydantic Pandas
 ---

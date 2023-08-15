@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Combine Pandas With Pydantic to Be King of the Jungle
+title: Tame Pandas With Pydantic to Be King of the Jungle
 date:   2023-08-15 8.07 +0300
 categories: Python Pydantic Pandas
 ---
 
 ![type-checking]({{ site.baseurl }}/assets/pydantic-panda.png)
 
-When you want to open a locked door and slip a key into the lock,
-you certainly don't want to break the key or the lock
+After you have tamed the Pandas and you want to open their locked cage 
+and slip a key into the lock, you certainly don't want to break the key or the lock
 if you accidentally insert the wrong key into the lock hole.
 Ideally, the key should not fit in at all if it isn't the right one!
 
@@ -20,9 +20,8 @@ This couldn't be more true when you write complex data conversions
 in Python language and use scientific libraries to achieve your data
 conversion and analysis goals.
 
-Therefore, let's have a look how to combine [Pydantic](https://pydantic.dev/) data validation 
-library with popular [Pandas](https://pandas.pydata.org/) to the glory of the
-Great Bureau of Data Science. 
+Therefore, let's have a look how to tame [Pandas](https://pandas.pydata.org/) 
+with [Pydantic](https://pydantic.dev/) data validation!
     
 For example, if we want to use Pandas library to create a two dimensional data frame,
 it can add an extra layer of readability and clarity to your code

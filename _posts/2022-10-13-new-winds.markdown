@@ -22,7 +22,7 @@ Together with my brother, I would spend countless hours typing that code
 into the machine to get an MSX-Basic based game. The games were of course crap.
 But nevertheless, I was enthralled. I would keep tweaking the code to see how the changes
 altered the program's behaviour. Maybe that was mostly just wasted time -
-but maybe I also learned something from that process!
+but maybe I also learned something in that process!
 
 ## Change is the only constant
 

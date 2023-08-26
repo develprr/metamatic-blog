@@ -10,19 +10,21 @@ categories: Python Pydantic Pandas
 Let's have a look how to tame [Pandas](https://pandas.pydata.org/) library
 with [Pydantic](https://pydantic.dev/) data validation!
     
-If you want to use Pandas to create a two dimensional data frame,
+If you want to use Pandas for data processing, 
 you can get an extra layer of readability and clarity to your code
 when you wrap the essential data structures into their own wrapper classes that both safeguard
 the types of your objects at every step along the way and provide
 some instantiation and processing methods that are specific to your 
-use case.
+use case. 
 
-Here's an example of a MSDataFrame class that only exists
+Let's examine how to benefit from Pyndatic when using Pandas to create a two dimensional data frame!
+
+Here's an example of an MSDataFrame class that only exists
 to make sure that the Pandas data frame it contains was instantiated the expected
 way, and more importantly, *cannot* be instantiated any other
 than the right way!
 
-```Python
+```python
 import pandas
 from pydantic import BaseModel, ConfigDict, validate_call
 from d2floatarray import D2FloatArray
@@ -41,10 +43,10 @@ class MSDataFrame(BaseModel):
       'dataframe': pandas.DataFrame(d2array.ndarray.T, columns.list)
     })
 ``` 
-Now have a look at the custom constructor *new_from_d2_float_array*. With a little help from Pydantic, this
-custom data frame class makes sure that it can only be instantiated
-using a two dimensional array of float numbers and a list of 
-columns that is a string list object.
+Now have a look at the custom constructor *new_from_d2_float_array*. 
+With a little help from Pydantic, this custom data frame class makes sure 
+that it can only be instantiated using a two dimensional array of float 
+numbers and a list of columns that is a string list object.
 
 So clearly we have written here also our own little wrappers for two-dimensional 
 arrays and simple string lists.
@@ -55,21 +57,28 @@ this constructor is being invoked if you didn't come up with the right parameter
 
 To clarify this, consider the following code:
 
-```Python
+```python
 float_array = D2FloatArray.new([[161,47], [170.5, 72.4], [185.5, 91]])
-columns = StringList.new(['Weight', 12])
+columns = StringList.new(['Weight', 12]) # this wrong!
 ms_dataframe = MSDataFrame.new_from_d2_float_array(float_array, columns)
 ```
 In the example above, we actually need to first instantiate a valid
-float array object (of type *D2FloatArray*) and a *StringList* object. 
+float array object (of type *D2FloatArray*) and a *StringList* object.
+Pay attention to line 2 - I am attempting to instantiate a StringList
+from an array that also contains an integer value, which is wrong.
+
+This mistake will prevent the execution to reach the third line at all,
+since the StringList object will throw an exception at this point.
+ 
 Now that even these basic types are encapsulated in their own wrappers
-as well, the last code line, the (erratic) instantiation of the actual MSDataFrame will
-never even be attempted since the second line of the code is already wrong
+as well, the last code line, the instantiation of the actual MSDataFrame will
+never even be attempted. Since the second line of the code is already wrong
 and will cause an exception. For the complete example, check out the 
 [Git repository](https://github.com/develprr/utility).
 
-I hope this example highlights how using Pydantic in combination with
-type-checking wrapper classes can move the point of failure closer to 
-program's starting point - which is really important because
+I hope this example highlights how you actually add an extra layer of security
+to your code at every line where you use Pydantic for data validation.
+Using Pydantic in combination with type-checking wrapper classes can move the point of failure closer to 
+the start of program execution - which is really important because
 the earlier you can detect the errors the easier and faster it will be 
 to actually implement effective and robust code!

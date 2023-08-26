@@ -16,21 +16,11 @@ spanned over dozens of pages. If you really manually copied all that code from
 the magazine into your PC you would finally have a real 
 computer game!
 
-Together with my brother, I would spend countless hours typing that code 
-into the machine to get an MSX-Basic based game. The games were of course crap. 
-But nevertheless, I was enthralled. I would keep tweaking the code to see how the changes
-altered the program's behaviour. Looking back from here to that time, however, 
-I probably should have also played football. (But that's another story.)
-
 ## Change is the only constant
 
 In software development, winds of change probably blow faster than
 in any other branch. It is good to be a software developer, but only if 
 you have a constantly curious mind and you are ready to learn new things.
-
-I have encountered it many times in my life that the more comfortable
-you get in any given project - the more furious the winds of change are
-when they finally arise.
 
 When the weather turns windy after a long period of relative calmness, 
 the right way to encounter the weather change is not to be torn from the ground 
@@ -61,11 +51,11 @@ up to date: tutorials! As this is no surprise, surprising however
 is how many people just keep ignoring all the available free material
 on the Internet that could help them learn more and more - and instead just
 waste their time on all that entertainment that all "toktiks" and "flixnets"
-(or whatever) keep force-feeding with all the power of their intelligent algorithms - to 
+(or whatever) keep force-feeding with all the power of their smart algorithms - to 
 keep you stupid!
 
 Learning from tutorials on a daily basis - it is possible. But it requires
-you to always remember that you **must keep learning**. Another thing to remember
+you to always remember that you must keep learning. Another thing to remember
 when learning from tutorials is to be honest to yourself and patient with
 results. To remember that going through a tutorial is almost useless if you just copy-paste the code from the
 examples into your project before attempting to run it. 

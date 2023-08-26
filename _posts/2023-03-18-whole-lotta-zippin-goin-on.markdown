@@ -5,6 +5,8 @@ date:   2023-03-18 18.23.25 +0200
 categories: Metamatic Systems
 ---
 
+![pine forest]({{ site.baseurl }}/assets/pine-forest.png)
+
 Once again I walked in a snowy pine forest somewhere in southern Finland and
 looked at all those trees around me. I came to think just how much genetic data
 must be stored inside those trunks - there's a whole lotta zippin' goin' on!

@@ -70,10 +70,13 @@ from an array that also contains an integer value, which is wrong.
 This mistake will prevent the execution to reach the third line at all,
 since the StringList object will throw an exception at this point.
  
-Now that even these basic types are encapsulated in their own wrappers
-as well, the last code line, the instantiation of the actual MSDataFrame will
-never even be attempted. Since the second line of the code is already wrong
-and will cause an exception. For the complete example, check out the 
+Now that even these basic types are encapsulated in their own wrappers, 
+each line of code is doing validation on their own and won't allow the
+execution to continue if we haven't gotten our objects right. 
+Therefore the last code line, the instantiation of the actual MSDataFrame will
+never even be attempted. 
+
+For the complete example, check out the 
 [Git repository](https://github.com/develprr/utility).
 
 I hope this example highlights how you actually add an extra layer of security

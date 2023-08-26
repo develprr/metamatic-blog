@@ -5,6 +5,8 @@ date:   2023-03-28 09.29.13 +0300
 categories: Metamatic Systems
 ---
 
+![space-ship]({{ site.baseurl }}/assets/interstellar-spaceship.png)
+
 Let's get serious now. It's time to talk about values. 
 Chances are high that you have heard this before. 
 Corporations want to hire people who share their common values. 

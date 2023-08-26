@@ -5,9 +5,9 @@ date:   2022-10-13 19.50.00 +0300
 categories: metamatic
 ---
 
-![wind mill]({{ site.baseurl }}/assets/windmill.png)
-
 ## Back in the 80's
+
+![kids coding]({{ site.baseurl }}/assets/kids-coding.png)
 
 In the 80's, there was no Internet. If you had an MSX computer and lived
 in Northern Finland, you were messed. There were very few games available for that
@@ -21,8 +21,8 @@ computer game!
 Together with my brother, I would spend countless hours typing that code
 into the machine to get an MSX-Basic based game. The games were of course crap.
 But nevertheless, I was enthralled. I would keep tweaking the code to see how the changes
-altered the program's behaviour. Maybe that was mostly just wasted time -
-but maybe I also learned something in that process!
+altered the program's behaviour. That didn't help me learn to play soccer
+but maybe I learned a little bit about coding!
 
 ## Change is the only constant
 
@@ -34,6 +34,9 @@ When the weather turns windy after a long period of relative calmness,
 the right way to encounter the weather change is not to be torn from the ground 
 like an old rotten wind mill, but to rather be like a sail boat that just
 turns the sails and adapts itself to embrace the new current as the long-awaited empowering force!
+
+![wind mill]({{ site.baseurl }}/assets/windmill.png)
+
 
 ## How to stay relevant
 

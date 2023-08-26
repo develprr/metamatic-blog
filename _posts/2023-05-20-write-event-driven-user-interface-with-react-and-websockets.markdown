@@ -5,6 +5,8 @@ date:   2023-05-20 16.11.00 +0300
 categories: Metamatic Systems
 ---
 
+![web-socket]({{ site.baseurl }}/assets/web-socket.png)
+
 Do you want to implement a smooth browser based user interface that can deliver
 your critical business data to your UI with a minimal delay? There are
 countless use cases - perhaps you want to show stock market data

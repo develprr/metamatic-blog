@@ -5,6 +5,8 @@ date:   2022-10-13 19.50.00 +0300
 categories: metamatic
 ---
 
+![wind mill]({{ site.baseurl }}/assets/windmill.png)
+
 ## Back in the 80's
 
 In the 80's, there was no Internet. If you had an MSX computer and lived

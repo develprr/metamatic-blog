@@ -39,8 +39,7 @@ Let's check how to make it happen!
 In my example, I want to write a wrapper class for [Numpy](https://numpy.org/) library's ndarray class.
 That wrapper class must encapsulate the underlying type-unsafe [ndarray](https://numpy.org/doc/stable/reference/arrays.ndarray.html) 
 object and provide alternative constructors for initializing my ndarray 
-in quite specific ways that serve my *shady* purposes 
-(that cannot stand the light of day!) - therefore I write a special constructor method to get
+in quite specific ways that serve particular use case - therefore I write a special constructor method to get
 a new instance of my MSArray class with a specially shaped ndarray object within: 
 
 ```python

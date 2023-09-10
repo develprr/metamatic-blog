@@ -132,8 +132,8 @@ with name "Ronaldinho Gaucho".
 
 Now this is fine but when you have implemented some logic specific
 to player data objects, the returned data object does not contain those
-methods, such as *get_description)* like in my example.
-you are required to explicitly instantiate your data object
+methods, such as *get_description()* like in my example. 
+Instead, you are required to explicitly instantiate your data object
 with the database result document as follows:
 
 ```

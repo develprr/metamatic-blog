@@ -150,26 +150,26 @@ that provides the logic to operate on it:
 ```python
 @classmethod
 def new_from_document(cls, document):  
-    # deterimine the target class into wich the Mongo document must be converted:
+    # determine the target class into wich the Mongo document must be converted:
     classname = cls.__name__ 
 
     # determine the module in which the target class resides: 
     modulename = classname.lower()
     
-    #import the actual module by the module name that we reasoned:
+    # import the actual module by the module name that we reasoned:
     module = importlib.import_module(modulename)
   
-    # get a reference to the class object of the target class inside the module
+    # get a reference to the class object of the target class inside the module:
     class_ref = getattr(module, classname)
 
     # finally, create an instance of target class passing the document as constructor parameter:
     return class_ref(**document)
 ```
 
-As a small nunance, my implementation requires the module of the target class
+As a small nuance, my implementation requires the module of the target class
 to be the same as the class name in lower case. This is fine for 
-me because that's actually my convention or writing Python code for the time being. 
-If you find my example insightful, please modify this to fit into your own masterpiece!
+me because that's actually how I like to write Python code - at least for the time being. 
+If you find my example insightful, you will surely modify this to fit into your own masterpiece!
 
 Next time, I might be diving even deeper into the intriguing topic 
 of mapping objects into database entities -or doing just something completely else.

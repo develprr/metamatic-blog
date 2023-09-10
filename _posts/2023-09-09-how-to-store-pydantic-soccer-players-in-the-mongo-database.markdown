@@ -13,11 +13,11 @@ library to improve your Python code.
 Now, if I was able to inspire you and you are on your way to become 
 a great data scientist (or an excellent application developer!)
 you will inevitably start wondering at some point 
-how to store your data objects into a database. 
+how to store your data objects in a database. 
 
 After all, when you have modeled your problem domain into wonderful
 data objects validated with Pydantic library, the next big thing for 
-you is to find a way to conveniently persist your data objects into
+you is to find a way to conveniently persist your data objects in
 a database.
 
 To make things simpler, I wrote for you a new base model class 
@@ -31,7 +31,7 @@ a powerful approach to allow the developer to very easily
 make their data objects persistent in the database without the eternal 
 headache about SQL schemas. Yet MongoDB allows you to execute complex queries similar
 to what you can expect from SQL-based databases. Read more about my
-thoughts about MongoDB in my (previous posts)[https://www.metamatic.net/metamatic/systems/2023/03/30/why-mongodb-still-kicks-ass.html].
+thoughts about MongoDB in my [previous posts](https://www.metamatic.net/metamatic/systems/2023/03/30/why-mongodb-still-kicks-ass.html).
 
 Be inspired by what I have created and be free to copy my code 
 and use it as the starting point for your own database-aware
@@ -43,9 +43,9 @@ Pydantic and data-aware at the same time.
 # An example with soccer players
 
 Imagine for a second that you are a great data scientist obsessed with
-soccer statistics... Or just imagine that you are another pathetic "soccer-dad".
-Just kidding, of course! :) Anyway, in this example I want to model soccer players, games, excercises
-and events and store everything into a database so I can execute
+soccer statistics... *(Or just imagine that you are another pathetic "soccer-dad":)*
+Anyway, in this example I want to model soccer players, games, excercises
+and events and store everything in a database so I can execute
 complex queries on them and calculate different kinds of statistical 
 truths about all possible aspects related to them. So I start by creating a model "Player"
 to represent a soccer player. I extend my player model from the base class MSModel to enable
@@ -72,7 +72,7 @@ class Player(MSModel):
     return f"{self.name}: {self.id}"
 ```
 Now, this is the first implementation of a Player model. Create your
-first Player using this model:
+first [Player](https://github.com/develprr/utility/blob/main/src/player.py) using this model:
 
 ```python
 player = Player.new("21", "Ronaldinho Gaucho")
@@ -81,8 +81,8 @@ player = Player.new("21", "Ronaldinho Gaucho")
 At this point the model is yet quite simple, allowing it to have
 just two fields, name and ID. As ID is defined as a string, 
 it can be any string. In this case, I have decided to use Ronaldinho's
-jersey nubmer 22 as identifier. Since our model uses Pydantic (through
-its super class MSMOidel), it would not allow erratic instantiation
+jersey number 21 as identifier. Since our model uses Pydantic (through
+its super class MSMOdel), it would not allow erratic instantiation
 of the model, for example using some other data type as constructor
 parameter than two strings. Giving the ID as an integer would cause
 this model to throw an error. Without Pydantic, erratic construction
@@ -96,7 +96,7 @@ To find your player from the database by its ID, you can:
 ```python
 found_player = Player.find_one({ "_id": "21" }) 
 ```
-Now, this looks pretty much like standard MongoDB query (using PyMongo)
+Now, this looks pretty much like standard MongoDB query (using [PyMongo](https://pymongo.readthedocs.io/en/stable/index.html))
 but the difference here is that using just PyMongo you would get just
 a dictionary object from the database. But when using our Player model
 that extends from MSModel class, the object that was loaded from the

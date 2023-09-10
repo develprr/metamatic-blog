@@ -7,7 +7,7 @@ categories: Python Pydantic MongoDB
 
 ![soccer-database]({{ site.baseurl }}/assets/soccer-database.png)
 
-I have written already some articles about how to use [Pydantic](https://pydantic.dev/) data validation
+I have already written some articles about how to use [Pydantic](https://pydantic.dev/) data validation
 library to improve your Python code.
 
 Now, if I was able to inspire you and you are on your way to become 
@@ -18,7 +18,7 @@ how to store your data objects in a database.
 After all, when you have modeled your problem domain into wonderful
 data objects validated with Pydantic library, the next big thing for 
 you is to find a way to conveniently persist your data objects in
-a database.
+a database. 
 
 To make things simpler, I wrote for you a new base model class 
 [MSModel](https://github.com/develprr/utility/blob/main/src/msmodel.py). 
@@ -47,12 +47,12 @@ soccer statistics... *(Or just imagine that you are another pathetic "soccer-dad
 Anyway, in this example I want to model soccer players, games, excercises
 and events and store everything in a database so I can execute
 complex queries on them and calculate different kinds of statistical 
-truths about all possible aspects related to them. So I start by creating a model "Player"
+truths about all possible aspects related to them. So I start by creating a model "[Player](https://github.com/develprr/utility/blob/main/src/player.py)"
 to represent a soccer player. I extend my player model from the base class MSModel to enable
 robust data validation and database communication:
 
 ```python
-from pydantic import StrictStr, validate_call, create_model
+from pydantic import StrictStr, validate_call
 from msmodel import MSModel
   
 class Player(MSModel):
@@ -72,7 +72,7 @@ class Player(MSModel):
     return f"{self.name}: {self.id}"
 ```
 Now, this is the first implementation of a Player model. Create your
-first [Player](https://github.com/develprr/utility/blob/main/src/player.py) using this model:
+first Player using this model:
 
 ```python
 player = Player.new("21", "Ronaldinho Gaucho")
@@ -82,7 +82,7 @@ At this point the model is yet quite simple, allowing it to have
 just two fields, name and ID. As ID is defined as a string, 
 it can be any string. In this case, I have decided to use Ronaldinho's
 jersey number 21 as identifier. Since our model uses Pydantic (through
-its super class MSMOdel), it would not allow erratic instantiation
+its super class MSModel), it would not allow erratic instantiation
 of the model, for example using some other data type as constructor
 parameter than two strings. Giving the ID as an integer would cause
 this model to throw an error. Without Pydantic, erratic construction
@@ -96,7 +96,7 @@ To find your player from the database by its ID, you can:
 ```python
 found_player = Player.find_one({ "_id": "21" }) 
 ```
-Now, this looks pretty much like standard MongoDB query (using [PyMongo](https://pymongo.readthedocs.io/en/stable/index.html))
+Now, this looks pretty much like a standard MongoDB query (using [PyMongo](https://pymongo.readthedocs.io/en/stable/index.html))
 but the difference here is that using just PyMongo you would get just
 a dictionary object from the database. But when using our Player model
 that extends from MSModel class, the object that was loaded from the
@@ -117,7 +117,61 @@ a Player object from the database.
 So what we have here is our own self-implemented [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping)
 (object-relational-mapping) for Python (on Pydantic) and MongoDB!
 
-Next time, let me dive deeper into the actual implementation details
-of this new ORM.
+# How this magic works
+
+Let's have a look how MSModel can deserialize objects from the database
+to the targeted models.
+
+Using the fundamental MongoDB client, PyMongo,
+you'd find your player from "player" collection by coding:
+```
+player_document = mongo_client["player"].find_one({ "_id": "21" })
+```
+What you get is a basic JSON-like dictionary data object, in this case
+with name "Ronaldinho Gaucho".
+
+Now this is fine but when you have implemented some logic specific
+to player data objects, the returned data object does not contain those
+methods, such as *get_description)* like in my example.
+you are required to explicitly instantiate your data object
+with the database result document as follows:
+
+```
+pydantic_player = Player(**player_document)
+```
+
+It is just awkward if you need to do this sort of type casting extra in your code.
+It is so much better when your database connection layers does
+these basic conversions for you in the fly.
+Therefore I wrote a method inside MSModel that dynamically wraps a 
+dictionary object (retrieved from the MongoDB) into the actual Pydantic class
+that provides the logic to operate on it:
+
+```python
+@classmethod
+def new_from_document(cls, document):  
+    # deterimine the target class into wich the Mongo document must be converted:
+    classname = cls.__name__ 
+
+    # determine the module in which the target class resides: 
+    modulename = classname.lower()
+    
+    #import the actual module by the module name that we reasoned:
+    module = importlib.import_module(modulename)
+  
+    # get a reference to the class object of the target class inside the module
+    class_ref = getattr(module, classname)
+
+    # finally, create an instance of target class passing the document as constructor parameter:
+    return class_ref(**document)
+```
+
+As a small nunance, my implementation requires the module of the target class
+to be the same as the class name in lower case. This is fine for 
+me because that's actually my convention or writing Python code for the time being. 
+If you find my example insightful, please modify this to fit into your own masterpiece!
+
+Next time, I might be diving even deeper into the intriguing topic 
+of mapping objects into database entities -or doing just something completely else.
 
 Until then, keep safe!

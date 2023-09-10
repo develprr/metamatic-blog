@@ -172,6 +172,6 @@ me because that's actually how I like to write Python code - at least for the ti
 If you find my example insightful, you will surely modify this to fit into your own masterpiece!
 
 Next time, I might be diving even deeper into the intriguing topic 
-of mapping objects into database entities -or doing just something completely else.
+of mapping objects into database entities.
 
 Until then, keep safe!

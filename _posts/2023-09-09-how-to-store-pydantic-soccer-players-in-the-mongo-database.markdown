@@ -141,7 +141,7 @@ pydantic_player = Player(**player_document)
 ```
 
 It is just awkward if you need to do this sort of type casting extra in your code.
-It is so much better when your database connection layers does
+It is so much better when your database connection layer does
 these basic conversions for you in the fly.
 Therefore I wrote a method inside MSModel that dynamically wraps a 
 dictionary object (retrieved from the MongoDB) into the actual Pydantic class

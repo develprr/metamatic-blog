@@ -44,7 +44,7 @@ Pydantic and data-aware at the same time.
 
 Imagine for a second that you are a great data scientist obsessed with
 soccer statistics... *(Or just imagine that you are another pathetic "soccer-dad":)*
-Anyway, in this example I want to model soccer players, games, excercises
+Both ways, in this example I want to model soccer players, games, excercises
 and events and store everything in a database so I can execute
 complex queries on them and calculate different kinds of statistical 
 truths about all possible aspects related to them. So I start by creating a model "[Player](https://github.com/develprr/utility/blob/main/src/player.py)"

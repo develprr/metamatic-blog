@@ -167,8 +167,8 @@ def new_from_document(cls, document):
 ```
 
 As a small nuance, my implementation requires the module of the target class
-to be the same as the class name in lower case. This is fine for 
-me because that's actually how I like to write Python code - at least for the time being. 
+to be the same as the class name in lower case: class *Player* must be placed into 
+module *player*. This is fine for me because that's actually how I like to write Python code - at least for the time being. 
 If you find my example insightful, you will surely modify this to fit into your own masterpiece!
 
 Next time, I might be diving even deeper into the intriguing topic 

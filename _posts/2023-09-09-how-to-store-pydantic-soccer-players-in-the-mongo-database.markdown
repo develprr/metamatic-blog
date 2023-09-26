@@ -210,7 +210,7 @@ from the database using our Player model with this new capability:
 ```python
 found_players = Player.find({})
 ```
-Now, the returned objects are readily converted to our Player objects
+The returned objects are readily converted to our Player objects
 which have all the neat instance methods available that we
 defined for them.
 

@@ -162,14 +162,60 @@ def new_from_document(cls, document):
     # get a reference to the class object of the target class inside the module:
     class_ref = getattr(module, classname)
 
+    # since our Pydantic objects are expected to have "id" field
+    # whereas MongoDB document has an "_id" field
+    # make a clone of the document that has "id" field:  
+    document_with_id = {**document, "id": document["_id"]}
+
     # finally, create an instance of target class passing the document as constructor parameter:
-    return class_ref(**document)
+    return class_ref(**document_with_id)
 ```
 
 As a small nuance, my implementation requires the module of the target class
 to be the same as the class name in lower case: class *Player* must be placed into 
 module *player*. This is fine for me because that's actually how I like to write Python code - at least for the time being. 
-If you find my example insightful, you will surely modify this to fit into your own masterpiece!
+
+## Finding many players
+
+When you wanted to find all documents from MongoDB collection and using the plain
+PyMongo driver, you'd be writing something like this:
+
+```python
+documents = mongo_client["player"].find({})
+```
+
+As a result, you will get a list of dictionary objects. This is fine,
+but when you actually want to use your nice business domain objects made with
+Pydantic, you will inevitably need to convert those dictionaries
+returned by MongoDB into your own business objects. It would lead to
+infuriatingly verbose, repetitive and boilerplatish code if you had 
+to explcicitly remember to apply some lines of conversion code
+each code line that makes an actual MongoDB query. 
+
+Instead, you certainly want to have a query function that automatically does
+this magic for you. Let's define such in our database mapping layer
+*MSModel*:
+
+```python
+@classmethod
+def find(cls, query):
+  collection_name = cls.__name__
+  documents = MSMongoClient.singleton.find(collection_name, query)
+  return list(map(cls.new_from_document, documents))
+```
+
+It wasn't too complicated, was it? :) Now, let us find our players
+from the database using our Player model with this new capability:
+
+```python
+found_players = Player.find({})
+```
+Now, the returned objects are readily converted to our Player objects
+which have all the neat instance methods available that we
+defined for them.
+
+If you find my examples insightful, I encourage you to use these ideas 
+to create your own masterpiece!
 
 Next time, I might be diving even deeper into the intriguing topic 
 of mapping objects into database entities.

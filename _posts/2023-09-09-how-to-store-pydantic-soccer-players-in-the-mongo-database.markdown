@@ -40,7 +40,7 @@ Pydantic models that serve *your* needs!
 By extending your data objects from my exemplary MSModel, you make them both
 Pydantic and data-aware at the same time.
 
-# An example with soccer players
+## An example with soccer players
 
 Imagine for a second that you are a great data scientist obsessed with
 soccer statistics... *(Or just imagine that you are another pathetic "soccer-dad":)*

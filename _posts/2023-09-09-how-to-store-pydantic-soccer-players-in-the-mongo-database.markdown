@@ -117,7 +117,7 @@ a Player object from the database.
 So what we have here is our own self-implemented [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping)
 (object-relational-mapping) for Python (on Pydantic) and MongoDB!
 
-# How this magic works
+## How this magic works
 
 Let's have a look how MSModel can deserialize objects from the database
 to the targeted models.

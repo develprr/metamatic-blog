@@ -189,7 +189,7 @@ but when you actually want to use your nice business domain objects made with
 Pydantic, you will inevitably need to convert those dictionaries
 returned by MongoDB into your own business objects. It would lead to
 infuriatingly verbose, repetitive and boilerplatish code if you had 
-to explicitly remember to apply some lines of conversion code
+to explicitly remember to apply the conversion code after
 each code line that makes an actual MongoDB query. 
 
 Instead, you certainly want to have a query function that automatically does

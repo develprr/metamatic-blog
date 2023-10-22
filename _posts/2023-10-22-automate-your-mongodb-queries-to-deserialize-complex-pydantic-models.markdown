@@ -42,16 +42,16 @@ Let's have a look at it in detail. To describe an event assignment as a JSON
 file we would have something like this:
 ```json
 {
-    'id': 'some-unique-identifier-here',
-    'player': {
-        'id': '21',
-        'name':  'R. Gaúcho'
-     },
-     'event': {
-        'id': 'some-event-id',
-        'name': 'First match'
-     }
-  }
+  'id': 'some-unique-identifier-here',
+  'player': {
+      'id': '21',
+      'name':  'R. Gaúcho'
+   },
+   'event': {
+      'id': 'some-event-id',
+      'name': 'First match'
+   }
+}
 ```
 This event assignment connects a certain player named R. Gaúcho to a specific 'First match' event.
 Note that tables are called *collections* in MongoDB. Let's assume that we load such JSON document

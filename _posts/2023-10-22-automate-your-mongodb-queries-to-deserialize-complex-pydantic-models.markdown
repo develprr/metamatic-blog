@@ -15,7 +15,7 @@ by avoiding duplication and inconsistency of data.
 As crazy as this may sound, I repeat my earlier claim that MongoDB, 
 although surely being a document database, is a relational
 database as well. No, it does not support SQL query language. Instead, 
-it has its own object query format not too different from Graph QL. But despite
+it has its own object query format not too different from [GraphQL](https://graphql.org/). But despite
 this it allows to organize collections in a quite relational fashion. 
 
 Let's think about a practical example of a data entity that is very
@@ -80,10 +80,10 @@ class SoccerEvent(BaseModel):
   name: StrictStr
 ```
 Little by little, we begin to discover that the innocent object *EventAssignment* is actually 
-a horrible Frankenstein monster piled up by smashing together rusty old metal limbs.
+a horrible Frankenstein monster piled up by smashing together rusty old metal limbs!
 
 No worries, with Pydantic we can still instantiate this whole structure of nested objects
-directly from just one nested JSON document!
+directly from just one nested JSON document:
 
 ```python
 my_event_assigment = EventAssignment(**{
@@ -108,9 +108,9 @@ player_name = my_event_assigment.player.name
 I can almost hear you saying, *"this is great, but didn't you just say that
 players and events reside in separate collections?"*
 
-Sure I did! Now we are coming to the point that when we can instantiate
+Sure I did! Now we are coming to the point that if we can instantiate
 composite Pydantic models from complex nested JSON files, then we are actually
-able to instantiate them from MongoDB split over multiple collections as well.
+able to instantiate them from MongoDB structures split over multiple collections as well.
 
 Let's write a MongoDB aggregation pipeline that composes a complete JSON document as describe
 above from three different collections:

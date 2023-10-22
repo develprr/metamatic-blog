@@ -112,52 +112,51 @@ Sure I did! Now we are coming to the point that if we can instantiate
 composite Pydantic models from complex nested JSON files, then we are actually
 able to instantiate them from MongoDB structures split over multiple collections as well.
 
-Let's write a MongoDB aggregation pipeline that composes a complete JSON document as describe
+Let's write a MongoDB aggregation pipeline that composes a complete JSON document as described
 above from three different collections:
 
 ```python 
-  mongodb_client.aggregate([
-    {
-      "$match": query
-    },
-    {
-      '$lookup': {
-        'from': 'Player', 
-        'localField': 'player_id', 
-        'foreignField': '_id', 
-        'as': 'player'
-      }
-    }, 
-    {
-      '$unwind': {
-        'path': '$player', 
-        'preserveNullAndEmptyArrays': True
-      }
-    },
-    {
-      '$lookup': {
-        'from': 'SoccerEvent', 
-        'localField': 'event_id', 
-        'foreignField': '_id', 
-        'as': 'event'
-      }
-    }, 
-    {
-      '$unwind': {
-        'path': '$event', 
-        'preserveNullAndEmptyArrays': True
-      }
-    },
-    {
-      '$project': {
-        'event.id': '$event._id',
-        'event.name': 1,
-        'player.id': '$player._id',
-        'player.name': 1
-      }
-    },
-  ]);
-
+mongodb_client.aggregate([
+  {
+    "$match": query
+  },
+  {
+    '$lookup': {
+      'from': 'Player', 
+      'localField': 'player_id', 
+      'foreignField': '_id', 
+      'as': 'player'
+    }
+  }, 
+  {
+    '$unwind': {
+      'path': '$player', 
+      'preserveNullAndEmptyArrays': True
+    }
+  },
+  {
+    '$lookup': {
+      'from': 'SoccerEvent', 
+      'localField': 'event_id', 
+      'foreignField': '_id', 
+      'as': 'event'
+    }
+  }, 
+  {
+    '$unwind': {
+      'path': '$event', 
+      'preserveNullAndEmptyArrays': True
+    }
+  },
+  {
+    '$project': {
+      'event.id': '$event._id',
+      'event.name': 1,
+      'player.id': '$player._id',
+      'player.name': 1
+    }
+  },
+]);
 ```
 
 This aggregation query might look a bit scary at first glance

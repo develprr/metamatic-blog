@@ -55,7 +55,7 @@ file we would have something like this:
 ```
 This event assignment connects a certain player named R. Gaúcho to a specific 'First match' event.
 Note that tables are called *collections* in MongoDB. Let's assume that we load such JSON document
-from 'EventAssigment' collection and want to serialize it into a similarly
+from 'EventAssigment' collection and want to deserialize it into a similarly
 named Pydantic model. The fantastic thing about Pydantic is that we are
 able to directly instantiate this kind of a composite object that has two object attributes ("player"
 and "event") from a similarly nested JSON document.

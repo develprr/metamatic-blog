@@ -166,5 +166,22 @@ a conventient and repeatable way. That would then suddenly give us an ad-hoc
 framework to facilitate fetching multi-collection data structures
 directly into Pydantic models.
 
-But that's for the next time. Talk to you then!
+We get here a quite handy data persistence pattern if we introduce a code convention
+that each attribute of a model is to be stored in a collection whose name equals the attribute's class name.
+For example, if we have an attribute "event" whose type is *SoccerEvent*,
+then that attribute will be stored in a collection that is also called "SoccerEvent".
 
+Being faithful to this convention, we'll be able to always obtain each attribute's
+collection name through reflection. So I expand my ORM solution's base class, [MSModel](https://github.com/develprr/utility/blob/main/src/msmodel.py),
+by adding a method to deduce any attribute's collection name: 
+
+```python
+@classmethod
+def get_field_collection_name(cls, field_name):
+  return cls.model_fields[field_name].annotation.__name__
+``` 
+
+Next time, let's have a closer look how to actually use this method to automatically
+deserialize objects from Mongo database into Pydantic models.
+
+Cheers!

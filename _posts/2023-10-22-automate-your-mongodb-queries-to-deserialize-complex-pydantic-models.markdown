@@ -243,7 +243,7 @@ Now let's go to the actual implementation of the method:
     ]
 ```
 
-Taking advantage of this builder method, the logic to generate original MongoDB query becomes
+Taking advantage of this builder method, the logic to generate the original MongoDB query becomes
 quite a bit smaller:
 
 ```python

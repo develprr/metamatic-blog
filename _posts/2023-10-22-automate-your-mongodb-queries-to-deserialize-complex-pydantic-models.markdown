@@ -194,7 +194,7 @@ Finally, we polish the result with a *project* command which converts MongoDB's 
 into *id* field to fit the pydantic model. We also tell that we want from both object's also
 name property. 
 
-# Automating MongoDB query
+# Automating MongoDB queries
 
 A closer look at MongoDB query's syntax makes it evident that it is quite feasible 
 to automatically construct the query from Pydantic model's structure.

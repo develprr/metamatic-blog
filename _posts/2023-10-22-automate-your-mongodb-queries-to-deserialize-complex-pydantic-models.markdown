@@ -204,8 +204,8 @@ to build the MongoDB query:
 
 ```python
 @classmethod
-  def get_field_names(cls):
-    return list(cls.model_fields.keys())
+def get_field_names(cls):
+  return list(cls.model_fields.keys())
 ```
 
 In *EventAssignment* example case, this method returns fields *id*, *player*
@@ -222,48 +222,48 @@ Now let's go to the actual implementation of the method:
 
 ```python
 @classmethod
-  def build_one_to_one_lookup(cls, field_name):
-    collection_name = cls.get_field_collection_name(field_name)
-    local_field = f'{field_name}_id'
-    return [
-      {
-        '$lookup': {
-          'from': collection_name,
-          'localField': local_field,
-          'foreignField': '_id',
-          'as': field_name
-        }
-      },
-      {
-        '$unwind': {
-            'path': f'${field_name}',
-            'preserveNullAndEmptyArrays': True
-        }
+def build_one_to_one_lookup(cls, field_name):
+  collection_name = cls.get_field_collection_name(field_name)
+  local_field = f'{field_name}_id'
+  return [
+    {
+      '$lookup': {
+        'from': collection_name,
+        'localField': local_field,
+        'foreignField': '_id',
+        'as': field_name
       }
-    ]
+    },
+    {
+      '$unwind': {
+          'path': f'${field_name}',
+          'preserveNullAndEmptyArrays': True
+      }
+    }
+  ]
 ```
 
 Taking advantage of this builder method, the logic to generate the original MongoDB query becomes
 quite a bit smaller:
 
 ```python
-  @classmethod
-  def fetch_one(cls, query):
-    return cls.aggregate_one([
-      {
-        "$match": query
-      },
-      *cls.build_one_to_one_lookup('event'),
-      *cls.build_one_to_one_lookup('player'),
-      {
-        '$project': {
-          'event.id': '$event._id',
-          'event.name': 1,
-          'player.id': '$player._id',
-          'player.name': 1
-        }
-      },
-    ]);
+@classmethod
+def fetch_one(cls, query):
+  return cls.aggregate_one([
+    {
+      "$match": query
+    },
+    *cls.build_one_to_one_lookup('event'),
+    *cls.build_one_to_one_lookup('player'),
+    {
+      '$project': {
+        'event.id': '$event._id',
+        'event.name': 1,
+        'player.id': '$player._id',
+        'player.name': 1
+      }
+    },
+  ]);
 ```
 
 That's all for now. Next time let's have a look how to automate MongoDB

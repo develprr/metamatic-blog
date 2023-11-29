@@ -208,7 +208,7 @@ to build the MongoDB query:
     return list(cls.model_fields.keys())
 ```
 
-In *EventAssignment* example vase, this method returns fields *id*, *player*
+In *EventAssignment* example case, this method returns fields *id*, *player*
 and *event*.  So why not automate things a bit and write a method **build_one_to_one_lookup**
 which allows us to build the actual lookup query simply by invoking:
 
@@ -217,8 +217,8 @@ EventAssignment.build_one_to_one_lookup('player')*
 ```
 
 A huge improvement versus manually typing almost identical code pattern every time
-we want to implement a one-to-one relation in our database queries. 
-No let's go to the actual implementation of the method:
+we want to implement a one-to-one relation in our database queries!
+Now let's go to the actual implementation of the method:
 
 ```python
 @classmethod

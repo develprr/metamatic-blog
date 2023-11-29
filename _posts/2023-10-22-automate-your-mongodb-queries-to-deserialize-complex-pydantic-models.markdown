@@ -181,7 +181,91 @@ def get_field_collection_name(cls, field_name):
   return cls.model_fields[field_name].annotation.__name__
 ``` 
 
-Next time, let's have a closer look how to actually use this method to automatically
-deserialize objects from Mongo database into Pydantic models.
+When looking carefully at the aggregation query above, it consists of two lookups, one
+that joins a Player object Player collection and another that joins a SoccerEvent
+object from SoccerEvent collection. By default, lookups join the target collection's objects
+as an array. However, since we only want one Player object and one Soccerevent object,
+it is not purposeful to attach those objects as arrays. Instead, after both lookups there
+is an *unwind* command that actually transforms the attached array into singular object,
+taking the first and only object from the array. This fits perfectly to our use case
+because then the JSON structure that we get perfectly matches our Pydantic model.
 
-Cheers!
+Finally, we polish the result with a *project* command which converts MongoDB's *_id* field
+into *id* field to fit the pydantic model. We also tell that we want from both object's also
+name property. 
+
+# Automating MongoDB query
+
+A closer look at MongoDB query's syntax makes it evident that it is quite feasible 
+to automatically construct the query from Pydantic model's structure.
+
+Let's define a method to automatically get the list of the properties from which
+to build the MongoDB query:
+
+```python
+@classmethod
+  def get_field_names(cls):
+    return list(cls.model_fields.keys())
+```
+
+In *EventAssignment* example vase, this method returns fields *id*, *player*
+and *event*.  So why not automate things a bit and write a method **build_one_to_one_lookup**
+which allows us to build the actual lookup query simply by invoking:
+
+```python
+EventAssignment.build_one_to_one_lookup('player')*
+```
+
+A huge improvement versus manually typing almost identical code pattern every time
+we want to implement a one-to-one relation in our database queries. 
+No let's go to the actual implementation of the method:
+
+```python
+@classmethod
+  def build_one_to_one_lookup(cls, field_name):
+    collection_name = cls.get_field_collection_name(field_name)
+    local_field = f'{field_name}_id'
+    return [
+      {
+        '$lookup': {
+          'from': collection_name,
+          'localField': local_field,
+          'foreignField': '_id',
+          'as': field_name
+        }
+      },
+      {
+        '$unwind': {
+            'path': f'${field_name}',
+            'preserveNullAndEmptyArrays': True
+        }
+      }
+    ]
+```
+
+Taking advantage of this builder method, the logic to generate original MongoDB query becomes
+quite a bit smaller:
+
+```python
+  @classmethod
+  def fetch_one(cls, query):
+    return cls.aggregate_one([
+      {
+        "$match": query
+      },
+      *cls.build_one_to_one_lookup('event'),
+      *cls.build_one_to_one_lookup('player'),
+      {
+        '$project': {
+          'event.id': '$event._id',
+          'event.name': 1,
+          'player.id': '$player._id',
+          'player.name': 1
+        }
+      },
+    ]);
+```
+
+That's all for now. Next time let's have a look how to automate MongoDB
+queries even further to painlessly deserialize database objects into Pydantic
+models!

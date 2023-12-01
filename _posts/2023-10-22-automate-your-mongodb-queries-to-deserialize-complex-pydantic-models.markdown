@@ -112,6 +112,8 @@ Sure I did! Now we are coming to the point that if we can instantiate
 composite Pydantic models from complex nested JSON files, then we are actually
 able to instantiate them from MongoDB structures split over multiple collections as well.
 
+# Understanding query aggregation pipelines
+
 Let's write a MongoDB aggregation pipeline that composes a complete JSON document as described
 above from three different collections:
 

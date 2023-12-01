@@ -266,6 +266,41 @@ def fetch_one(cls, query):
   ]);
 ```
 
+# To save or not to save
+
+Looking at the semi-automated query, the first question that an observer might
+ask is, would it be better if the user didn't need to expliclitly declare which attributes
+have to be looked up from a joint collection but the system would implicitly know it?
+
+Sure!
+
+To achieve this, there is a temptation to take advantage of *get_field_names()*
+method that we just implemented. Now the problem is that this method returns all attributes
+of the model and not all attributes are lookup references to other collections - starting
+with "id" field. To create a smarter method that can return those attributes that
+actually map one-to-one to another collection's objects we need to write some logic
+that helps our framework find out whether a particular object type name actually exists
+as a collection in the database. So let's [extend our MSMongoClient](https://github.com/develprr/utility/commit/4668d835f2a30d6c0c3a8a42763c86ae1c3b7428) class to provide this
+functionality:
+
+```python
+def exists_collection(self, collection_name):
+  return collection_name in self.collection_names()
+  
+@cache
+def collection_names(self):
+  return self.client.list_collection_names()
+```
+
+Clearly *exists_collection()* needs to be invoked all over again. We definitely
+don't want the system to execute a database query every time this happens.
+Therefore *@cache* decorator helps us here to make the DB client class 
+actually remember the results. To use the cache, import it to your code:
+
+```python
+from functools import cache
+```
+
 That's all for now. Next time let's have a look how to automate MongoDB
 queries even further to painlessly deserialize database objects into Pydantic
 models!

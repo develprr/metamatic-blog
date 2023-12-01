@@ -272,7 +272,7 @@ def fetch_one(cls, query):
 
 Looking at the semi-automated query, the first question that an observer might
 ask is, would it be better if the user didn't need to expliclitly declare which attributes
-have to be looked up from a joint collection but the system would implicitly know it?
+have to be looked up from a joint collection but instead, the system would rather implicitly know it?
 
 Sure!
 
@@ -294,9 +294,9 @@ def collection_names(self):
   return self.client.list_collection_names()
 ```
 
-Clearly *exists_collection()* needs to be invoked all over again. We definitely
+The thing Clearly *exists_collection()* needs to be invoked all over again. We definitely
 don't want the system to execute a database query every time this happens.
-Therefore *@cache* decorator helps us here to make the DB client class 
+Therefore *@cache* decorator helps us here make the DB client class 
 actually remember the results. To use the cache, import it to your code:
 
 ```python

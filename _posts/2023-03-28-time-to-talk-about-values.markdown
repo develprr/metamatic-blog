@@ -112,7 +112,12 @@ class Norm
 
 end
 ```
-Next time, let's dvelve into the topic about who is normal, who is not, 
+
+Finally, have a look at a sequence diagram presentation of the algorithm:
+
+![Cosine similarity]({{ site.baseurl }}/assets/CosineSimilarity.calculate.png)
+
+Next time, let's delve into the topic about who is normal, who is not, 
 why it matters and how to find out!
 
 Cheers!

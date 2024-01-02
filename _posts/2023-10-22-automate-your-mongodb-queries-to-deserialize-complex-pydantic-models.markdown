@@ -303,6 +303,59 @@ actually remember the results. To use the cache, import it to your code:
 from functools import cache
 ```
 
-That's all for now. Next time let's have a look how to automate MongoDB
-queries even further to painlessly deserialize database objects into Pydantic
-models!
+Now we are ready to implement a method to get only those fields of a model that
+actually are collection references. Let's go for it and equip our base model with this code:
+
+```python
+@classmethod
+def get_collection_references(cls):
+  field_names = cls.get_field_names()
+  return list(filter(cls.is_field_collection_reference, field_names))
+```
+The method above loops through all field names and filters those that are actually
+collection references. So this needs a helper method to check whether a given
+individual field name is a collection reference:
+
+```python
+@classmethod
+def is_field_collection_reference(cls, field_name):
+  field_type = cls.get_field_type(field_name)
+  collection_names = MSMongoClient.singleton.collection_names()
+  return True if field_type in collection_names else False
+```
+
+From this position, it is only a small step to write a true workhorse method
+to automatically build all one-to one lookups:
+```python
+@classmethod
+def build_one_to_one_lookups(cls):
+  references = cls.get_collection_references()
+  return np.array(list(map(cls.build_one_to_one_lookup, references))).flatten().tolist()
+```
+
+With these helper methods, *EventAssigment's*
+*fetch_one()* method can now be simplified as follows:
+```python
+@classmethod
+def fetch_one(cls, query):
+  return cls.aggregate_one([
+    {
+      "$match": query
+    },
+    *cls.build_one_to_one_lookups(),
+    {
+      '$project': {
+        'event.id': '$event._id',
+        'event.name': 1,
+        'player.id': '$player._id',
+        'player.name': 1
+      }
+    },
+  ]);
+```
+
+If we go even further with this query automation madness, clearly the same
+same truncation procedure can be also applied to the projection part at the 
+end of the aggregation. I'll be soon back to this topic. 
+
+Cheers!

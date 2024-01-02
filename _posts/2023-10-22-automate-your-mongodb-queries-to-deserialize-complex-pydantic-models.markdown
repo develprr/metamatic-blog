@@ -215,7 +215,7 @@ and *event*.  So why not automate things a bit and write a method **build_one_to
 which allows us to build the actual lookup query simply by invoking:
 
 ```python
-EventAssignment.build_one_to_one_lookup('player')*
+EventAssignment.build_one_to_one_lookup('player')
 ```
 
 A huge improvement versus manually typing almost identical code pattern every time

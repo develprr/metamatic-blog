@@ -435,15 +435,15 @@ Do you really believe me when I tell you this turpentine works? Well, you should
 I test it:
 ```python
 def test_build_one_to_one_projection():
-projection = EventAssignment.build_one_to_one_projection()
-assert(projection == {
-  '$project': {
-    'event.id': '$event._id',
-    'event.name': 1,
-    'player.id': '$player._id',
-    'player.name': 1
-  }
-})
+  projection = EventAssignment.build_one_to_one_projection()
+  assert(projection == {
+    '$project': {
+      'event.id': '$event._id',
+      'event.name': 1,
+      'player.id': '$player._id',
+      'player.name': 1
+    }
+  })
 ```
 Alright, I tested it. It works. Now you can believe me!
 
@@ -455,14 +455,14 @@ This journey has lead us together all the way up to the hill where this particul
 
 ```python
 @classmethod
-  def fetch_one(cls, query):
-    return cls.aggregate_one([
-      {
-        "$match": query
-      },
-      *cls.build_one_to_one_lookups(),
-      cls.build_one_to_one_projection(),
-    ]);
+def fetch_one(cls, query):
+  return cls.aggregate_one([
+    {
+      "$match": query
+    },
+    *cls.build_one_to_one_lookups(),
+    cls.build_one_to_one_projection(),
+  ]);
 ```
 
 ## Coming soon...

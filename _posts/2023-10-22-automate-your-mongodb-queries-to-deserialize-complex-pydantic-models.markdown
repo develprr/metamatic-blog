@@ -467,6 +467,6 @@ This journey has lead us together all the way up to the hill where this particul
 
 ## Coming soon...
 
-Next time we will learn how to whistle. Whistling is a great skill that helps you express emotions at home, in the neighborhood, at work - and maybe even in the garden.
+Next time we will be learning how to whistle. Whistling is a great skill that helps you express emotions at home, in the neighborhood, at work - and maybe even in the garden.
 
 Cheers!

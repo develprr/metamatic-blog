@@ -470,6 +470,6 @@ We hereby promote it and move it to the noble MSModel class where it can start s
 
 ## Coming soon...
 
-Next time we are going to learn together how to whistle. Whistling is a great skill that will help you express emotions at home, at work and in the garden.
+Next time we will learn how to whistle. Whistling is a great skill that helps you express emotions at home, in the neighborhood, at work and maybe even in the garden.
 
 Cheers!

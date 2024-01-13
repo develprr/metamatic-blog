@@ -451,7 +451,7 @@ Alright, I tested it. It works. Now you can believe me!
 
 This is the last chapter of my article about automating MongoDB queries to instantiate Pydantic models.
 This journey has lead us together all the way up to the hill where this particular piece of code, 
-**fetch_one** method, can stand upright and proudly gaze at the horizon with the realization in the heart that it doesn't depend anymore on its original host model *EventAssignment*. At this point we will move it to the upper class *MSModel*, where it can begin to serve all models of the future.
+**fetch_one** method, can stand upright and proudly gaze at the horizon with the realization in the heart that it doesn't depend anymore on its original host model *EventAssignment*. At this point we are honored to move it to the upper class *MSModel*, where it can begin to serve all models of the future.
 
 ```python
 @classmethod

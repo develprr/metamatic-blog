@@ -450,11 +450,9 @@ Alright, I tested it. It works. Now you can believe me!
 ## The closing ceremony
 
 This is the last chapter of my article about automating MongoDB queries to instantiate Pydantic models.
-This journey has lead us together all the way down to the happy end where our framework's ground-breaking **fetch_one** method
-has grwon bit by bit into a generic grown-up method that doesn't anything specific to its original host *EventAssignment* model anymore.
+This journey has lead us together all the way up to the hill where **fetch_one** can stand upright and proudly gaze at the horizon with the realization in the heart that it doesn't depend anymore on its original host model *EventAssignment*.
 
-Having lived through its stormy formative times under our parental guidance, it is now finally ready to enter well-earned adulthood *TA-DAA!*
-We hereby promote it and move it to the noble MSModel class where it can start serving all future models that inherit from the grand MSModel class.
+Having lived through its stormy formative times under our caring guidance, it is now finally ready to enter its well-earned adulthood *TA-DAA!* We hereby promote it and move it to the noble MSModel class where it can start serving all future models that inherit from the grand MSModel class:
 
 ```python
 @classmethod

@@ -364,8 +364,8 @@ The reason why I have formulated a *$project* statement at the end of my aggrega
 is that the result object returned by MongoDB doesn't exactly fit into the Pydantic model.
 First of all, the object IDs are presented with **id** attribute in the model, whereas MongoDB objects
 contain prefixed variants, **_id** fields. Therefore *$project* statement helps convert those *_id* fields 
-into their Pydantic form *id*. Additionally projection defines which properties 
-we will use from the included foreign objects *event* and *name*:
+into their Pydantic form *id*. Additionally, projection defines which properties 
+we will use from the included foreign objects *event* and *player*:
 ```json
 {
       '$project': {

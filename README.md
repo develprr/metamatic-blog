@@ -1,2 +1,2 @@
 # metamatic-blog
-Metamatic Writings
+Writings on behalf of Metamatic Systems Ltd.

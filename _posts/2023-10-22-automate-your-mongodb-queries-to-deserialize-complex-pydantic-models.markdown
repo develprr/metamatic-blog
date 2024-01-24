@@ -467,6 +467,6 @@ def fetch_one(cls, query):
 
 ## Coming soon...
 
-Next time we will be learning how to whistle. Whistling is a great skill that helps you express emotions at home, in the neighborhood, at work - and maybe even in the garden.
+Next time we will be learning how to whistle. Whistling is a great skill that helps you express emotions at home, in the neighborhood - and maybe even in the garden.
 
 Cheers!

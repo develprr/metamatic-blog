@@ -25,7 +25,7 @@ performance isn't the bottle neck but instead you need to provide a flexible way
 data creatively from different angles, a relational model is the best fit. This is the trade-off between the
 relational and document-like ways to see the world.
 
-Now the fantastic thing about MongoDB is that it allows you to use both approaches. A very typical scenario is
+Now the fantastic thing about MongoDB is that it allows you to take both approaches. A very typical scenario is
 that some of your data is "big" and some is "small". Let's say that you have some measurement instruments or server logs
 that produce huge amounts of data. Obviously, a document database model is the best match to make queries to this kind of data.
 On the other hand, your employee or customer data is different. Typically this kind of data contains a limited numberof o entries 
@@ -42,7 +42,7 @@ In my previous article I wrote about writing lookups for MongoDB, which enables 
 databases. However, if your intention is to provide a low latency system that allows to perform super fast queries
 into huge data sets, obviously lookups aren't the ideal way to go. When you want to provide a rapid access to data sets,
 MongoDB provides a fantastic architecture to combine data into collections that already are the perfect match for their queries.
-This approach suits well to scenarios where it can be assumed that there is a rather fixed set of queries that clients will be 
+This approach serves well scenarios where it can be assumed that there is a rather fixed set of queries that clients will be 
 constantly executing. 
 
 Denormalizing data from multiple sources into collections unarguably causes data duplication - it is actually all about caching. 

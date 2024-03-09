@@ -64,9 +64,9 @@ being are Amazon AWS or Microsoft Azure ecosystems. Amazon AWS has been longer a
 In general, Amazon AWS has a wider range of services. It may sound good but in reality it is often far from ideal. It turns out that
 Amazon AWS has a lot of partially or fully overlapping services, making it confusing to figure out the right stack. Also the AWS
 service family is quite fragmented and does not provide a well opinionated pathway. The same applies to documentation which is quite
-fragmented. AWS web console is also confusing and far from intuitive to use. On the other hand, Microsoft Azure appears far more focused and provides a family of services that are well thought out and play well together. Having worked on both environments, I would recommend to go for Microsoft Azure and .NET if you don't need to carry any AWS based legacy "lambda" liability on your shoulders.
+fragmented. AWS web console is also confusing and far from intuitive to use. On the other hand, Microsoft Azure appears far more focused and provides a family of services that are well thought out and play well together. Having worked on both environments, I would recommend to go for Microsoft Azure and .NET if you don't need to carry any AWS based legacy "lambda" liabilities on your shoulders.
 
-Nevertheless, if you want to for MongoDB wonder how to implement your cloud-based business system on top of it, let's examine how to possible go about in either cloud enviroment. 
+Nevertheless, if you want to go for MongoDB and wonder how to implement your cloud-based business system on top of it, let's examine how to possible go about in either cloud enviroment. 
 
 ## MongoDB on Amazon AWS
 If you have to choose AWS, just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) - as suprising as it may sound. Namely, this tool isn't anything Mongo-specific. So let me explain my thinking!

@@ -83,7 +83,7 @@ but if you have a typical coder mindset, this approach probably starts causing s
 A classical coder of course wants to see everything as *code*, not as some complex menus on a confusing web console. 
 You want to write your lambdas as *code* on *your* machine and neatly deploy your creation to the cloud from the command line. 
 To create your first API Gateway application with SAM and *Python* language, have a look at this [workshop](https://catalog.workshops.aws/serverless-app-with-sam/en-US). You can develop Lambda functions with many languages, such as Java, JavaScript, Ruby, TypeScript, GO etc. 
-However, given that I don't know you, anonymous reader, statistically speaking you most likely want to write your functions with
+However, given that I don't know you, my dear anonymous reader, statistically speaking you most likely want to write your functions with
 Python - because it just happens to be the most popular programming language these days.
 
 ## Microsoft Azure

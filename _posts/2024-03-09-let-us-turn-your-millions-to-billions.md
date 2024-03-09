@@ -56,7 +56,7 @@ To query data from collections with billions, not millions of entries, we want t
 To learn more about strategies for reducing lookup operations, I recommend to have a look at [this article](https://www.mongodb.com/docs/atlas/schema-suggestions/reduce-lookup-operations/).
 
 ## Where to start
-If you are a hands-on person (like me) and can't wait to start actually getting productive with database development, the next 
+If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
 thing that crosses your mind is, where should I start right now? Depending on what is your starting point, 
 I suggest two alternatives. If you already are familiar to Mongo and would want to get started with deploying the database
 to the cloud (to start generating millions, and then billions), my proposal is to get started by installing [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) tool - as suprsising 

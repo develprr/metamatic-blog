@@ -58,7 +58,7 @@ To learn more about strategies for reducing lookup operations, I recommend to ha
 ## How to start getting cloudy with MongoDB
 If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
 thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, there are a few alternatives. 
-For starters, you have to make up mind on whether "planet" you want to live on. The major ecosystems to choose from at the time
+For starters, you have to make up your mind on which "planet" you want to live on. The major ecosystems to choose from at the time
 being are Amazon AWS or Microsoft Azure ecosystems. Amazon AWS has been longer around than Microsoft Azure and it is therefore somewhat more widely adopted than Microsoft Azure. However, Microsoft Azure ecosystem is rapidly catching up with Amazon AWS and is only slightly behind in terms of market share. 
 
 In general, Amazon AWS has a wider range of services. It may sound good but in reality it is often far from ideal. It turns out that

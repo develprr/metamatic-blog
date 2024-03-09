@@ -83,6 +83,6 @@ However, given that I don't know you, anonymous reader, statistically speaking y
 Python - because it just happens to be the most popular programming language these days.
 
 ## Microsoft Azure
-To get started implementing scalable cloud services on Microsoft Azure, I recommend to start with this sane and clear article on implementing your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). Have a good journey. I'll be be writing about
+To get started implementing scalable cloud services on Microsoft Azure, I recommend to start with this sane and clear article on implementing your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). Have a good journey. I'll be back writing about
 this and other cool topics maybe even sooner than you realize!
 

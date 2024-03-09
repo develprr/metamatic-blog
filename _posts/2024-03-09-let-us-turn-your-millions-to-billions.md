@@ -55,21 +55,20 @@ Doing data denormalization to achieve velocity means sacrificing storage space t
 To query data from collections with billions, not millions of entries, we want to avoid complex lookups and SQLish approach to queries.
 To learn more about strategies for reducing lookup operations, I recommend to have a look at [this article](https://www.mongodb.com/docs/atlas/schema-suggestions/reduce-lookup-operations/).
 
-## Where to start
+## Where to start getting cloudy with MongoDB
 If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
-thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, 
-I propose two alternatives. If you already are familiar to Mongo and would want to get started with deploying the database
-to the cloud, just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) tool - as suprsising 
-as it sounds. Namely, this tool isn't anything Mongo-specific. But the power of the MongoDB is in the cloud, therefore 
-you will need to start practicing cloud deployment. Amazon Web Services is somewhat overwhelming to a new-starter. 
-My pick for the starting point is AWS SAM if you want to get something serious  done as soon as possible. 
-However, if you want start practicing just MongoDB queries locally, then the most straightforward next step 
-is to [install MongoDB locally](https://www.mongodb.com/try/download/shell).
+thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, there are alternatives. 
+If you already are familiar to Mongo and would want to get started with deploying the database to the cloud, 
+just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) tool - as suprsising as it sounds. Namely, this tool isn't anything Mongo-specific. So let me explain my mindset!
+When you want to start using MongoDB Atlas Data API on AWS, you need to use [AWS API Gateway](https://aws.amazon.com/api-gateway/).
+You can configure AWS API Gateway directly on [AWS console](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html)
+but if you have at typical coder mindset, this approach probably starts causing some headache even before you do anything. 
+A classical coder of course wants to see everything as *code*, not as some complex menus on a confusing web console. 
+Youwant to write your lambdas *as code* on *your* machine and neatly deploy your creation to the cloud from the command line. 
+To create your first API Gateway application with SAM and *Python* language, have a look at this [fantastic example](https://github.com/aws-samples/sam-python-crud-sample). You can develop Lambda functions with many languages, such as Java, JavaScript, Ruby, TypeScript, GO etc. 
+However, given that I don't know you, anonymous reader, statistically speaking you most likely want to write Lambda functions with
+Python because it just happens to be the most popular programming language these days.
 
 ## Coming soon
 I'll be back writing more about the topic. Let's stay tuned and look at the world from different angles. 
 The truth is out there, or somewhere between!
-
-
-
-

@@ -58,8 +58,18 @@ To learn more about strategies for reducing lookup operations, I recommend to ha
 ## How to start getting cloudy with MongoDB
 If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
 thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, there are a few alternatives. 
-If you already are familiar to Mongo and would want to get started with deploying the database to the cloud, 
-just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) - as suprising as it may sound. Namely, this tool isn't anything Mongo-specific. So let me explain my thinking!
+For starters, you have to make up mind on whether "planet" you want to live on. The major ecosystems to choose from at the time
+being are Amazon AWS or Microsoft Azure ecosystems. Amazon AWS has been longer around than Microsoft Azure and it is therefore somewhat more widely adopted than Microsoft Azure. However, Microsoft Azure ecosystem is rapidly catching up with Amazon AWS and is only slightly behind in terms of market share. 
+
+In general, Amazon AWS has a wider range of services. It may sound good but in reality it is often far from ideal. It turns out that
+Amazon AWS has a lot of partially or fully overlapping services, making it confusing to figure out the right stack. Also the AWS
+service family is quite fragmented and does not provide a well opinionated pathway. The same applies to documentation which is quite
+fragmented. AWS web console is also confusing and far from intuitive to use. On the other hand, Microsoft Azure appears far more focused and provides a family of services that are well thought out and play well together. Having worked on both environments, I would recommend to go for Microsoft Azure and .NET if you don't need to carry any AWS based legacy "lambda" liability on your shoulders.
+
+Nevertheless, if you want to for MongoDB wonder how to implement your cloud-based business system on top of it, let's examine how to possible go about in either cloud enviroment. 
+
+## MongoDB on Amazon AWS
+If you have to choose AWS, just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) - as suprising as it may sound. Namely, this tool isn't anything Mongo-specific. So let me explain my thinking!
 
 When you want to start using MongoDB Atlas Data API on AWS, you need to use [AWS API Gateway](https://aws.amazon.com/api-gateway/).
 You can configure AWS API Gateway directly on [AWS console](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html)
@@ -70,6 +80,7 @@ To create your first API Gateway application with SAM and *Python* language, hav
 However, given that I don't know you, anonymous reader, statistically speaking you most likely want to write your functions with
 Python - because it just happens to be the most popular programming language these days.
 
-## Coming soon
-I'll be back writing more about the topic. Let's stay tuned and look at the world from different angles. 
-The truth is out there, or somewhere between!
+## MongoDB on Microsoft Azure
+To get started implementing scalable cloud services on Microsoft Azure, I recommend to start with this sane and clear article on implementing your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). Have a good journey. I'll be be writing about
+this and other cool topics maybe even sooner than you realize!
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Let's Turn your Millions into Billions
+title: Let's Turn Your Millions into Billions
 date:   2024-03-09 11.11.00 +0200
 categories: Metamatic Systems MongoDB 
 ---
@@ -16,6 +16,8 @@ way.
 
 Now, let's not be too single-minded even here, because it all depends!
 
+## The trade-off
+
 If your objective is to serve billions, not millions, queries to your data during a certain time unit, or
 if you want to access collections with billions, not millions entries, it is likely that you should cache and combine the data
 into all-in-one collections and do whatever you can to prevent lookups from occuring.
@@ -24,6 +26,8 @@ However, optimizing queries for speed means sacrificing flexibility. If your dat
 performance isn't the bottle neck but instead you need to provide a flexible way to allow queries to look at the
 data creatively from different angles, a relational model is the best fit. This is the trade-off between the
 relational and document-like ways to see the world.
+
+## Two worlds 
 
 Now the fantastic thing about MongoDB is that it allows you to take both approaches. A very typical scenario is
 that some of your data is "big" and some is "small". Let's say that you have some measurement instruments or server logs
@@ -45,11 +49,14 @@ MongoDB provides a fantastic architecture to combine data into collections that 
 This approach serves well scenarios where it can be assumed that there is a rather fixed set of queries that clients will be 
 constantly executing. 
 
+## It's all about caching
+
 Denormalizing data from multiple sources into collections unarguably causes data duplication - it is actually all about caching. 
 Doing data denormalization to achieve velocity means sacrificing storage space to save processing time.
 To query data from collections with billions, not millions of entries, we want to avoid complex lookups and SQLish approach to queries.
 To learn more about strategies for reducing lookup operations, I recommend to have a look at [this article](https://www.mongodb.com/docs/atlas/schema-suggestions/reduce-lookup-operations/).
 
+## Coming soon
 I'll be back writing more about the topic. Let's stay tuned and look at the world from different angles. 
 The truth is out there, or somewhere between!
 

@@ -28,7 +28,7 @@ relational and document-like ways to see the world.
 Now the fantastic thing about MongoDB is that it allows you to take both approaches. A very typical scenario is
 that some of your data is "big" and some is "small". Let's say that you have some measurement instruments or server logs
 that produce huge amounts of data. Obviously, a document database model is the best match to make queries to this kind of data.
-On the other hand, your employee or customer data is different. Typically this kind of data contains a limited numberof o entries 
+On the other hand, your employee or customer data is different. Typically this kind of data contains a limited number of entries 
 that isn't accumulating at a huge speed. Obviously, you need two different database engines for these two
 domains. You need something like AWS DynamoDB for measurements or logs and something like Postgres SQL database for eveything
 else. 

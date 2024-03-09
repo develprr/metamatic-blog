@@ -28,7 +28,6 @@ data creatively from different angles, a relational model is the best fit. This 
 relational and document-like ways to see the world.
 
 ## Two worlds 
-
 Now the fantastic thing about MongoDB is that it allows you to take both approaches. A very typical scenario is
 that some of your data is "big" and some is "small". Let's say that you have some measurement instruments or server logs
 that produce huge amounts of data. Obviously, a document database model is the best match to make queries to this kind of data.
@@ -58,13 +57,18 @@ To learn more about strategies for reducing lookup operations, I recommend to ha
 ## How to start getting cloudy with MongoDB
 If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
 thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, there are a few alternatives. 
-For starters, you have to make up your mind on which "planet" you want to live on. The major ecosystems to choose from at the time
-being are Amazon AWS or Microsoft Azure. Amazon AWS has been longer around than Microsoft Azure and is therefore somewhat more widely adopted. However, Microsoft Azure ecosystem is rapidly catching up with Amazon AWS and is only slightly behind in terms of market share. 
+For starters, if you ever want to create a serious business system that interacts with *any* database, you have to host your system somewhere.
+Nowadays it practically means that you must deploy your software to a cloud. Which begs the question what cloud is the best for you. 
+So you have to make up your mind on which "planet" you want to live on. The two major ecosystems to choose from at the time
+being are Amazon AWS or Microsoft Azure. Amazon AWS has been longer around than Microsoft Azure and is therefore somewhat more widely adopted.
+However, Microsoft Azure ecosystem is rapidly catching up with Amazon AWS and is only slightly behind in terms of market share. 
 
 In general, Amazon AWS has a wider range of services. It may sound good but in reality it is actually far from ideal. It turns out that
-Amazon AWS has many partially or fully overlapping services and tools, making it confusing to figure out the right stack. Also the AWS
-service family is quite fragmented and does not provide a clearly opinionated pathway. The same applies to the documentation which is quite
-decentralized. The AWS web console is also confusing and far from intuitive to use. On the other hand, Microsoft Azure appears far more focused and provides a family of services that is a well thought out, formulating a complete product with all parts playing well together. Having worked on both environments, I would recommend to go for Microsoft Azure and .NET if you don't need to carry any AWS based legacy "lambda" liabilities on your shoulders.
+Amazon AWS has many overlapping services and tools, making it confusing to figure out the right stack. Also the AWS
+service family is quite fragmented and does not provide a clearly opinionated pathway to implement your system. 
+The same applies to the documentation which is quite shattered. The AWS web console is also confusing and far from intuitive to use. 
+
+On the other hand, Microsoft Azure appears far more focused and provides a family of services that is a well thought out, formulating a complete product with all parts playing well together. Having worked on both environments, I would recommend to go for Microsoft Azure and .NET if you don't need to carry any AWS based legacy "lambda" liabilities on your shoulders.
 
 My personal opinion as a freelance developer is that by choosing Microsoft Azure, you will get your web services developed, deployed, up and running in a fraction of the time that would be required when working on AWS. The complexity and fragmentation of the AWS ecosystem means that your company needs a dedicated "cloud architect" to navigate in this mess. On Microsoft Azure, on the other hand, the things seem properly streamlined and orchestrated by definition, which means that normal "off-the-shelf" developers will be able to construct robust and maintainable systems - just by following Microsoft's instructions written in cleartext.
 

@@ -57,14 +57,14 @@ To learn more about strategies for reducing lookup operations, I recommend to ha
 
 ## Where to start
 If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
-thing that crosses your mind is, where should I start right now? Depending on what is your starting point, 
-I suggest two alternatives. If you already are familiar to Mongo and would want to get started with deploying the database
-to the cloud (to start generating millions, and then billions), my proposal is to get started by installing [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) tool - as suprsising 
+thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, 
+I propose two alternatives. If you already are familiar to Mongo and would want to get started with deploying the database
+to the cloud (to start generating millions, and then billions), just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) tool - as suprsising 
 as it sounds. Namely, this tool isn't anything Mongo-specific. But the power of the MongoDB is in the cloud, therefore 
-you will need to start practicing cloud deployment. Amazon Web Services is somewhat overwhelming and it a newstarter 
-might easily get confused about how to start. My pick for the starting point is AWS SAM if you want to get something serious 
-done as soon as possible. However, if you want start practicing just MongoDB queries locally,
-then the most straightforward next step is to [install MongoDB locally](https://www.mongodb.com/try/download/shell).
+you will need to start practicing cloud deployment. Amazon Web Services is somewhat overwhelming to a new-starter. 
+My pick for the starting point is AWS SAM if you want to get something serious  done as soon as possible. 
+However, if you want start practicing just MongoDB queries locally, then the most straightforward next step 
+is to [install MongoDB locally](https://www.mongodb.com/try/download/shell).
 
 ## Coming soon
 I'll be back writing more about the topic. Let's stay tuned and look at the world from different angles. 

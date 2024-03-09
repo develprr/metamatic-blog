@@ -75,7 +75,7 @@ If you have to choose AWS, just go ahead and install [AWS SAM tool](https://docs
 
 When you want to start using MongoDB Atlas Data API on AWS, you need to use [AWS API Gateway](https://aws.amazon.com/api-gateway/).
 You can configure AWS API Gateway directly on [AWS console](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html)
-but if you have at typical coder mindset, this approach probably starts causing some headache even before you do anything. 
+but if you have a typical coder mindset, this approach probably starts causing some headache even before you do anything. 
 A classical coder of course wants to see everything as *code*, not as some complex menus on a confusing web console. 
 You want to write your lambdas as *code* on *your* machine and neatly deploy your creation to the cloud from the command line. 
 To create your first API Gateway application with SAM and *Python* language, have a look at this [workshop](https://catalog.workshops.aws/serverless-app-with-sam/en-US). You can develop Lambda functions with many languages, such as Java, JavaScript, Ruby, TypeScript, GO etc. 
@@ -83,6 +83,5 @@ However, given that I don't know you, anonymous reader, statistically speaking y
 Python - because it just happens to be the most popular programming language these days.
 
 ## Microsoft Azure
-To get started implementing scalable cloud services on Microsoft Azure, I recommend to start with this sane and clear article on implementing your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). Have a good journey. I'll be back writing about
-this and other cool topics maybe even sooner than you realize!
+To get started implementing scalable MongoDB-based cloud services on Microsoft Azure, I recommend to start with this sane and clear article on implementing your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). Have a good journey. I'll be back writing about this and other cool topics maybe even sooner than you realize!
 

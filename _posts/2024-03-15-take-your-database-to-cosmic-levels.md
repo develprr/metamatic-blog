@@ -35,8 +35,8 @@ Make sure that your API works. You will greatly benefit by configuring [Swagger]
 If you stumble in these steps, have a look at [my example implementation "StoreApi"](https://github.com/develprr/StoreApi) to make your first web API to interact with MongoDB!
 
 ## Onboarding the Rocket
-No need to be a rocket scientist to take your database to CosmosDB! As your final steps before fastening the seat belts, Read [this
-manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) how to start the rocket engine.
+No need to be a rocket scientist to take your database to CosmosDB! As your final steps after fastening the seat belts, read [this
+manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) about how to start the rocket engine.
 When you are done, just push the button! See you up there!
 
 

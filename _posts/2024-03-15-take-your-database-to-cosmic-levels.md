@@ -18,7 +18,7 @@ search capability, full text search, graph data, streaming data, geospatial data
 you need to start hosting your MongoDB in Microsoft's ground-breaking [CosmosDB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction).
 
 ## Your Roadmap to the Cosmos 
-To get serious with a scalable MongoDB in CosmosDB you need to find a concrete starting point. In this
+To get serious like Noah with a scalable MongoDB in CosmosDB you need to find a concrete starting point. In this
 article I want to be practical as usual and point out the right spot as I see it. 
 For starters, instead of painting with a large brush, let's drill down into the details - that's the way you do it! 
 I recommend these three steps to start with:

@@ -4,8 +4,6 @@ title: Take Your Database to Cosmic Levels
 date:   2024-03-09 11.11.00 +0200
 categories: MongoDB CosmosDB Azure
 ---
-# Take Your Database to Cosmic Levels
-
 Hello again and have a rainy Friday on 15th March Anno Domini 2024! 
 The rain is like the Creator's subtle touch on Earth's surface. Wherever the
 rain touches the surface of our planet, it transforms death into life,

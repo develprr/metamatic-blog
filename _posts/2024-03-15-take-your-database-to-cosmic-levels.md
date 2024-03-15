@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Take Your Database to Cosmic Levels
-date:   2024-03-09 11.11.00 +0200
+date:   2024-03-15 11.12.00 +0200
 categories: MongoDB CosmosDB Azure
 ---
 Hello again and have a rainy Friday on 15th March Anno Domini 2024! 

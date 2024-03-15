@@ -35,7 +35,7 @@ If you stumble in these steps, have a look at [my example implementation "StoreA
 
 ## Onboarding the Rocket
 No need to be a rocket scientist to take your database to the Cosmos! As your final steps before fastening the seat belts, Read [this
-manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) how to get your rocket started.
+manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) how to start the rocket engine.
 When you are done, just push the button! See you up there!
 
 

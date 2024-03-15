@@ -6,7 +6,7 @@ categories: MongoDB CosmosDB Azure
 ---
 Hello again and have a rainy Friday on 15th March Anno Domini 2024! Rain is like the subtle touch of the Creator on the surface of the Earth. 
 Wherever the rain touches the surface of our planet, it transforms death into life, melts the ice, greens the ground. Life always finds its ways. 
-It may already be secretly hitchhiking aboard rockets to conquer the Cosmos!
+It may already be secretly hitchhiking aboard rockets to flood the Cosmos, like a passenger on an ancient Ark floating toward a strange land across the eternal ocean.
 
 So why not take our databases to the Cosmos as well? Luckily,
 it's easier than ever! To fully apply [MongoDB](https://www.mongodb.com/) to secure rainy days in your future,

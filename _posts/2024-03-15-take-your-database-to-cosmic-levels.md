@@ -24,7 +24,7 @@ I recommend these three steps to start with:
 * Then, learn to configure your Web API to use a local MongoDB
 * Tune your API to use cloud based CosmosDB instead
 
-To successfully walk through this road to the Cosmos, I recommend to start with this tutorial to implement your first ASP.NET based web API following [this tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&amp;tabs=visual-studio-code).
+To successfully walk through this road to the Cosmos, I recommend to start with [this tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&amp;tabs=visual-studio-code) to implement your first ASP.NET based web API.
 Then deepen your ASP.NET API skills by implementing a MongoDB API [here](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app).
 When you are done with these two steps, continue working on the API you wrote first and enhance it by adding some MongoDB controller to it as well.
 Make sure that your API works. You will greatly benefit by configuring [Swagger](https://swagger.io/) for for your API. [Here](https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-8.0) is a good tutorial for configuring Swagger for your ASP.NET based web API.

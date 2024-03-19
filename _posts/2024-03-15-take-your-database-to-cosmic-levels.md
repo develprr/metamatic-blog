@@ -22,7 +22,8 @@ Then deepen your ASP.NET API skills by implementing a MongoDB API [here](https:/
 When you are done with these two steps, continue working on the API you wrote first and enhance it by adding some MongoDB controller to it as well.
 Make sure that your API works. You will greatly benefit by configuring [Swagger](https://swagger.io/) for for your API. [Here](https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-8.0) is a good tutorial for configuring Swagger for your ASP.NET based web API.
 
-If you stumble in these steps, have a look at [my example implementation "StoreApi"](https://github.com/develprr/StoreApi) to make your first web API to interact with MongoDB!
+If you stumble in these steps, have a look at [my example implementation "StoreApi"](https://github.com/develprr/StoreApi) to make your first web API to interact with MongoDB! I also wrote a standalone project [CosmosApi](https://github.com/develprr/CosmosApi) to help you create your fist MongoDB database instance in Cosmos DB and verify
+that you can interact with it.
 
 ## Onboarding the Rocket
 No need to be a rocket scientist to take your database to Cosmos DB! As your final step after fastening the seat belts, read [this

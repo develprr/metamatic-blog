@@ -470,3 +470,5 @@ def fetch_one(cls, query):
 Next time we will be learning how to whistle. Whistling is a great skill that helps you express emotions at home, in the neighborhood - and maybe even in the garden.
 
 Cheers!
+
+![boy-on-the-hill]({{site.baseurl }}/assets/boy-on-the-hill.png)

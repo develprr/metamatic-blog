@@ -17,6 +17,9 @@ To get serious with a scalable MongoDB in Cosmos DB you need to find a concrete 
 * Then, learn to configure your Web API to use a local MongoDB
 * Tune your API to use cloud based Cosmos DB instead
 
+
+![roadmap-to-cosmos]({{site.baseurl }}/assets/roadmap-to-cosmos.png)
+
 To successfully walk through this road to Cosmos DB, I recommend to start with [this tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&amp;tabs=visual-studio-code) to implement your first ASP.NET based web API.
 Then deepen your ASP.NET API skills by implementing a MongoDB API [here](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app).
 When you are done with these two steps, continue working on the API you wrote first and enhance it by adding some MongoDB controller to it as well.

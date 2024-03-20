@@ -19,5 +19,5 @@ Business ID: 2469467-6
 Metamatic Systems is a fully automated company, so we don't have any team really.
 But don't worry, here's an AI generated group photo of our 'team', so it doesn't look too lonely!
 
-![Metamatic Systems Team]]({{site.baseurl }}/assets/metamatic-systems-team.png)
+![Metamatic Systems Team]({{site.baseurl }}/assets/metamatic-systems-team.png)
 At your service!

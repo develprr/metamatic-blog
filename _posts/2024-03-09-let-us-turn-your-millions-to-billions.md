@@ -4,6 +4,7 @@ title: Let's Turn Your Millions into Billions
 date:   2024-03-09 11.11.00 +0200
 categories: Metamatic Systems MongoDB 
 ---
+![cash-pile]({{site.baseurl }}/assets/cash-pile.png)
 
 Hello again and shiny month of March 2024! 
 

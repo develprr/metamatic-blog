@@ -6,7 +6,7 @@ permalink: /contact/
 
 ### Metamatic Systems Ltd.
 
-![metamatic-systems-team]({{site.baseurl }}/assets/metamatic-systems-team.png)
+![Don't worry! This 'group photo' is just an AI-generated sample :D]({{site.baseurl }}/assets/metamatic-systems-team.png)
 
 Fredrikinkatu 61
 00100 Helsinki

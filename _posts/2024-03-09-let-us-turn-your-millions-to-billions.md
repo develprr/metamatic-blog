@@ -28,6 +28,8 @@ performance isn't the bottle neck but instead you need to provide a flexible way
 data creatively from different angles, a relational model is the best fit. This is the trade-off between the
 relational and document-like ways to see the world.
 
+![two-worlds]({{site.baseurl }}/assets/two-worlds.png)
+
 ## Two worlds 
 Now the fantastic thing about MongoDB is that it allows you to take both approaches. A very typical scenario is
 that some of your data is "big" and some is "small". Let's say that you have some measurement instruments or server logs

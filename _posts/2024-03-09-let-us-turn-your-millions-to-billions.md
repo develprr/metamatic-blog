@@ -55,6 +55,8 @@ Doing data denormalization to achieve velocity means sacrificing storage space t
 To query data from collections with billions, not millions of entries, we want to avoid complex lookups and SQLish approach to queries.
 To learn more about strategies for reducing lookup operations, I recommend to have a look at [this article](https://www.mongodb.com/docs/atlas/schema-suggestions/reduce-lookup-operations/).
 
+![clouds]({{site.baseurl }}/assets/clouds.png)
+
 ## How to start getting cloudy with MongoDB
 If you are a hands-on person (like me) and can't wait to actually start getting productive with database development, the next 
 thing that probably crosses your mind is where should I start right now? Depending on your prerequisites, there are a few alternatives. 

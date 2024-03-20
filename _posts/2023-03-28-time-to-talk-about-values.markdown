@@ -15,6 +15,8 @@ Et cetera. Obviously, the values matter. A lot!
 
 The real question is, how do you know whether someone shares your values? Let's find out!
 
+![metamatic-systems-team]({{site.baseurl }}/assets/metamatic-systems-team.png)
+
 ## A practical Real-World Example
 
 Let's say that an interstellar insurgency group known as "the Jedi Order" 

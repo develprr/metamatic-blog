@@ -4,6 +4,9 @@
   width: 100%;
 }
 
+img {
+  margin-top: 10px;
+}
 .post-header {
   margin-top: 50px;
 }

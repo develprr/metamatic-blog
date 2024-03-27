@@ -36,7 +36,7 @@ a database *at all* in the first place? Let's get the big picture!
 ## Getting Down to Business
 
 To understand what we want to achieve with all this vanity under the sun, let's imagine that you are
-a start-up entrepreneur full of enthusiasm and you want to start selling something - let's say food - in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than a kalabaw.
+a start-up entrepreneur full of enthusiasm and you want to start selling something - let's say food - in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than the kalabaw.
 
 So you need to have three main components in your business system:
 
@@ -47,7 +47,6 @@ So you need to have three main components in your business system:
 When our imaginary kalabaw entrepreneur is done with the first step on the list and deployed his food store database to Azure cloud, then it's time to proceed over to the second step. These days
 you never know how much demand there will be for the delicious products of Kalabaw Foods Ltd.
 So you don't want your servers to crash immediately when everybody rushes to your online store.
-Luckily, *Azure functions* are a great way to create an API that will scale up to the rush on our
-online store!
+Luckily, *Azure functions* are a great way to create an API that will scale up to the rush on our online store!
 
 ![the-cosmos]({{site.baseurl }}/assets/the-cosmos.png)

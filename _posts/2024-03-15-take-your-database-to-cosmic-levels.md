@@ -30,13 +30,13 @@ If you stumble in these steps, have a look at [my example implementation "StoreA
 No need to be a rocket scientist to take your database to Cosmos DB! As your final step after fastening the seat belts, read [this manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) about how to start the rocket engine.
 When you are done, just push the button! See you up there! ![build-and-run-store-api]({{site.baseurl }}/assets/build-and-run-store-api.gif)
 
-Just kidding, it isn't *that* easy. This article's narration is only starting to approach a turning point. We are coming to the question, why *exactly* would I want to configure
+Just kidding, it isn't *that* easy. This article's narration is only starting to approach its turning point. We are coming to the question, why *exactly* would I want to configure
 a database *at all* in the first place? Let's get the big picture!
 
 ## Getting Down to Business
 
 To understand what we want to achieve with all this vanity under the sun, let's imagine that you are
-a start-up entrepreneur full of enthusiasm and you want to start selling food in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~ no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than kalabaw.
+a start-up entrepreneur full of enthusiasm and you want to start selling food in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than kalabaw.
 
 So you need to have three main components in your business system:
 

@@ -27,10 +27,27 @@ Make sure that your API works. You will greatly benefit by configuring [Swagger]
 If you stumble in these steps, have a look at [my example implementation "StoreApi"](https://github.com/develprr/StoreApi) to make your first web API to interact with MongoDB! I also wrote a standalone project [CosmosApi](https://github.com/develprr/CosmosApi) to help you create your first MongoDB database instance in Cosmos DB and verify that you can interact with it.
 
 ## Onboarding the Rocket
-No need to be a rocket scientist to take your database to Cosmos DB! As your final step after fastening the seat belts, read [this
-manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) about how to start the rocket engine.
+No need to be a rocket scientist to take your database to Cosmos DB! As your final step after fastening the seat belts, read [this manual](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/quickstart-dotnet?tabs=azure-cli%2Cwindows) about how to start the rocket engine.
+When you are done, just push the button! See you up there! ![build-and-run-store-api]({{site.baseurl }}/assets/build-and-run-store-api.gif)
 
-![build-and-run-store-api]({{site.baseurl }}/assets/build-and-run-store-api.gif)
-When you are done, just push the button! See you up there!
+Just kidding, it isn't *that* easy. This article's narration is only starting to approach a turning point. We are coming to the question, why *exactly* would I want to configure
+a database *at all* in the first place? Let's get the big picture!
+
+## Getting Down to Business
+
+To understand what we want to achieve with all this vanity under the sun, let's imagine that you are
+a start-up entrepreneur full of enthusiasm and you want to start selling food in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~ no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than kalabaw.
+
+So you need to have three main components in your business system:
+
+1. A Database to store the business data (subscriptions, products, users etc.)
+2. A Store API to handle requests by the application and interact with the database
+3. A web application for the store (made with React, Angular, Vue or why not with Blazor)
+
+When our imaginary kalabaw entrepreneur is done with the first step on the list and deployed his food store database to Azure cloud, then it's time to proceed over to the second step. These days
+you never know how much demand there will be for the delicious products of Kalabaw Foods Ltd.
+So you don't want your servers to crash immediately when everybody rushes to your online store.
+Luckily, *Azure functions* are a great way to create an API that will scale up to the rush on our
+online store!
 
 ![the-cosmos]({{site.baseurl }}/assets/the-cosmos.png)

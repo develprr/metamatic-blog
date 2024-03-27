@@ -68,29 +68,21 @@ So you have to make up your mind on which "planet" you want to live on. The two 
 being are Amazon AWS or Microsoft Azure. Amazon AWS has been longer around than Microsoft Azure and is therefore somewhat more widely adopted.
 However, Microsoft Azure ecosystem is rapidly catching up with Amazon AWS and is only slightly behind in terms of market share. 
 
-In general, Amazon AWS has a wider range of services. It may sound good but in reality it is actually far from ideal. It turns out that
-Amazon AWS has many overlapping services and tools, making it confusing to figure out the right stack. Also the AWS
-service family is quite fragmented and does not provide a clearly opinionated pathway to implement your system. 
-The same applies to the documentation which is quite shattered. The AWS web console is also confusing and far from intuitive to use. 
-
-On the other hand, Microsoft Azure appears far more focused and provides a family of services that is a well thought out, formulating a complete product with all parts playing well together. Having worked on both environments, I would recommend to go for Microsoft Azure and .NET if you don't need to carry any AWS based legacy "lambda" liabilities on your shoulders.
-
-My personal opinion as a freelance developer is that by choosing Microsoft Azure, you will get your web services developed, deployed, up and running in a fraction of the time that would be required when working on AWS. The complexity and fragmentation of the AWS ecosystem means that your company needs a dedicated "cloud architect" to navigate in this mess. On Microsoft Azure, on the other hand, the things seem properly streamlined and orchestrated by definition, which means that normal "off-the-shelf" developers will be able to construct robust and maintainable systems - just by following Microsoft's instructions written in cleartext.
-
 Now, back to MongoDB. If you want to go for MongoDB and wonder how to implement your cloud-based business system on top of it, let's examine how to possibly go about it in each mentioned cloud enviroment. 
 
 ## Amazon AWS
 If you have to choose AWS, just go ahead and install [AWS SAM tool](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) - as suprising as it may sound. Namely, this tool isn't anything Mongo-specific. So let me explain my thinking!
 
 When you want to start using MongoDB Atlas Data API on AWS, you need to use [AWS API Gateway](https://aws.amazon.com/api-gateway/).
-You can configure AWS API Gateway directly on [AWS console](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html)
-but if you have a typical coder mindset, this approach probably starts causing some headache even before you do anything. 
-A classical coder of course wants to see everything as *code*, not as some complex menus on a confusing web console. 
-You want to write your lambdas as *code* on *your* machine and neatly deploy your creation to the cloud from the command line. 
+You may want to implement your lambdas as *code* on *your* machine and neatly deploy your creation to the cloud from the command line. 
 To create your first API Gateway application with SAM and *Python* language, have a look at this [workshop](https://catalog.workshops.aws/serverless-app-with-sam/en-US). You can develop Lambda functions with many languages, such as Java, JavaScript, Ruby, TypeScript, GO etc. 
 However, given that I don't know you, my dear anonymous reader, statistically speaking you most likely want to write your functions with
 Python - because it just happens to be the most popular programming language these days.
 
 ## Microsoft Azure
-To get started implementing scalable MongoDB-based cloud services on Microsoft Azure, consider including [this tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code) in your roadmap's first steps to construct a robust business grade ASP.NET based web API. When you are done, proceed to the next superb tutorial for creating your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). Have a good journey. I'll be back writing about this and other cool topics maybe even sooner than you realize!
+To get started implementing scalable MongoDB-based cloud services on Microsoft Azure, consider including [this tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code) in your roadmap's first steps to construct a robust business grade ASP.NET based web API. When you are done, proceed to the next superb tutorial for creating your [first Mongo app on ASP.net core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app). 
+
+## Conclusion
+
+These both services provide a roughly comparable development and deployment experience. However, in the follow-up articles I will be having a look at Azure based cloud development. It doesn't necessarily mean that I personally favor one over other. I hope my opinion clarifies during this journey and I can also provide something useful to *you* too.
 

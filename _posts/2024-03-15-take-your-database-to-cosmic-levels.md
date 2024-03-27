@@ -48,5 +48,4 @@ When our imaginary kalabaw entrepreneur is done with the first step on the list 
 you never know how much demand there will be for the delicious products of Kalabaw Foods Ltd.
 So you don't want your servers to crash immediately when everybody rushes to your online store.
 Luckily, *Azure functions* are a great way to create an API that will scale up to the rush on our online store!
-
-![the-cosmos]({{site.baseurl }}/assets/the-cosmos.png)
+![the-cosmos]({{site.baseurl }}/assets/install-azure-tools-to-vscode.gif)

@@ -45,7 +45,7 @@ So you need to have three main components in your business system:
 3. A web application for the store (made with React, Angular, Vue or why not with Blazor)
 
 When our imaginary kalabaw entrepreneur is done with the first step on the list and deployed his food store database to Azure cloud, then it's time to proceed over to the second step. These days
-you never know how much demand there will be for the delicious products of Kalabaw Foods Ltd.
+you never know how much demand there will be for the delicious products by Kalabaw Foods Ltd.
 So you don't want your servers to crash immediately when everybody rushes to your online store.
 Luckily, *Azure functions* are a great way to create an API that will scale up to the rush on our online store!
 
@@ -56,8 +56,10 @@ install Microsoft's Azure tools extension.
 
 ![the-cosmos]({{site.baseurl }}/assets/install-azure-tools-to-vscode.gif)
 
-From there, I recommend to proceed to installing [Azure tools core functions](https://github.com/Azure/azure-functions-core-tools/blob/v4.x/README.md#linux). 
+From there, I recommend to proceed to installing [Azure functions core tools](https://github.com/Azure/azure-functions-core-tools/blob/v4.x/README.md#linux). 
 
 A comprehensive Microsoft's tutorial to Azure functions local development can be found [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp).
+
+![install-azure-functions-core-tools]({{site.baseurl }}/assets/install-azure-functions-core-tools.gif)
 
 Cheers!

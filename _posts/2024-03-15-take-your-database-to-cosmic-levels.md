@@ -36,7 +36,7 @@ a database *at all* in the first place? Let's get the big picture!
 ## Getting Down to Business
 
 To understand what we want to achieve with all this vanity under the sun, let's imagine that you are
-a start-up entrepreneur full of enthusiasm and you want to start selling food in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than kalabaw.
+a start-up entrepreneur full of enthusiasm and you want to start selling something - let's say food - in your brand new online store. Ideally, you want to name your new company as Kalabaw Foods Ltd. After all, ~~no steak tastes as good as a real kalabaw rib~~ no animal symbolizes diligence better than kalabaw.
 
 So you need to have three main components in your business system:
 

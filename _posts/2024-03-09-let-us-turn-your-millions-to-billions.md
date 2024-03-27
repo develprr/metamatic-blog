@@ -84,5 +84,5 @@ To get started implementing scalable MongoDB-based cloud services on Microsoft A
 
 ## Conclusion
 
-These both services provide a roughly comparable development and deployment experience. However, in the follow-up articles I will be having a look at Azure based cloud development. It doesn't necessarily mean that I personally favor one over other. I hope my opinion clarifies during this journey and I can also provide something useful to *you* too.
+These both services provide a roughly comparable development and deployment experience. However, in the follow-up articles I will be having a look at Azure based cloud development specifically. It doesn't necessarily mean that I personally favor one over other. I hope my opinion clarifies during this journey and I can also provide something useful to *you* too.
 

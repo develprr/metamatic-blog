@@ -76,7 +76,7 @@ Finally, install the core tools package:
 sudo apt-get install azure-functions-core-tools-4
 ```
 
-Check out also the comprehensive Microsoft's tutorial to Azure functions local development can be found [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp).
+Check out also the comprehensive Microsoft's tutorial to Azure functions local development [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp).
 
 ![install-azure-functions-core-tools]({{site.baseurl }}/assets/install-azure-functions-core-tools.gif)
 

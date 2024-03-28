@@ -56,9 +56,27 @@ install Microsoft's Azure tools extension.
 
 ![the-cosmos]({{site.baseurl }}/assets/install-azure-tools-to-vscode.gif)
 
-From there, I recommend to proceed to installing [Azure functions core tools](https://github.com/Azure/azure-functions-core-tools/blob/v4.x/README.md#linux). 
+From there, I recommend to proceed to installing [Azure functions core tools](https://github.com/Azure/azure-functions-core-tools/blob/v4.x/README.md#linux), which is quite easy. On Ubuntu Linux operating system it just requires to copy paste fouyyr commands.
 
-A comprehensive Microsoft's tutorial to Azure functions local development can be found [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp).
+Firstly, add the Microsoft repository GPG key:
+```
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+```
+Then, update your sources list:
+```
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
+```
+Update your APT source:
+```
+sudo apt-get update
+```
+Finally, install the core tools package:
+```
+sudo apt-get install azure-functions-core-tools-4
+```
+
+Check out also the comprehensive Microsoft's tutorial to Azure functions local development can be found [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp).
 
 ![install-azure-functions-core-tools]({{site.baseurl }}/assets/install-azure-functions-core-tools.gif)
 
